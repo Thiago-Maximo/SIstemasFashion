@@ -14,7 +14,7 @@ namespace FashionLib
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public DateOnly Data_Nasc { get; set; }
+        public DateTime Data_Nasc { get; set; }
         public bool Ativo { get; set; }
 
         //Método Construtor Vazio
@@ -24,7 +24,7 @@ namespace FashionLib
         }
 
         //Método Construtor com Tudo
-        public Cliente(int id, string nome, string cpf, DateOnly data_Nasc, bool ativo)
+        public Cliente(int id, string nome, string cpf, DateTime data_Nasc, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -34,7 +34,7 @@ namespace FashionLib
         }
 
         //Método Construtor Sem Id
-        public Cliente(string nome, string cpf, DateOnly data_Nasc, bool ativo)
+        public Cliente(string nome, string cpf, DateTime data_Nasc, bool ativo)
         {
 
             Nome = nome;
@@ -44,7 +44,7 @@ namespace FashionLib
         }
 
         //Método Construtor sem Id e Ativo
-        public Cliente(string nome, string cpf, DateOnly data_Nasc)
+        public Cliente(string nome, string cpf, DateTime data_Nasc)
         {
 
             Nome = nome;
@@ -70,7 +70,6 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
-            cmd.Parameters.AddWithValue("spativo", Ativo);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -89,7 +88,6 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
-            cmd.Parameters.AddWithValue("spativo", Ativo);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
@@ -111,6 +109,57 @@ namespace FashionLib
             cmd.CommandText = $"update clientes set ativo = 1 where id = {id}";
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
+        }
+
+        public static Cliente ObterPorId(int id)
+        {
+            Cliente cliente = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"Select * from clientes where id = {id}";
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                cliente = new(
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetDateTime(3),
+                        dr.GetBoolean(4)
+                    );
+            }
+            cmd.Connection.Close();
+            return cliente;
+        }
+        public static List<Cliente> ObterPorLista(string? nome = "")
+        {
+            List<Cliente> lista = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            if (nome == "")
+            {
+                cmd.CommandText = "Select * from clientes order by nome";
+            }
+            else
+            {
+                cmd.CommandText = $"Select * from clientes where nome like '%{nome}%' order by nome";
+            }
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(
+                    new(
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetDateTime(3),
+                        dr.GetBoolean(4)
+                        )
+                    );
+            }
+            cmd.Connection.Close();
+            return lista;
         }
     }
 }
