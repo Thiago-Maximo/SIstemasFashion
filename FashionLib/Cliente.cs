@@ -14,8 +14,8 @@ namespace FashionLib
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public DateOnly Data_Nasc {  get; set; }
-        public bool Ativo {  get; set; }
+        public DateOnly Data_Nasc { get; set; }
+        public bool Ativo { get; set; }
 
         //Método Construtor Vazio
         public Cliente()
@@ -36,7 +36,7 @@ namespace FashionLib
         //Método Construtor Sem Id
         public Cliente(string nome, string cpf, DateOnly data_Nasc, bool ativo)
         {
-           
+
             Nome = nome;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
@@ -44,7 +44,7 @@ namespace FashionLib
         }
 
         //Método Construtor sem Id e Ativo
-        public Cliente( string nome, string cpf, DateOnly data_Nasc)
+        public Cliente(string nome, string cpf, DateOnly data_Nasc)
         {
 
             Nome = nome;
@@ -67,10 +67,10 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cliente_insert";
-            cmd.Parameters.AddWithValue("spnome",Nome);
-            cmd.Parameters.AddWithValue("spcpf",Cpf);
-            cmd.Parameters.AddWithValue("spdata_nascimento",Data_Nasc);
-            cmd.Parameters.AddWithValue("spativo",Ativo);
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spcpf", Cpf);
+            cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
+            cmd.Parameters.AddWithValue("spativo", Ativo);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -84,6 +84,33 @@ namespace FashionLib
         public void Atualizar()
         {
             var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_cliente_update";
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spcpf", Cpf);
+            cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
+            cmd.Parameters.AddWithValue("spativo", Ativo);
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+        // Função para deixar o funcionário inativo
+        public void DeixarInativo(int id)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"update clientes set ativo = 0 where id = {id}";
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+
+        // Função para ativar o funcionário novamente
+        public void DeixarAtivo(int id)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"update clientes set ativo = 1 where id = {id}";
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
         }
     }
 }

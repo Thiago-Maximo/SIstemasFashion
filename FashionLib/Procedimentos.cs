@@ -8,47 +8,82 @@ using System.Data;
 
 namespace FashionLib
 {
-    internal class Procedimentos
+    public class Procedimentos
     {
-        
+        // Declarando Váriaveis
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public decimal Valor { get; set; }
+        public TimeOnly Duracacao_Estimada { get; set; }
+        public char Classificacao { get; set; }
 
-        public int Id {  get; set; }
-        public int Id_procedimento_H {  get; set; }
-        public int Id_procedimento_M {  get; set; }
+        // Métodos Construtores
 
+        // Método com Tudo
 
+        public Procedimentos(int id, string nome, string descricao, decimal valor, TimeOnly duracao_estimada, char classificacao)
+        {
+            Id = id;
+            Nome = nome;
+            Descricao = descricao;
+            Valor = valor;
+            Duracacao_Estimada = duracao_estimada;
+            Classificacao = classificacao;
+        }
+        // Método sem Id
+        public Procedimentos(string nome, string descricao, decimal valor, TimeOnly duracao_estimada, char classificacao)
+        {
+            Nome = nome;
+            Descricao = descricao;
+            Valor = valor;
+            Duracacao_Estimada = duracao_estimada;
+            Classificacao = classificacao;
+        }
+
+        // Método Vazio
         public Procedimentos()
-        {          
-        }
-
-        public Procedimentos(int id, int id_procedimento_H, int id_procedimento_M)
         {
-            Id = id;
-            Id_procedimento_H = id_procedimento_H;
-            Id_procedimento_M = id_procedimento_M;
+            Id = new();
         }
 
-        public Procedimentos(int id,int id_procedimento_M)
-        {
-            Id = id;
-            Id_procedimento_M = id_procedimento_M;
-        }
+        // Funções
 
-        public Procedimentos( int id_procedimento_H)
-        {          
-            Id_procedimento_H = id_procedimento_H;            
-        }
-
+        // Função Inserir
         public void Inserir()
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_procedimentos";
-            cmd.Parameters.AddWithValue("sp_id_procedimentos_homens", Id_procedimento_H);
-            cmd.Parameters.AddWithValue("sp_id_procedimentos_mulheres", Id_procedimento_M);
-            Id = Convert.ToInt32(cmd.ExecuteScalar());
-        }      
+            cmd.CommandText = "sp_procedimentos_insert";
+            cmd.Parameters.AddWithValue("sp_nome", Nome);
+            cmd.Parameters.AddWithValue("sp_descricao", Descricao);
+            cmd.Parameters.AddWithValue("sp_valor", Valor);
+            cmd.Parameters.AddWithValue("sp_duracao_estimada", Duracacao_Estimada);
+            cmd.Parameters.AddWithValue("sp_classificacao", Classificacao);
+            var dr = cmd.ExecuteReader();
 
+            while (dr.Read())
+            {
+                Id = dr.GetInt32(0);
+            }
+            cmd.Connection.Close();
+        }
+
+        // Função Update
+        public void Update()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_procedimentos_insert";
+            cmd.Parameters.AddWithValue("sp_nome", Nome);
+            cmd.Parameters.AddWithValue("sp_descricao", Descricao);
+            cmd.Parameters.AddWithValue("sp_valor", Valor);
+            cmd.Parameters.AddWithValue("sp_duracao_estimada", Duracacao_Estimada);
+            cmd.Parameters.AddWithValue("sp_classificacao", Classificacao);
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
     }
-
 }
+
+
