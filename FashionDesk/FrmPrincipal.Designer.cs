@@ -28,74 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            panelUser = new Guna.UI2.WinForms.Guna2Panel();
+            btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            lblEmailUser = new Label();
+            btnUser = new Guna.UI2.WinForms.Guna2Button();
             panelAdmin = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarAdmin = new Guna.UI2.WinForms.Guna2Button();
+            btnAtualizarAdmin = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirAdmin = new Guna.UI2.WinForms.Guna2Button();
             btnAdmin = new Guna.UI2.WinForms.Guna2Button();
             panelAgendamentos = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarAgendamentos = new Guna.UI2.WinForms.Guna2Button();
+            btntualizarAgendamentos = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirAgendamentos = new Guna.UI2.WinForms.Guna2Button();
             btnAgendar = new Guna.UI2.WinForms.Guna2Button();
-            
             panelClientes = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarCliente = new Guna.UI2.WinForms.Guna2Button();
+            btnAtualizarCliente = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirCliente = new Guna.UI2.WinForms.Guna2Button();
             btnClientes = new Guna.UI2.WinForms.Guna2Button();
             panelFuncionarios = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarFuncionario = new Guna.UI2.WinForms.Guna2Button();
+            btnAtualizarFuncionario = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirFuncionario = new Guna.UI2.WinForms.Guna2Button();
             btnFuncionarios = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            panelUser.SuspendLayout();
             panelAdmin.SuspendLayout();
             panelAgendamentos.SuspendLayout();
             panelClientes.SuspendLayout();
@@ -107,11 +115,13 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(panelUser);
+            panel1.Controls.Add(lblEmailUser);
+            panel1.Controls.Add(btnUser);
             panel1.Controls.Add(panelAdmin);
             panel1.Controls.Add(btnAdmin);
             panel1.Controls.Add(panelAgendamentos);
             panel1.Controls.Add(btnAgendar);
-            
             panel1.Controls.Add(panelClientes);
             panel1.Controls.Add(btnClientes);
             panel1.Controls.Add(panelFuncionarios);
@@ -120,92 +130,159 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 914);
+            panel1.Size = new Size(200, 1061);
             panel1.TabIndex = 0;
+            // 
+            // panelUser
+            // 
+            panelUser.Controls.Add(btnLogout);
+            panelUser.CustomizableEdges = customizableEdges3;
+            panelUser.Location = new Point(0, 980);
+            panelUser.Name = "panelUser";
+            panelUser.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            panelUser.Size = new Size(200, 69);
+            panelUser.TabIndex = 12;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackgroundImageLayout = ImageLayout.Zoom;
+            btnLogout.CustomizableEdges = customizableEdges1;
+            btnLogout.DisabledState.BorderColor = Color.DarkGray;
+            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogout.Dock = DockStyle.Top;
+            btnLogout.FillColor = Color.White;
+            btnLogout.Font = new Font("Segoe UI", 9F);
+            btnLogout.ForeColor = Color.Black;
+            btnLogout.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnLogout.ImageAlign = HorizontalAlignment.Right;
+            btnLogout.Location = new Point(0, 0);
+            btnLogout.Name = "btnLogout";
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLogout.Size = new Size(200, 45);
+            btnLogout.TabIndex = 7;
+            btnLogout.Text = "&Logout";
+            btnLogout.TextAlign = HorizontalAlignment.Left;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // lblEmailUser
+            // 
+            lblEmailUser.AutoSize = true;
+            lblEmailUser.BackColor = Color.Transparent;
+            lblEmailUser.Font = new Font("Swis721 Hv BT", 8.25F, FontStyle.Italic);
+            lblEmailUser.Location = new Point(77, 959);
+            lblEmailUser.Name = "lblEmailUser";
+            lblEmailUser.Size = new Size(65, 14);
+            lblEmailUser.TabIndex = 11;
+            lblEmailUser.Text = "Email User";
+            // 
+            // btnUser
+            // 
+            btnUser.CustomizableEdges = customizableEdges5;
+            btnUser.DisabledState.BorderColor = Color.DarkGray;
+            btnUser.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnUser.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUser.FillColor = Color.White;
+            btnUser.Font = new Font("Swis721 Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnUser.ForeColor = Color.Black;
+            btnUser.HoverState.FillColor = Color.White;
+            btnUser.Image = Properties.Resources.Usuario_Rosa;
+            btnUser.ImageAlign = HorizontalAlignment.Left;
+            btnUser.ImageSize = new Size(50, 50);
+            btnUser.Location = new Point(0, 923);
+            btnUser.Name = "btnUser";
+            btnUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnUser.Size = new Size(200, 51);
+            btnUser.TabIndex = 2;
+            btnUser.Text = "User Name - Nivel";
+            btnUser.TextAlign = HorizontalAlignment.Right;
+            btnUser.Click += btnUser_Click;
             // 
             // panelAdmin
             // 
-            panelAdmin.Controls.Add(guna2Button12);
-            panelAdmin.Controls.Add(guna2Button11);
-            panelAdmin.Controls.Add(guna2Button10);
-            panelAdmin.CustomizableEdges = customizableEdges7;
+            panelAdmin.Controls.Add(btnConsultarAdmin);
+            panelAdmin.Controls.Add(btnAtualizarAdmin);
+            panelAdmin.Controls.Add(btnInserirAdmin);
+            panelAdmin.CustomizableEdges = customizableEdges13;
             panelAdmin.Dock = DockStyle.Top;
             panelAdmin.Location = new Point(0, 718);
             panelAdmin.Name = "panelAdmin";
-            panelAdmin.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            panelAdmin.ShadowDecoration.CustomizableEdges = customizableEdges14;
             panelAdmin.Size = new Size(200, 158);
             panelAdmin.TabIndex = 1;
             // 
-            // guna2Button12
+            // btnConsultarAdmin
             // 
-            guna2Button12.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button12.CustomizableEdges = customizableEdges1;
-            guna2Button12.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button12.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button12.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button12.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button12.Dock = DockStyle.Top;
-            guna2Button12.FillColor = Color.White;
-            guna2Button12.Font = new Font("Segoe UI", 9F);
-            guna2Button12.ForeColor = Color.Black;
-            guna2Button12.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button12.ImageAlign = HorizontalAlignment.Right;
-            guna2Button12.Location = new Point(0, 90);
-            guna2Button12.Name = "guna2Button12";
-            guna2Button12.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button12.Size = new Size(200, 45);
-            guna2Button12.TabIndex = 6;
-            guna2Button12.Text = "&Consultar";
-            guna2Button12.TextAlign = HorizontalAlignment.Left;
+            btnConsultarAdmin.BackgroundImageLayout = ImageLayout.Zoom;
+            btnConsultarAdmin.CustomizableEdges = customizableEdges7;
+            btnConsultarAdmin.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarAdmin.Dock = DockStyle.Top;
+            btnConsultarAdmin.FillColor = Color.White;
+            btnConsultarAdmin.Font = new Font("Segoe UI", 9F);
+            btnConsultarAdmin.ForeColor = Color.Black;
+            btnConsultarAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnConsultarAdmin.ImageAlign = HorizontalAlignment.Right;
+            btnConsultarAdmin.Location = new Point(0, 90);
+            btnConsultarAdmin.Name = "btnConsultarAdmin";
+            btnConsultarAdmin.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnConsultarAdmin.Size = new Size(200, 45);
+            btnConsultarAdmin.TabIndex = 6;
+            btnConsultarAdmin.Text = "&Consultar";
+            btnConsultarAdmin.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button11
+            // btnAtualizarAdmin
             // 
-            guna2Button11.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button11.CustomizableEdges = customizableEdges3;
-            guna2Button11.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button11.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button11.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button11.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button11.Dock = DockStyle.Top;
-            guna2Button11.FillColor = Color.White;
-            guna2Button11.Font = new Font("Segoe UI", 9F);
-            guna2Button11.ForeColor = Color.Black;
-            guna2Button11.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button11.ImageAlign = HorizontalAlignment.Right;
-            guna2Button11.Location = new Point(0, 45);
-            guna2Button11.Name = "guna2Button11";
-            guna2Button11.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button11.Size = new Size(200, 45);
-            guna2Button11.TabIndex = 5;
-            guna2Button11.Text = "&Atualizar";
-            guna2Button11.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarAdmin.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarAdmin.CustomizableEdges = customizableEdges9;
+            btnAtualizarAdmin.DisabledState.BorderColor = Color.DarkGray;
+            btnAtualizarAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAtualizarAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAtualizarAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizarAdmin.Dock = DockStyle.Top;
+            btnAtualizarAdmin.FillColor = Color.White;
+            btnAtualizarAdmin.Font = new Font("Segoe UI", 9F);
+            btnAtualizarAdmin.ForeColor = Color.Black;
+            btnAtualizarAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnAtualizarAdmin.ImageAlign = HorizontalAlignment.Right;
+            btnAtualizarAdmin.Location = new Point(0, 45);
+            btnAtualizarAdmin.Name = "btnAtualizarAdmin";
+            btnAtualizarAdmin.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAtualizarAdmin.Size = new Size(200, 45);
+            btnAtualizarAdmin.TabIndex = 5;
+            btnAtualizarAdmin.Text = "&Atualizar";
+            btnAtualizarAdmin.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button10
+            // btnInserirAdmin
             // 
-            guna2Button10.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button10.CustomizableEdges = customizableEdges5;
-            guna2Button10.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button10.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button10.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button10.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button10.Dock = DockStyle.Top;
-            guna2Button10.FillColor = Color.White;
-            guna2Button10.Font = new Font("Segoe UI", 9F);
-            guna2Button10.ForeColor = Color.Black;
-            guna2Button10.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button10.ImageAlign = HorizontalAlignment.Right;
-            guna2Button10.Location = new Point(0, 0);
-            guna2Button10.Name = "guna2Button10";
-            guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button10.Size = new Size(200, 45);
-            guna2Button10.TabIndex = 4;
-            guna2Button10.Text = "&Inserir";
-            guna2Button10.TextAlign = HorizontalAlignment.Left;
+            btnInserirAdmin.BackgroundImageLayout = ImageLayout.Zoom;
+            btnInserirAdmin.CustomizableEdges = customizableEdges11;
+            btnInserirAdmin.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirAdmin.Dock = DockStyle.Top;
+            btnInserirAdmin.FillColor = Color.White;
+            btnInserirAdmin.Font = new Font("Segoe UI", 9F);
+            btnInserirAdmin.ForeColor = Color.Black;
+            btnInserirAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirAdmin.ImageAlign = HorizontalAlignment.Right;
+            btnInserirAdmin.Location = new Point(0, 0);
+            btnInserirAdmin.Name = "btnInserirAdmin";
+            btnInserirAdmin.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnInserirAdmin.Size = new Size(200, 45);
+            btnInserirAdmin.TabIndex = 4;
+            btnInserirAdmin.Text = "&Inserir";
+            btnInserirAdmin.TextAlign = HorizontalAlignment.Left;
             // 
             // btnAdmin
             // 
             btnAdmin.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAdmin.CustomizableEdges = customizableEdges9;
+            btnAdmin.CustomizableEdges = customizableEdges15;
             btnAdmin.DisabledState.BorderColor = Color.DarkGray;
             btnAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -219,7 +296,7 @@
             btnAdmin.ImageAlign = HorizontalAlignment.Right;
             btnAdmin.Location = new Point(0, 673);
             btnAdmin.Name = "btnAdmin";
-            btnAdmin.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAdmin.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnAdmin.Size = new Size(200, 45);
             btnAdmin.TabIndex = 10;
             btnAdmin.Text = "A&dmin";
@@ -228,87 +305,87 @@
             // 
             // panelAgendamentos
             // 
-            panelAgendamentos.Controls.Add(guna2Button9);
-            panelAgendamentos.Controls.Add(guna2Button8);
-            panelAgendamentos.Controls.Add(guna2Button7);
-            panelAgendamentos.CustomizableEdges = customizableEdges17;
+            panelAgendamentos.Controls.Add(btnConsultarAgendamentos);
+            panelAgendamentos.Controls.Add(btntualizarAgendamentos);
+            panelAgendamentos.Controls.Add(btnInserirAgendamentos);
+            panelAgendamentos.CustomizableEdges = customizableEdges23;
             panelAgendamentos.Dock = DockStyle.Top;
             panelAgendamentos.Location = new Point(0, 525);
             panelAgendamentos.Name = "panelAgendamentos";
-            panelAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            panelAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges24;
             panelAgendamentos.Size = new Size(200, 148);
             panelAgendamentos.TabIndex = 9;
             // 
-            // guna2Button9
+            // btnConsultarAgendamentos
             // 
-            guna2Button9.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button9.CustomizableEdges = customizableEdges11;
-            guna2Button9.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button9.Dock = DockStyle.Top;
-            guna2Button9.FillColor = Color.White;
-            guna2Button9.Font = new Font("Segoe UI", 9F);
-            guna2Button9.ForeColor = Color.Black;
-            guna2Button9.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button9.ImageAlign = HorizontalAlignment.Right;
-            guna2Button9.Location = new Point(0, 90);
-            guna2Button9.Name = "guna2Button9";
-            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button9.Size = new Size(200, 45);
-            guna2Button9.TabIndex = 6;
-            guna2Button9.Text = "&Consultar";
-            guna2Button9.TextAlign = HorizontalAlignment.Left;
+            btnConsultarAgendamentos.BackgroundImageLayout = ImageLayout.Zoom;
+            btnConsultarAgendamentos.CustomizableEdges = customizableEdges17;
+            btnConsultarAgendamentos.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarAgendamentos.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarAgendamentos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarAgendamentos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarAgendamentos.Dock = DockStyle.Top;
+            btnConsultarAgendamentos.FillColor = Color.White;
+            btnConsultarAgendamentos.Font = new Font("Segoe UI", 9F);
+            btnConsultarAgendamentos.ForeColor = Color.Black;
+            btnConsultarAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnConsultarAgendamentos.ImageAlign = HorizontalAlignment.Right;
+            btnConsultarAgendamentos.Location = new Point(0, 90);
+            btnConsultarAgendamentos.Name = "btnConsultarAgendamentos";
+            btnConsultarAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnConsultarAgendamentos.Size = new Size(200, 45);
+            btnConsultarAgendamentos.TabIndex = 6;
+            btnConsultarAgendamentos.Text = "&Consultar";
+            btnConsultarAgendamentos.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button8
+            // btntualizarAgendamentos
             // 
-            guna2Button8.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button8.CustomizableEdges = customizableEdges13;
-            guna2Button8.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button8.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button8.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button8.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button8.Dock = DockStyle.Top;
-            guna2Button8.FillColor = Color.White;
-            guna2Button8.Font = new Font("Segoe UI", 9F);
-            guna2Button8.ForeColor = Color.Black;
-            guna2Button8.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button8.ImageAlign = HorizontalAlignment.Right;
-            guna2Button8.Location = new Point(0, 45);
-            guna2Button8.Name = "guna2Button8";
-            guna2Button8.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button8.Size = new Size(200, 45);
-            guna2Button8.TabIndex = 5;
-            guna2Button8.Text = "&Atualizar";
-            guna2Button8.TextAlign = HorizontalAlignment.Left;
+            btntualizarAgendamentos.BackgroundImageLayout = ImageLayout.Zoom;
+            btntualizarAgendamentos.CustomizableEdges = customizableEdges19;
+            btntualizarAgendamentos.DisabledState.BorderColor = Color.DarkGray;
+            btntualizarAgendamentos.DisabledState.CustomBorderColor = Color.DarkGray;
+            btntualizarAgendamentos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btntualizarAgendamentos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btntualizarAgendamentos.Dock = DockStyle.Top;
+            btntualizarAgendamentos.FillColor = Color.White;
+            btntualizarAgendamentos.Font = new Font("Segoe UI", 9F);
+            btntualizarAgendamentos.ForeColor = Color.Black;
+            btntualizarAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btntualizarAgendamentos.ImageAlign = HorizontalAlignment.Right;
+            btntualizarAgendamentos.Location = new Point(0, 45);
+            btntualizarAgendamentos.Name = "btntualizarAgendamentos";
+            btntualizarAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btntualizarAgendamentos.Size = new Size(200, 45);
+            btntualizarAgendamentos.TabIndex = 5;
+            btntualizarAgendamentos.Text = "&Atualizar";
+            btntualizarAgendamentos.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button7
+            // btnInserirAgendamentos
             // 
-            guna2Button7.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button7.CustomizableEdges = customizableEdges15;
-            guna2Button7.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button7.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button7.Dock = DockStyle.Top;
-            guna2Button7.FillColor = Color.White;
-            guna2Button7.Font = new Font("Segoe UI", 9F);
-            guna2Button7.ForeColor = Color.Black;
-            guna2Button7.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button7.ImageAlign = HorizontalAlignment.Right;
-            guna2Button7.Location = new Point(0, 0);
-            guna2Button7.Name = "guna2Button7";
-            guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button7.Size = new Size(200, 45);
-            guna2Button7.TabIndex = 4;
-            guna2Button7.Text = "&Inserir";
-            guna2Button7.TextAlign = HorizontalAlignment.Left;
+            btnInserirAgendamentos.BackgroundImageLayout = ImageLayout.Zoom;
+            btnInserirAgendamentos.CustomizableEdges = customizableEdges21;
+            btnInserirAgendamentos.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirAgendamentos.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirAgendamentos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirAgendamentos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirAgendamentos.Dock = DockStyle.Top;
+            btnInserirAgendamentos.FillColor = Color.White;
+            btnInserirAgendamentos.Font = new Font("Segoe UI", 9F);
+            btnInserirAgendamentos.ForeColor = Color.Black;
+            btnInserirAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirAgendamentos.ImageAlign = HorizontalAlignment.Right;
+            btnInserirAgendamentos.Location = new Point(0, 0);
+            btnInserirAgendamentos.Name = "btnInserirAgendamentos";
+            btnInserirAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnInserirAgendamentos.Size = new Size(200, 45);
+            btnInserirAgendamentos.TabIndex = 4;
+            btnInserirAgendamentos.Text = "&Inserir";
+            btnInserirAgendamentos.TextAlign = HorizontalAlignment.Left;
             // 
             // btnAgendar
             // 
             btnAgendar.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAgendar.CustomizableEdges = customizableEdges19;
+            btnAgendar.CustomizableEdges = customizableEdges25;
             btnAgendar.DisabledState.BorderColor = Color.DarkGray;
             btnAgendar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgendar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -322,100 +399,96 @@
             btnAgendar.ImageAlign = HorizontalAlignment.Right;
             btnAgendar.Location = new Point(0, 480);
             btnAgendar.Name = "btnAgendar";
-            btnAgendar.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnAgendar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnAgendar.Size = new Size(200, 45);
             btnAgendar.TabIndex = 7;
             btnAgendar.Text = "&Agendamentos";
             btnAgendar.TextAlign = HorizontalAlignment.Left;
             btnAgendar.Click += btnAgendar_Click;
             // 
-            // btnAgendamentos
-            // 
-            
-            // 
             // panelClientes
             // 
-            panelClientes.Controls.Add(guna2Button6);
-            panelClientes.Controls.Add(guna2Button5);
-            panelClientes.Controls.Add(guna2Button4);
-            panelClientes.CustomizableEdges = customizableEdges29;
+            panelClientes.Controls.Add(btnConsultarCliente);
+            panelClientes.Controls.Add(btnAtualizarCliente);
+            panelClientes.Controls.Add(btnInserirCliente);
+            panelClientes.CustomizableEdges = customizableEdges33;
             panelClientes.Dock = DockStyle.Top;
             panelClientes.Location = new Point(0, 326);
             panelClientes.Name = "panelClientes";
-            panelClientes.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            panelClientes.ShadowDecoration.CustomizableEdges = customizableEdges34;
             panelClientes.Size = new Size(200, 154);
             panelClientes.TabIndex = 4;
             // 
-            // guna2Button6
+            // btnConsultarCliente
             // 
-            guna2Button6.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button6.CustomizableEdges = customizableEdges23;
-            guna2Button6.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button6.Dock = DockStyle.Top;
-            guna2Button6.FillColor = Color.White;
-            guna2Button6.Font = new Font("Segoe UI", 9F);
-            guna2Button6.ForeColor = Color.Black;
-            guna2Button6.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button6.ImageAlign = HorizontalAlignment.Right;
-            guna2Button6.Location = new Point(0, 90);
-            guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Button6.Size = new Size(200, 45);
-            guna2Button6.TabIndex = 5;
-            guna2Button6.Text = "&Consultar";
-            guna2Button6.TextAlign = HorizontalAlignment.Left;
+            btnConsultarCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnConsultarCliente.CustomizableEdges = customizableEdges27;
+            btnConsultarCliente.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarCliente.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarCliente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarCliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarCliente.Dock = DockStyle.Top;
+            btnConsultarCliente.FillColor = Color.White;
+            btnConsultarCliente.Font = new Font("Segoe UI", 9F);
+            btnConsultarCliente.ForeColor = Color.Black;
+            btnConsultarCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnConsultarCliente.ImageAlign = HorizontalAlignment.Right;
+            btnConsultarCliente.Location = new Point(0, 90);
+            btnConsultarCliente.Name = "btnConsultarCliente";
+            btnConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnConsultarCliente.Size = new Size(200, 45);
+            btnConsultarCliente.TabIndex = 5;
+            btnConsultarCliente.Text = "&Consultar";
+            btnConsultarCliente.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button5
+            // btnAtualizarCliente
             // 
-            guna2Button5.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button5.CustomizableEdges = customizableEdges25;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.Dock = DockStyle.Top;
-            guna2Button5.FillColor = Color.White;
-            guna2Button5.Font = new Font("Segoe UI", 9F);
-            guna2Button5.ForeColor = Color.Black;
-            guna2Button5.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button5.ImageAlign = HorizontalAlignment.Right;
-            guna2Button5.Location = new Point(0, 45);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Button5.Size = new Size(200, 45);
-            guna2Button5.TabIndex = 4;
-            guna2Button5.Text = "&Atualizar";
-            guna2Button5.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarCliente.CustomizableEdges = customizableEdges29;
+            btnAtualizarCliente.DisabledState.BorderColor = Color.DarkGray;
+            btnAtualizarCliente.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAtualizarCliente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAtualizarCliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizarCliente.Dock = DockStyle.Top;
+            btnAtualizarCliente.FillColor = Color.White;
+            btnAtualizarCliente.Font = new Font("Segoe UI", 9F);
+            btnAtualizarCliente.ForeColor = Color.Black;
+            btnAtualizarCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnAtualizarCliente.ImageAlign = HorizontalAlignment.Right;
+            btnAtualizarCliente.Location = new Point(0, 45);
+            btnAtualizarCliente.Name = "btnAtualizarCliente";
+            btnAtualizarCliente.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnAtualizarCliente.Size = new Size(200, 45);
+            btnAtualizarCliente.TabIndex = 4;
+            btnAtualizarCliente.Text = "&Atualizar";
+            btnAtualizarCliente.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button4
+            // btnInserirCliente
             // 
-            guna2Button4.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button4.CustomizableEdges = customizableEdges27;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.Dock = DockStyle.Top;
-            guna2Button4.FillColor = Color.White;
-            guna2Button4.Font = new Font("Segoe UI", 9F);
-            guna2Button4.ForeColor = Color.Black;
-            guna2Button4.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button4.ImageAlign = HorizontalAlignment.Right;
-            guna2Button4.Location = new Point(0, 0);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2Button4.Size = new Size(200, 45);
-            guna2Button4.TabIndex = 3;
-            guna2Button4.Text = "&Inserir";
-            guna2Button4.TextAlign = HorizontalAlignment.Left;
+            btnInserirCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnInserirCliente.CustomizableEdges = customizableEdges31;
+            btnInserirCliente.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirCliente.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirCliente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirCliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirCliente.Dock = DockStyle.Top;
+            btnInserirCliente.FillColor = Color.White;
+            btnInserirCliente.Font = new Font("Segoe UI", 9F);
+            btnInserirCliente.ForeColor = Color.Black;
+            btnInserirCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirCliente.ImageAlign = HorizontalAlignment.Right;
+            btnInserirCliente.Location = new Point(0, 0);
+            btnInserirCliente.Name = "btnInserirCliente";
+            btnInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnInserirCliente.Size = new Size(200, 45);
+            btnInserirCliente.TabIndex = 3;
+            btnInserirCliente.Text = "&Inserir";
+            btnInserirCliente.TextAlign = HorizontalAlignment.Left;
             // 
             // btnClientes
             // 
             btnClientes.BackgroundImageLayout = ImageLayout.Zoom;
-            btnClientes.CustomizableEdges = customizableEdges31;
+            btnClientes.CustomizableEdges = customizableEdges35;
             btnClientes.DisabledState.BorderColor = Color.DarkGray;
             btnClientes.DisabledState.CustomBorderColor = Color.DarkGray;
             btnClientes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -429,7 +502,7 @@
             btnClientes.ImageAlign = HorizontalAlignment.Right;
             btnClientes.Location = new Point(0, 281);
             btnClientes.Name = "btnClientes";
-            btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges36;
             btnClientes.Size = new Size(200, 45);
             btnClientes.TabIndex = 3;
             btnClientes.Text = "&Clientes";
@@ -438,87 +511,88 @@
             // 
             // panelFuncionarios
             // 
-            panelFuncionarios.Controls.Add(guna2Button3);
-            panelFuncionarios.Controls.Add(guna2Button2);
-            panelFuncionarios.Controls.Add(guna2Button1);
-            panelFuncionarios.CustomizableEdges = customizableEdges39;
+            panelFuncionarios.Controls.Add(btnConsultarFuncionario);
+            panelFuncionarios.Controls.Add(btnAtualizarFuncionario);
+            panelFuncionarios.Controls.Add(btnInserirFuncionario);
+            panelFuncionarios.CustomizableEdges = customizableEdges43;
             panelFuncionarios.Dock = DockStyle.Top;
             panelFuncionarios.Location = new Point(0, 140);
             panelFuncionarios.Name = "panelFuncionarios";
-            panelFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            panelFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges44;
             panelFuncionarios.Size = new Size(200, 141);
             panelFuncionarios.TabIndex = 2;
             // 
-            // guna2Button3
+            // btnConsultarFuncionario
             // 
-            guna2Button3.BackgroundImageLayout = ImageLayout.None;
-            guna2Button3.CustomizableEdges = customizableEdges33;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.Dock = DockStyle.Top;
-            guna2Button3.FillColor = Color.White;
-            guna2Button3.Font = new Font("Segoe UI", 9F);
-            guna2Button3.ForeColor = Color.Black;
-            guna2Button3.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button3.ImageAlign = HorizontalAlignment.Right;
-            guna2Button3.Location = new Point(0, 90);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2Button3.Size = new Size(200, 45);
-            guna2Button3.TabIndex = 4;
-            guna2Button3.Text = "&Consultar";
-            guna2Button3.TextAlign = HorizontalAlignment.Left;
+            btnConsultarFuncionario.BackgroundImageLayout = ImageLayout.None;
+            btnConsultarFuncionario.CustomizableEdges = customizableEdges37;
+            btnConsultarFuncionario.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarFuncionario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarFuncionario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarFuncionario.Dock = DockStyle.Top;
+            btnConsultarFuncionario.FillColor = Color.White;
+            btnConsultarFuncionario.Font = new Font("Segoe UI", 9F);
+            btnConsultarFuncionario.ForeColor = Color.Black;
+            btnConsultarFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnConsultarFuncionario.ImageAlign = HorizontalAlignment.Right;
+            btnConsultarFuncionario.Location = new Point(0, 90);
+            btnConsultarFuncionario.Name = "btnConsultarFuncionario";
+            btnConsultarFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnConsultarFuncionario.Size = new Size(200, 45);
+            btnConsultarFuncionario.TabIndex = 4;
+            btnConsultarFuncionario.Text = "&Consultar";
+            btnConsultarFuncionario.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button2
+            // btnAtualizarFuncionario
             // 
-            guna2Button2.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button2.CustomizableEdges = customizableEdges35;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Dock = DockStyle.Top;
-            guna2Button2.FillColor = Color.White;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.Black;
-            guna2Button2.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button2.ImageAlign = HorizontalAlignment.Right;
-            guna2Button2.Location = new Point(0, 45);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            guna2Button2.Size = new Size(200, 45);
-            guna2Button2.TabIndex = 3;
-            guna2Button2.Text = "&Atualizar";
-            guna2Button2.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarFuncionario.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarFuncionario.CustomizableEdges = customizableEdges39;
+            btnAtualizarFuncionario.DisabledState.BorderColor = Color.DarkGray;
+            btnAtualizarFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAtualizarFuncionario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAtualizarFuncionario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizarFuncionario.Dock = DockStyle.Top;
+            btnAtualizarFuncionario.FillColor = Color.White;
+            btnAtualizarFuncionario.Font = new Font("Segoe UI", 9F);
+            btnAtualizarFuncionario.ForeColor = Color.Black;
+            btnAtualizarFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnAtualizarFuncionario.ImageAlign = HorizontalAlignment.Right;
+            btnAtualizarFuncionario.Location = new Point(0, 45);
+            btnAtualizarFuncionario.Name = "btnAtualizarFuncionario";
+            btnAtualizarFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btnAtualizarFuncionario.Size = new Size(200, 45);
+            btnAtualizarFuncionario.TabIndex = 3;
+            btnAtualizarFuncionario.Text = "&Atualizar";
+            btnAtualizarFuncionario.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button1
+            // btnInserirFuncionario
             // 
-            guna2Button1.BackgroundImageLayout = ImageLayout.Zoom;
-            guna2Button1.CustomizableEdges = customizableEdges37;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Dock = DockStyle.Top;
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button1.ImageAlign = HorizontalAlignment.Right;
-            guna2Button1.Location = new Point(0, 0);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2Button1.Size = new Size(200, 45);
-            guna2Button1.TabIndex = 2;
-            guna2Button1.Text = "&Inserir";
-            guna2Button1.TextAlign = HorizontalAlignment.Left;
+            btnInserirFuncionario.BackgroundImageLayout = ImageLayout.Zoom;
+            btnInserirFuncionario.CustomizableEdges = customizableEdges41;
+            btnInserirFuncionario.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirFuncionario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirFuncionario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirFuncionario.Dock = DockStyle.Top;
+            btnInserirFuncionario.FillColor = Color.White;
+            btnInserirFuncionario.Font = new Font("Segoe UI", 9F);
+            btnInserirFuncionario.ForeColor = Color.Black;
+            btnInserirFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirFuncionario.ImageAlign = HorizontalAlignment.Right;
+            btnInserirFuncionario.Location = new Point(0, 0);
+            btnInserirFuncionario.Name = "btnInserirFuncionario";
+            btnInserirFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btnInserirFuncionario.Size = new Size(200, 45);
+            btnInserirFuncionario.TabIndex = 2;
+            btnInserirFuncionario.Text = "&Inserir";
+            btnInserirFuncionario.TextAlign = HorizontalAlignment.Left;
+            btnInserirFuncionario.Click += btnInserirFuncionario_Click;
             // 
             // btnFuncionarios
             // 
             btnFuncionarios.BackgroundImageLayout = ImageLayout.Zoom;
-            btnFuncionarios.CustomizableEdges = customizableEdges41;
+            btnFuncionarios.CustomizableEdges = customizableEdges45;
             btnFuncionarios.DisabledState.BorderColor = Color.DarkGray;
             btnFuncionarios.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFuncionarios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -532,7 +606,7 @@
             btnFuncionarios.ImageAlign = HorizontalAlignment.Right;
             btnFuncionarios.Location = new Point(0, 95);
             btnFuncionarios.Name = "btnFuncionarios";
-            btnFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btnFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges46;
             btnFuncionarios.Size = new Size(200, 45);
             btnFuncionarios.TabIndex = 1;
             btnFuncionarios.Text = "&Funcionarios";
@@ -566,14 +640,17 @@
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1076, 914);
+            ClientSize = new Size(1076, 1061);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            IsMdiContainer = true;
             Name = "FrmPrincipal";
             SizeGripStyle = SizeGripStyle.Show;
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panelUser.ResumeLayout(false);
             panelAdmin.ResumeLayout(false);
             panelAgendamentos.ResumeLayout(false);
             panelClientes.ResumeLayout(false);
@@ -594,20 +671,24 @@
         private Guna.UI2.WinForms.Guna2Panel panelClientes;
         private Guna.UI2.WinForms.Guna2Button btnClientes;
         private Guna.UI2.WinForms.Guna2Panel panelFuncionarios;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarFuncionario;
+        private Guna.UI2.WinForms.Guna2Button btnAtualizarFuncionario;
+        private Guna.UI2.WinForms.Guna2Button btnInserirFuncionario;
         private Guna.UI2.WinForms.Guna2Panel panelAgendamentos;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarCliente;
+        private Guna.UI2.WinForms.Guna2Button btnAtualizarCliente;
+        private Guna.UI2.WinForms.Guna2Button btnInserirCliente;
         private Guna.UI2.WinForms.Guna2Button btnAdmin;
         private Guna.UI2.WinForms.Guna2Panel panelAdmin;
-        private Guna.UI2.WinForms.Guna2Button guna2Button12;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarAdmin;
+        private Guna.UI2.WinForms.Guna2Button btnAtualizarAdmin;
+        private Guna.UI2.WinForms.Guna2Button btnInserirAdmin;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarAgendamentos;
+        private Guna.UI2.WinForms.Guna2Button btntualizarAgendamentos;
+        private Guna.UI2.WinForms.Guna2Button btnInserirAgendamentos;
+        private Guna.UI2.WinForms.Guna2Button btnUser;
+        private Label lblEmailUser;
+        private Guna.UI2.WinForms.Guna2Panel panelUser;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }

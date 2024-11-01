@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using static Mysqlx.Notice.Warning.Types;
 
 namespace FashionLib
 {
@@ -16,15 +17,15 @@ namespace FashionLib
         public string Nome { get; set; }
         public string Rg { get; set; }
         public string Cpf { get; set; }
-        public DateOnly Data_Nasc { get; set; }
-        public int? Ativo { get; set; }
-        public int Id_Cargo { get; set; }
-        public char Disponibilidade { get; set; }
+        public DateTime Data_Nasc { get; set; }
+        public bool Ativo { get; set; }
+        public Cargo Id_Cargo { get; set; }
+
 
         // Métodos Construtores
 
         // Método Com Tudo
-        public Funcionario(int id, string nome, string rg, string cpf, DateOnly data_Nasc, int? ativo, int id_Cargo, char disponibilidade)
+        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo)
         {
             Id = id;
             Nome = nome;
@@ -33,11 +34,11 @@ namespace FashionLib
             Data_Nasc = data_Nasc;
             Ativo = ativo;
             Id_Cargo = id_Cargo;
-            Disponibilidade = disponibilidade;
+
         }
 
         // Método Sem Id
-        public Funcionario(string nome, string rg, string cpf, DateOnly data_Nasc, int ativo, int id_Cargo, char disponibilidade)
+        public Funcionario(string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo)
         {
             Nome = nome;
             Rg = rg;
@@ -45,22 +46,22 @@ namespace FashionLib
             Data_Nasc = data_Nasc;
             Ativo = ativo;
             Id_Cargo = id_Cargo;
-            Disponibilidade = disponibilidade;
+
         }
 
         // Método Sem Id e Ativo
-        public Funcionario(string nome, string rg, string cpf, DateOnly data_Nasc, int id_Cargo, char disponibilidade)
+        public Funcionario(string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo)
         {
             Nome = nome;
             Rg = rg;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
             Id_Cargo = id_Cargo;
-            Disponibilidade = disponibilidade;
+
         }
 
         // Método com Id e Ativo e Sem Id_Cargo
-        public Funcionario(int id, string nome, string rg, string cpf, DateOnly data_Nasc, int ativo, char disponibilidade)
+        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -68,7 +69,7 @@ namespace FashionLib
             Cpf = cpf;
             Data_Nasc = data_Nasc;
             Ativo = ativo;
-            Disponibilidade = disponibilidade;
+
         }
 
         // Método Vazio
@@ -89,8 +90,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("sprg", Rg);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
-            cmd.Parameters.AddWithValue("spativo", Ativo);
-            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo);
+            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id);
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -106,12 +106,13 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_funcionario_update";
+            cmd.Parameters.AddWithValue("sp_id", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("sprg", Rg);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
             cmd.Parameters.AddWithValue("spativo", Ativo);
-            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo);
+            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
@@ -122,7 +123,7 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"update funcionarios set ativo = 0 where id = {id}";
-            cmd.ExecuteNonQuery(); 
+            cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
 
@@ -132,16 +133,29 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"update funcionarios set ativo = 1 where id = {id}";
-            cmd.ExecuteNonQuery(); 
+            cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
 
         public static Funcionario ObterPorId(int Id)
         {
-            Funcionario funcionario= new Funcionario();
+            Funcionario funcionario = new Funcionario();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"Select * from funcionarios where id = {Id}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                funcionario = new(
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetDateTime(4),
+                    dr.GetBoolean(5),
+                    Cargo.ObterPorId(dr.GetInt32(6))
+                    );
+            }
             cmd.Connection.Close();
             return funcionario;
         }
@@ -160,7 +174,13 @@ namespace FashionLib
             while (dr.Read())
             {
                 lista.Add(new(
-                    
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetDateTime(4),
+                    dr.GetBoolean(5),
+                    Cargo.ObterPorId(dr.GetInt32(6))
                     ));
             }
             cmd.Connection.Close();

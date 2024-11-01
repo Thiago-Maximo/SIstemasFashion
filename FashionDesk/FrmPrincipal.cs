@@ -16,6 +16,7 @@ namespace FashionDesk
         private Boolean ShowClientes = false;
         private Boolean ShowAgendamentos = false;
         private Boolean ShowAdmin = false;
+        private bool ShowUser = false;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace FashionDesk
             panelClientes.Height = 0;
             panelAgendamentos.Height = 0;
             panelAdmin.Height = 0;
+            panelUser.Height = 0;
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
@@ -107,6 +109,22 @@ namespace FashionDesk
             {
                 panelAdmin.Height = 0;
             }
+
+            //#     #                      
+            //#     #  ####  ###### #####  
+            //#     # #      #      #    # 
+            //#     #  ####  #####  #    # 
+            //#     #      # #      #####  
+            //#     # #    # #      #   #  
+            //#####   ####  ###### #    # 
+            if (ShowUser)
+            {
+                panelUser.Height = 69;
+            }
+            else
+            {
+                panelUser.Height = 0;
+            }
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -125,6 +143,25 @@ namespace FashionDesk
         {
             ShowAdmin = !ShowAdmin;
             ExibirDropDown();
+        }
+
+        private void btnInserirFuncionario_Click(object sender, EventArgs e)
+        {
+            FrmInserirFuncionario frmInserirFuncionario = new();
+            frmInserirFuncionario.MdiParent = this;
+            frmInserirFuncionario.Show();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            ShowUser = !ShowUser;
+            ExibirDropDown();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal frmPrincipal = new();
+            frmPrincipal.Close();
         }
     }
 }
