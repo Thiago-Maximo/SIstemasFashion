@@ -73,9 +73,39 @@ namespace FashionDesk.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_lado {
+            get {
+                object obj = ResourceManager.GetObject("botao-lado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_pra_baixo {
+            get {
+                object obj = ResourceManager.GetObject("botao-pra-baixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap burger_menu_left_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("burger-menu-left-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Butoa_atulizado {
+            get {
+                object obj = ResourceManager.GetObject("Butoa-atulizado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
