@@ -163,5 +163,12 @@ namespace FashionDesk
             FrmPrincipal frmPrincipal = new();
             frmPrincipal.Close();
         }
+
+        private void btnInserirCliente_Click(object sender, EventArgs e)
+        {
+            FrmInserirCliente frmInserirCliente = new();
+            frmInserirCliente.MdiParent = this;
+            frmInserirCliente.Show();
+        }
     }
 }

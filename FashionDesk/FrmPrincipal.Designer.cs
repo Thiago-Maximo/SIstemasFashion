@@ -484,6 +484,7 @@
             btnInserirCliente.TabIndex = 3;
             btnInserirCliente.Text = "&Inserir";
             btnInserirCliente.TextAlign = HorizontalAlignment.Left;
+            btnInserirCliente.Click += btnInserirCliente_Click;
             // 
             // btnClientes
             // 
