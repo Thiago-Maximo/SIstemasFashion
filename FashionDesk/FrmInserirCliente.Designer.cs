@@ -32,23 +32,28 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             mskCpf = new MaskedTextBox();
             txtId = new Guna.UI2.WinForms.Guna2TextBox();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
             dgvClientesInserir = new Guna.UI2.WinForms.Guna2DataGridView();
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
+            clnEmail = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnData_Nasc = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
@@ -62,16 +67,45 @@
             ((System.ComponentModel.ISupportInitialize)dgvClientesInserir).BeginInit();
             SuspendLayout();
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Location = new Point(211, 115);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(32, 17);
+            guna2HtmlLabel1.TabIndex = 29;
+            guna2HtmlLabel1.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            txtEmail.CustomizableEdges = customizableEdges1;
+            txtEmail.DefaultText = "";
+            txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Font = new Font("Segoe UI", 9F);
+            txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Location = new Point(211, 133);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PasswordChar = '\0';
+            txtEmail.PlaceholderText = "";
+            txtEmail.SelectedText = "";
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtEmail.Size = new Size(200, 36);
+            txtEmail.TabIndex = 28;
+            // 
             // mskCpf
             // 
-            mskCpf.Location = new Point(407, 51);
+            mskCpf.Location = new Point(417, 83);
             mskCpf.Name = "mskCpf";
             mskCpf.Size = new Size(100, 23);
-            mskCpf.TabIndex = 25;
+            mskCpf.TabIndex = 27;
             // 
             // txtId
             // 
-            txtId.CustomizableEdges = customizableEdges1;
+            txtId.CustomizableEdges = customizableEdges3;
             txtId.DefaultText = "";
             txtId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -85,16 +119,16 @@
             txtId.PasswordChar = '\0';
             txtId.PlaceholderText = "";
             txtId.SelectedText = "";
-            txtId.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtId.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtId.Size = new Size(40, 36);
-            txtId.TabIndex = 24;
+            txtId.TabIndex = 26;
             txtId.Visible = false;
             // 
             // btnFechar
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
-            btnFechar.CustomizableEdges = customizableEdges3;
+            btnFechar.CustomizableEdges = customizableEdges5;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -105,11 +139,11 @@
             btnFechar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnFechar.Location = new Point(393, 493);
             btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnFechar.Size = new Size(180, 45);
-            btnFechar.TabIndex = 23;
+            btnFechar.TabIndex = 25;
             btnFechar.Text = "&Fechar";
-            btnFechar.Click += btnFechar_Click;
+            btnFechar.Click += btnFechar_Click_1;
             // 
             // dgvClientesInserir
             // 
@@ -128,7 +162,7 @@
             dgvClientesInserir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvClientesInserir.ColumnHeadersHeight = 17;
             dgvClientesInserir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvClientesInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnCpf, clnData_Nasc, clnAtivo });
+            dgvClientesInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnCpf, clnData_Nasc, clnAtivo });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -143,7 +177,7 @@
             dgvClientesInserir.ReadOnly = true;
             dgvClientesInserir.RowHeadersVisible = false;
             dgvClientesInserir.Size = new Size(753, 233);
-            dgvClientesInserir.TabIndex = 22;
+            dgvClientesInserir.TabIndex = 24;
             dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.Font = null;
             dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
@@ -180,6 +214,12 @@
             clnNome.Name = "clnNome";
             clnNome.ReadOnly = true;
             // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            // 
             // clnCpf
             // 
             clnCpf.FillWeight = 69.28934F;
@@ -204,7 +244,7 @@
             // 
             btnInserir.BorderColor = Color.FromArgb(255, 192, 255);
             btnInserir.BorderRadius = 10;
-            btnInserir.CustomizableEdges = customizableEdges5;
+            btnInserir.CustomizableEdges = customizableEdges7;
             btnInserir.DisabledState.BorderColor = Color.DarkGray;
             btnInserir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnInserir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -215,31 +255,31 @@
             btnInserir.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnInserir.Location = new Point(579, 493);
             btnInserir.Name = "btnInserir";
-            btnInserir.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnInserir.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnInserir.Size = new Size(180, 45);
-            btnInserir.TabIndex = 21;
+            btnInserir.TabIndex = 23;
             btnInserir.Text = "&Inserir";
-            btnInserir.Click += btnInserir_Click;
+            btnInserir.Click += btnInserir_Click_1;
             // 
             // dateData_Nasc
             // 
             dateData_Nasc.Checked = true;
-            dateData_Nasc.CustomizableEdges = customizableEdges7;
+            dateData_Nasc.CustomizableEdges = customizableEdges9;
             dateData_Nasc.FillColor = Color.FromArgb(255, 192, 255);
             dateData_Nasc.Font = new Font("Segoe UI", 9F);
             dateData_Nasc.Format = DateTimePickerFormat.Long;
-            dateData_Nasc.Location = new Point(201, 118);
+            dateData_Nasc.Location = new Point(417, 133);
             dateData_Nasc.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dateData_Nasc.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dateData_Nasc.Name = "dateData_Nasc";
-            dateData_Nasc.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            dateData_Nasc.Size = new Size(306, 36);
-            dateData_Nasc.TabIndex = 19;
+            dateData_Nasc.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            dateData_Nasc.Size = new Size(100, 36);
+            dateData_Nasc.TabIndex = 21;
             dateData_Nasc.Value = new DateTime(2024, 11, 1, 11, 53, 3, 653);
             // 
             // txtNome
             // 
-            txtNome.CustomizableEdges = customizableEdges9;
+            txtNome.CustomizableEdges = customizableEdges11;
             txtNome.DefaultText = "";
             txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -248,59 +288,62 @@
             txtNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNome.Font = new Font("Segoe UI", 9F);
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Location = new Point(201, 46);
+            txtNome.Location = new Point(211, 73);
             txtNome.Name = "txtNome";
             txtNome.PasswordChar = '\0';
             txtNome.PlaceholderText = "";
             txtNome.SelectedText = "";
-            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtNome.Size = new Size(200, 36);
-            txtNome.TabIndex = 17;
+            txtNome.TabIndex = 19;
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Location = new Point(265, 95);
+            guna2HtmlLabel5.Location = new Point(415, 115);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(110, 17);
-            guna2HtmlLabel5.TabIndex = 13;
+            guna2HtmlLabel5.TabIndex = 16;
             guna2HtmlLabel5.Text = "Data de Nascimento";
             // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Location = new Point(407, 23);
+            guna2HtmlLabel4.Location = new Point(417, 67);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(24, 17);
-            guna2HtmlLabel4.TabIndex = 14;
+            guna2HtmlLabel4.TabIndex = 15;
             guna2HtmlLabel4.Text = "CPF";
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Location = new Point(201, 23);
+            guna2HtmlLabel2.Location = new Point(211, 50);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(36, 17);
-            guna2HtmlLabel2.TabIndex = 16;
+            guna2HtmlLabel2.TabIndex = 18;
             guna2HtmlLabel2.Text = "Nome";
             // 
             // btnfecharForm
             // 
             btnfecharForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnfecharForm.CustomizableEdges = customizableEdges11;
+            btnfecharForm.CustomizableEdges = customizableEdges13;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
-            btnfecharForm.Location = new Point(733, 0);
+            btnfecharForm.Location = new Point(734, -1);
             btnfecharForm.Name = "btnfecharForm";
-            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnfecharForm.Size = new Size(44, 24);
-            btnfecharForm.TabIndex = 11;
+            btnfecharForm.TabIndex = 13;
+            btnfecharForm.Click += btnfecharForm_Click;
             // 
             // FrmInserirCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(777, 544);
+            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(txtEmail);
             Controls.Add(mskCpf);
             Controls.Add(txtId);
             Controls.Add(btnFechar);
@@ -323,6 +366,8 @@
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private MaskedTextBox mskCpf;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2Button btnFechar;
@@ -336,6 +381,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
         private DataGridViewTextBoxColumn clnID;
         private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clnEmail;
         private DataGridViewTextBoxColumn clnCpf;
         private DataGridViewTextBoxColumn clnData_Nasc;
         private DataGridViewTextBoxColumn clnAtivo;

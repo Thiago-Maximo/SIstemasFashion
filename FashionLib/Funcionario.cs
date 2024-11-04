@@ -21,12 +21,13 @@ namespace FashionLib
         public DateTime Data_Nasc { get; set; }
         public bool Ativo { get; set; }
         public Cargo Id_Cargo { get; set; }
+        public string Email { get; set; }
 
 
         // Métodos Construtores
 
         // Método Com Tudo
-        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo)
+        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo,string email)
         {
             Id = id;
             Nome = nome;
@@ -35,7 +36,7 @@ namespace FashionLib
             Data_Nasc = data_Nasc;
             Ativo = ativo;
             Id_Cargo = id_Cargo;
-
+            Email = email;
         }
 
         // Método Sem Id
@@ -51,14 +52,14 @@ namespace FashionLib
         }
 
         // Método Sem Id e Ativo
-        public Funcionario(string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo)
+        public Funcionario(string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo,string email)
         {
             Nome = nome;
             Rg = rg;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
             Id_Cargo = id_Cargo;
-
+            Email = email;
         }
 
         // Método com Id e Ativo e Sem Id_Cargo
@@ -92,6 +93,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
             cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id); // Certifique-se de que Id_Cargo não é nulo
+            cmd.Parameters.AddWithValue("sp_email", Email);
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -154,7 +156,8 @@ namespace FashionLib
                     dr.GetString(3),
                     dr.GetDateTime(4),
                     dr.GetBoolean(5),
-                    Cargo.ObterPorId(dr.GetInt32(6))
+                    Cargo.ObterPorId(dr.GetInt32(6)),
+                    dr.GetString(7)
                     );
             }
             cmd.Connection.Close();
@@ -185,7 +188,8 @@ namespace FashionLib
                     dr.GetString(3),
                     dr.GetDateTime(4),
                     dr.GetBoolean(5),
-                    Cargo.ObterPorId(dr.GetInt32(6))
+                    Cargo.ObterPorId(dr.GetInt32(6)),
+                    dr.GetString(7)
                     ));
             }
             cmd.Connection.Close();

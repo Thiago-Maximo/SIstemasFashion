@@ -28,12 +28,13 @@ namespace FashionDesk
                 dgvClientesInserir.Rows.Add();
                 dgvClientesInserir.Rows[cont].Cells[0].Value = cliente.Id;
                 dgvClientesInserir.Rows[cont].Cells[1].Value = cliente.Nome;
-                dgvClientesInserir.Rows[cont].Cells[2].Value = cliente.Cpf;
+                dgvClientesInserir.Rows[cont].Cells[2].Value = cliente.Email;
+                dgvClientesInserir.Rows[cont].Cells[3].Value = cliente.Cpf;
 
                 // Formatar a data para exibir apenas a data
-                dgvClientesInserir.Rows[cont].Cells[3].Value = cliente.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
+                dgvClientesInserir.Rows[cont].Cells[4].Value = cliente.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvClientesInserir.Rows[cont].Cells[4].Value = cliente.Ativo;
+                dgvClientesInserir.Rows[cont].Cells[5].Value = cliente.Ativo;
 
                 cont++;
             }
@@ -54,7 +55,51 @@ namespace FashionDesk
             }
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+
+        private void FrmInserirCliente_Load(object sender, EventArgs e)
+        {
+            // Configuração do MaskedTextBox para CPF
+            mskCpf.Mask = "000.000.000-00";
+            mskCpf.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+            CarregaGrid();
+            //dgvClientesInserir.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        private void btnInserir_Click_1(object sender, EventArgs e)
+        {
+            // Extrair CPF
+            string cpfNumeros = new string(mskCpf.Text.Where(char.IsDigit).ToArray());
+
+            // Verificar se o CPF tem o número correto de dígitos
+            if (cpfNumeros.Length != 11)
+            {
+                MessageBox.Show("O campo CPF deve conter 11 dígitos.");
+                return;
+            }
+
+
+            Cliente cliente = new Cliente(
+                txtNome.Text,
+                cpfNumeros,
+                dateData_Nasc.Value,
+                txtEmail.Text
+                );
+
+
+            cliente.Inserir();
+            if (cliente.Id > 0)
+            {
+                MessageBox.Show($"O Funcionario {cliente.Nome} com o Id {cliente.Id}, Foi Inserido com Sucesso!!");
+                CarregaGrid();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao Inserir Funcionario");
+                CarregaGrid();
+            }
+        }
+
+        private void btnFechar_Click_1(object sender, EventArgs e)
         {
             if (VerificandoControles())
             {
@@ -68,41 +113,15 @@ namespace FashionDesk
             else { this.Close(); }
         }
 
-        private void FrmInserirCliente_Load(object sender, EventArgs e)
+        private void btnfecharForm_Click(object sender, EventArgs e)
         {
-            // Configuração do MaskedTextBox para CPF
-            mskCpf.Mask = "000.000.000-00";
-            mskCpf.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
-            CarregaGrid();
-            //dgvClientesInserir.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-            // Extrair CPF
-            string cpfNumeros = new string(mskCpf.Text.Where(char.IsDigit).ToArray());
-
-            
 
 
-            Cliente cliente = new Cliente(
-                txtNome.Text,
-                cpfNumeros,
-                dateData_Nasc.Value
-                );
 
+            FrmInserirCliente frmInserirCliente= new();
+            frmInserirCliente.Close();
 
-            cliente.Inserir();
-            if (cliente.Id > 0)
-            {
-                MessageBox.Show($"O Funcionario {cliente.Nome} com o Id {cliente.Id}, Foi Inserindo com Sucesso!!");
-                CarregaGrid();
-            }
-            else
-            {
-                MessageBox.Show("Falha ao Inserir Funcionario");
-                CarregaGrid();
-            }
+          
         }
     }
 }

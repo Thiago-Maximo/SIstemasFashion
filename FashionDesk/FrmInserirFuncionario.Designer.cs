@@ -45,6 +45,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,16 +59,19 @@
             mskRg = new MaskedTextBox();
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             dgvFuncionariosInserir = new Guna.UI2.WinForms.Guna2DataGridView();
+            btnFechar = new Guna.UI2.WinForms.Guna2Button();
+            txtId = new Guna.UI2.WinForms.Guna2TextBox();
+            mskCpf = new MaskedTextBox();
+            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
+            clnEmail = new DataGridViewTextBoxColumn();
             clnRg = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnData_Nasc = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
             clnCargo = new DataGridViewTextBoxColumn();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            txtId = new Guna.UI2.WinForms.Guna2TextBox();
-            mskCpf = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
             SuspendLayout();
             // 
@@ -86,7 +91,7 @@
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Location = new Point(207, 17);
+            guna2HtmlLabel2.Location = new Point(207, 7);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(36, 17);
             guna2HtmlLabel2.TabIndex = 1;
@@ -95,7 +100,7 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Location = new Point(413, 30);
+            guna2HtmlLabel3.Location = new Point(413, 11);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(18, 17);
             guna2HtmlLabel3.TabIndex = 1;
@@ -104,7 +109,7 @@
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Location = new Point(413, 89);
+            guna2HtmlLabel4.Location = new Point(413, 78);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(24, 17);
             guna2HtmlLabel4.TabIndex = 1;
@@ -113,7 +118,7 @@
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Location = new Point(244, 154);
+            guna2HtmlLabel5.Location = new Point(246, 127);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(110, 17);
             guna2HtmlLabel5.TabIndex = 1;
@@ -122,7 +127,7 @@
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Location = new Point(207, 89);
+            guna2HtmlLabel6.Location = new Point(413, 122);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(35, 17);
             guna2HtmlLabel6.TabIndex = 1;
@@ -139,7 +144,7 @@
             txtNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNome.Font = new Font("Segoe UI", 9F);
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Location = new Point(207, 40);
+            txtNome.Location = new Point(207, 30);
             txtNome.Name = "txtNome";
             txtNome.PasswordChar = '\0';
             txtNome.PlaceholderText = "";
@@ -159,10 +164,10 @@
             cmbCargo.Font = new Font("Segoe UI", 10F);
             cmbCargo.ForeColor = Color.FromArgb(68, 88, 112);
             cmbCargo.ItemHeight = 30;
-            cmbCargo.Location = new Point(207, 112);
+            cmbCargo.Location = new Point(413, 138);
             cmbCargo.Name = "cmbCargo";
             cmbCargo.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbCargo.Size = new Size(200, 36);
+            cmbCargo.Size = new Size(100, 36);
             cmbCargo.TabIndex = 3;
             // 
             // dateData_Nasc
@@ -172,20 +177,20 @@
             dateData_Nasc.FillColor = Color.FromArgb(255, 192, 255);
             dateData_Nasc.Font = new Font("Segoe UI", 9F);
             dateData_Nasc.Format = DateTimePickerFormat.Long;
-            dateData_Nasc.Location = new Point(207, 177);
+            dateData_Nasc.Location = new Point(207, 144);
             dateData_Nasc.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dateData_Nasc.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dateData_Nasc.Name = "dateData_Nasc";
             dateData_Nasc.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            dateData_Nasc.Size = new Size(306, 36);
+            dateData_Nasc.Size = new Size(200, 36);
             dateData_Nasc.TabIndex = 4;
             dateData_Nasc.Value = new DateTime(2024, 11, 1, 11, 53, 3, 653);
             // 
             // mskRg
             // 
-            mskRg.Location = new Point(413, 53);
+            mskRg.Location = new Point(413, 30);
             mskRg.Name = "mskRg";
-            mskRg.Size = new Size(100, 23);
+            mskRg.Size = new Size(94, 23);
             mskRg.TabIndex = 5;
             // 
             // btnInserir
@@ -226,7 +231,7 @@
             dgvFuncionariosInserir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvFuncionariosInserir.ColumnHeadersHeight = 17;
             dgvFuncionariosInserir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvFuncionariosInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
+            dgvFuncionariosInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -263,54 +268,6 @@
             dgvFuncionariosInserir.ThemeStyle.RowsStyle.Height = 25;
             dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // clnID
-            // 
-            clnID.FillWeight = 69.28934F;
-            clnID.HeaderText = "Id";
-            clnID.Name = "clnID";
-            clnID.ReadOnly = true;
-            // 
-            // clnNome
-            // 
-            clnNome.FillWeight = 69.28934F;
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            // 
-            // clnRg
-            // 
-            clnRg.FillWeight = 69.28934F;
-            clnRg.HeaderText = "RG";
-            clnRg.Name = "clnRg";
-            clnRg.ReadOnly = true;
-            // 
-            // clnCpf
-            // 
-            clnCpf.FillWeight = 69.28934F;
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            // 
-            // clnData_Nasc
-            // 
-            clnData_Nasc.HeaderText = "Data de Nascimento";
-            clnData_Nasc.Name = "clnData_Nasc";
-            clnData_Nasc.ReadOnly = true;
-            // 
-            // clnAtivo
-            // 
-            clnAtivo.FillWeight = 69.28934F;
-            clnAtivo.HeaderText = "Ativo";
-            clnAtivo.Name = "clnAtivo";
-            clnAtivo.ReadOnly = true;
-            // 
-            // clnCargo
-            // 
-            clnCargo.FillWeight = 69.28934F;
-            clnCargo.HeaderText = "Cargo";
-            clnCargo.Name = "clnCargo";
-            clnCargo.ReadOnly = true;
             // 
             // btnFechar
             // 
@@ -356,10 +313,93 @@
             // 
             // mskCpf
             // 
-            mskCpf.Location = new Point(413, 119);
+            mskCpf.Location = new Point(413, 94);
             mskCpf.Name = "mskCpf";
             mskCpf.Size = new Size(100, 23);
             mskCpf.TabIndex = 10;
+            // 
+            // txtEmail
+            // 
+            txtEmail.CustomizableEdges = customizableEdges15;
+            txtEmail.DefaultText = "";
+            txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Font = new Font("Segoe UI", 9F);
+            txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Location = new Point(207, 90);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PasswordChar = '\0';
+            txtEmail.PlaceholderText = "";
+            txtEmail.SelectedText = "";
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtEmail.Size = new Size(200, 36);
+            txtEmail.TabIndex = 11;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Location = new Point(207, 72);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(32, 17);
+            guna2HtmlLabel1.TabIndex = 12;
+            guna2HtmlLabel1.Text = "Email";
+            // 
+            // clnID
+            // 
+            clnID.FillWeight = 69.28934F;
+            clnID.HeaderText = "Id";
+            clnID.Name = "clnID";
+            clnID.ReadOnly = true;
+            // 
+            // clnNome
+            // 
+            clnNome.FillWeight = 69.28934F;
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            // 
+            // clnRg
+            // 
+            clnRg.FillWeight = 69.28934F;
+            clnRg.HeaderText = "RG";
+            clnRg.Name = "clnRg";
+            clnRg.ReadOnly = true;
+            // 
+            // clnCpf
+            // 
+            clnCpf.FillWeight = 69.28934F;
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            // 
+            // clnData_Nasc
+            // 
+            clnData_Nasc.HeaderText = "Data de Nascimento";
+            clnData_Nasc.Name = "clnData_Nasc";
+            clnData_Nasc.ReadOnly = true;
+            // 
+            // clnAtivo
+            // 
+            clnAtivo.FillWeight = 69.28934F;
+            clnAtivo.HeaderText = "Ativo";
+            clnAtivo.Name = "clnAtivo";
+            clnAtivo.ReadOnly = true;
+            // 
+            // clnCargo
+            // 
+            clnCargo.FillWeight = 69.28934F;
+            clnCargo.HeaderText = "Cargo";
+            clnCargo.Name = "clnCargo";
+            clnCargo.ReadOnly = true;
             // 
             // FrmInserirFuncionario
             // 
@@ -367,6 +407,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(777, 544);
+            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(txtEmail);
             Controls.Add(mskCpf);
             Controls.Add(txtId);
             Controls.Add(btnFechar);
@@ -409,8 +451,11 @@
         private Guna.UI2.WinForms.Guna2Button btnFechar;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private MaskedTextBox mskCpf;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridViewTextBoxColumn clnID;
         private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clnEmail;
         private DataGridViewTextBoxColumn clnRg;
         private DataGridViewTextBoxColumn clnCpf;
         private DataGridViewTextBoxColumn clnData_Nasc;

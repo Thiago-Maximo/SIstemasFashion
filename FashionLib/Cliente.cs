@@ -16,6 +16,7 @@ namespace FashionLib
         public string Cpf { get; set; }
         public DateTime Data_Nasc { get; set; }
         public bool Ativo { get; set; }
+        public string Email { get; set; }
 
         //Método Construtor Vazio
         public Cliente()
@@ -24,13 +25,14 @@ namespace FashionLib
         }
 
         //Método Construtor com Tudo
-        public Cliente(int id, string nome, string cpf, DateTime data_Nasc, bool ativo)
+        public Cliente(int id, string nome, string cpf, DateTime data_Nasc, bool ativo,string email)
         {
             Id = id;
             Nome = nome;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
             Ativo = ativo;
+            Email = email;
         }
 
         //Método Construtor Sem Id
@@ -44,12 +46,13 @@ namespace FashionLib
         }
 
         //Método Construtor sem Id e Ativo
-        public Cliente(string nome, string cpf, DateTime data_Nasc)
+        public Cliente(string nome, string cpf, DateTime data_Nasc,string email)
         {
 
             Nome = nome;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
+            Email = email;
         }
 
         //Método Construtor sem Data_Nasc
@@ -70,6 +73,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
+            cmd.Parameters.AddWithValue("sp_email", Email);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -125,7 +129,8 @@ namespace FashionLib
                         dr.GetString(1),
                         dr.GetString(2),
                         dr.GetDateTime(3),
-                        dr.GetBoolean(4)
+                        dr.GetBoolean(4),
+                        dr.GetString(5)
                     );
             }
             cmd.Connection.Close();
@@ -154,7 +159,8 @@ namespace FashionLib
                         dr.GetString(1),
                         dr.GetString(2),
                         dr.GetDateTime(3),
-                        dr.GetBoolean(4)
+                        dr.GetBoolean(4),
+                        dr.GetString(5)
                         )
                     );
             }

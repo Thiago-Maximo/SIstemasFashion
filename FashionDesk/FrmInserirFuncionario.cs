@@ -22,6 +22,8 @@ namespace FashionDesk
         {
             FrmInserirFuncionario frmInserirFuncionario = new();
             frmInserirFuncionario.Close();
+
+
         }
 
         private void FrmInserirFuncionario_Load(object sender, EventArgs e)
@@ -49,6 +51,21 @@ namespace FashionDesk
             string rgNumeros = new string(mskRg.Text.Where(char.IsDigit).ToArray());
             string cpfNumeros = new string(mskCpf.Text.Where(char.IsDigit).ToArray());
 
+            // Verificar se o RG tem o número correto de dígitos
+            if (rgNumeros.Length != 9)
+            {
+                MessageBox.Show("O campo RG deve conter 9 dígitos.");
+                return;
+            }
+
+            // Verificar se o CPF tem o número correto de dígitos
+            if (cpfNumeros.Length != 11)
+            {
+                MessageBox.Show("O campo CPF deve conter 11 dígitos.");
+                return;
+            }
+
+
             // Obter id_cargo
             int cargoId = Convert.ToInt32(cmbCargo.SelectedValue);
             if (Cargo.ObterPorId(cargoId) == null)
@@ -62,14 +79,16 @@ namespace FashionDesk
                 rgNumeros,
                 cpfNumeros,
                 dateData_Nasc.Value,
-                Cargo.ObterPorId(cargoId) // Passa o cargo válido
+                Cargo.ObterPorId(cargoId), // Passa o cargo válido
+                txtEmail.Text
             );
 
 
             funcionario.Inserir();
             if (funcionario.Id > 0)
             {
-                MessageBox.Show($"O Funcionario {funcionario.Nome} com o Id {funcionario.Id}, Foi Inserindo com Sucesso!!");
+                MessageBox.Show($"O Funcionario {funcionario.Nome} com o Id {funcionario.Id}, Foi Inserido com Sucesso!!");
+                
                 CarregaGrid();
             }
             else
@@ -89,14 +108,15 @@ namespace FashionDesk
                 dgvFuncionariosInserir.Rows.Add();
                 dgvFuncionariosInserir.Rows[cont].Cells[0].Value = funcionario.Id;
                 dgvFuncionariosInserir.Rows[cont].Cells[1].Value = funcionario.Nome;
-                dgvFuncionariosInserir.Rows[cont].Cells[2].Value = funcionario.Rg;
-                dgvFuncionariosInserir.Rows[cont].Cells[3].Value = funcionario.Cpf;
+                dgvFuncionariosInserir.Rows[cont].Cells[2].Value = funcionario.Email;
+                dgvFuncionariosInserir.Rows[cont].Cells[3].Value = funcionario.Rg;
+                dgvFuncionariosInserir.Rows[cont].Cells[4].Value = funcionario.Cpf;
 
                 // Formatar a data para exibir apenas a data
-                dgvFuncionariosInserir.Rows[cont].Cells[4].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
+                dgvFuncionariosInserir.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvFuncionariosInserir.Rows[cont].Cells[5].Value = funcionario.Ativo;
-                dgvFuncionariosInserir.Rows[cont].Cells[6].Value = funcionario.Id_Cargo.Cargos;
+                dgvFuncionariosInserir.Rows[cont].Cells[6].Value = funcionario.Ativo;
+                dgvFuncionariosInserir.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Cargos;
 
                 cont++;
             }
