@@ -130,7 +130,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 1061);
+            panel1.Size = new Size(200, 881);
             panel1.TabIndex = 0;
             // 
             // panelUser
@@ -170,10 +170,10 @@
             // 
             lblEmailUser.AutoSize = true;
             lblEmailUser.BackColor = Color.Transparent;
-            lblEmailUser.Font = new Font("Swis721 Hv BT", 8.25F, FontStyle.Italic);
+            lblEmailUser.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Italic);
             lblEmailUser.Location = new Point(77, 959);
             lblEmailUser.Name = "lblEmailUser";
-            lblEmailUser.Size = new Size(65, 14);
+            lblEmailUser.Size = new Size(57, 13);
             lblEmailUser.TabIndex = 11;
             lblEmailUser.Text = "Email User";
             // 
@@ -185,7 +185,7 @@
             btnUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUser.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUser.FillColor = Color.White;
-            btnUser.Font = new Font("Swis721 Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnUser.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnUser.ForeColor = Color.Black;
             btnUser.HoverState.FillColor = Color.White;
             btnUser.Image = Properties.Resources.Usuario_Rosa;
@@ -566,6 +566,7 @@
             btnAtualizarFuncionario.TabIndex = 3;
             btnAtualizarFuncionario.Text = "&Atualizar";
             btnAtualizarFuncionario.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarFuncionario.Click += btnAtualizarFuncionario_Click;
             // 
             // btnInserirFuncionario
             // 
@@ -641,7 +642,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1076, 1061);
+            ClientSize = new Size(1076, 881);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;

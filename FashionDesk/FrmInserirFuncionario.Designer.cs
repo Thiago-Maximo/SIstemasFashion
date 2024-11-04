@@ -59,11 +59,6 @@
             mskRg = new MaskedTextBox();
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             dgvFuncionariosInserir = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            txtId = new Guna.UI2.WinForms.Guna2TextBox();
-            mskCpf = new MaskedTextBox();
-            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
@@ -72,6 +67,11 @@
             clnData_Nasc = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
             clnCargo = new DataGridViewTextBoxColumn();
+            btnFechar = new Guna.UI2.WinForms.Guna2Button();
+            txtId = new Guna.UI2.WinForms.Guna2TextBox();
+            mskCpf = new MaskedTextBox();
+            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
             SuspendLayout();
             // 
@@ -269,6 +269,60 @@
             dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // clnID
+            // 
+            clnID.FillWeight = 69.28934F;
+            clnID.HeaderText = "Id";
+            clnID.Name = "clnID";
+            clnID.ReadOnly = true;
+            // 
+            // clnNome
+            // 
+            clnNome.FillWeight = 69.28934F;
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            // 
+            // clnRg
+            // 
+            clnRg.FillWeight = 69.28934F;
+            clnRg.HeaderText = "RG";
+            clnRg.Name = "clnRg";
+            clnRg.ReadOnly = true;
+            // 
+            // clnCpf
+            // 
+            clnCpf.FillWeight = 69.28934F;
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            // 
+            // clnData_Nasc
+            // 
+            clnData_Nasc.HeaderText = "Data de Nascimento";
+            clnData_Nasc.Name = "clnData_Nasc";
+            clnData_Nasc.ReadOnly = true;
+            // 
+            // clnAtivo
+            // 
+            clnAtivo.FillWeight = 69.28934F;
+            clnAtivo.HeaderText = "Ativo";
+            clnAtivo.Name = "clnAtivo";
+            clnAtivo.ReadOnly = true;
+            // 
+            // clnCargo
+            // 
+            clnCargo.FillWeight = 69.28934F;
+            clnCargo.HeaderText = "Cargo";
+            clnCargo.Name = "clnCargo";
+            clnCargo.ReadOnly = true;
+            // 
             // btnFechar
             // 
             btnFechar.BackColor = Color.Transparent;
@@ -346,60 +400,6 @@
             guna2HtmlLabel1.Size = new Size(32, 17);
             guna2HtmlLabel1.TabIndex = 12;
             guna2HtmlLabel1.Text = "Email";
-            // 
-            // clnID
-            // 
-            clnID.FillWeight = 69.28934F;
-            clnID.HeaderText = "Id";
-            clnID.Name = "clnID";
-            clnID.ReadOnly = true;
-            // 
-            // clnNome
-            // 
-            clnNome.FillWeight = 69.28934F;
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            // 
-            // clnEmail
-            // 
-            clnEmail.HeaderText = "Email";
-            clnEmail.Name = "clnEmail";
-            clnEmail.ReadOnly = true;
-            // 
-            // clnRg
-            // 
-            clnRg.FillWeight = 69.28934F;
-            clnRg.HeaderText = "RG";
-            clnRg.Name = "clnRg";
-            clnRg.ReadOnly = true;
-            // 
-            // clnCpf
-            // 
-            clnCpf.FillWeight = 69.28934F;
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            // 
-            // clnData_Nasc
-            // 
-            clnData_Nasc.HeaderText = "Data de Nascimento";
-            clnData_Nasc.Name = "clnData_Nasc";
-            clnData_Nasc.ReadOnly = true;
-            // 
-            // clnAtivo
-            // 
-            clnAtivo.FillWeight = 69.28934F;
-            clnAtivo.HeaderText = "Ativo";
-            clnAtivo.Name = "clnAtivo";
-            clnAtivo.ReadOnly = true;
-            // 
-            // clnCargo
-            // 
-            clnCargo.FillWeight = 69.28934F;
-            clnCargo.HeaderText = "Cargo";
-            clnCargo.Name = "clnCargo";
-            clnCargo.ReadOnly = true;
             // 
             // FrmInserirFuncionario
             // 

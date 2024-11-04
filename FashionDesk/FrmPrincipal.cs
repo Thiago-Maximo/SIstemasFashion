@@ -170,5 +170,12 @@ namespace FashionDesk
             frmInserirCliente.MdiParent = this;
             frmInserirCliente.Show();
         }
+
+        private void btnAtualizarFuncionario_Click(object sender, EventArgs e)
+        {
+            FrmAtualizarFuncionario frmAtualizarFuncionario = new();
+            frmAtualizarFuncionario.MdiParent = this;
+            frmAtualizarFuncionario.Show();
+        }
     }
 }
