@@ -60,6 +60,12 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"select * from cargos where id = {Id}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cargo.Id = dr.GetInt32(0);
+                cargo.Cargos = dr.GetString(1);
+            }
             cmd.Connection.Close();
             return cargo;
         }

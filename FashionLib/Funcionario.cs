@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using static Mysqlx.Notice.Warning.Types;
+using MySql.Data.MySqlClient;
 
 namespace FashionLib
 {
@@ -90,14 +91,14 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("sprg", Rg);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
-            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id);
+            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id); // Certifique-se de que Id_Cargo não é nulo
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
                 Id = dr.GetInt32(0);
             }
-            cmd.Connection.Close();
+            
         }
 
         // Função Atualizar
@@ -170,6 +171,10 @@ namespace FashionLib
             {
                 cmd.CommandText = "Select * from funcionarios order by nome";
             }
+            else
+            {
+                cmd.CommandText = $"Select * from funcionarios where nome like '%{nome}%' order by nome";
+            }
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -185,7 +190,6 @@ namespace FashionLib
             }
             cmd.Connection.Close();
             return lista;
-
         }
     }
 }
