@@ -19,7 +19,7 @@ namespace SysPecNSLib
         /// <returns>Entrega um objeto de comandos SQL, que serão executados na conexão informada</returns>
         public static MySqlCommand Abrir() // método de conexão
         {
-            // dados da conexão
+            // dados da conexão!
             string strconn = @"server=127.0.0.1;database=teste_fashion-hair;user=root;password=";
             MySqlConnection cn = new(strconn);
             MySqlCommand cmd = new();
