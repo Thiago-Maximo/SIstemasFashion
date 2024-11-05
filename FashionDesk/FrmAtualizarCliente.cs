@@ -94,7 +94,7 @@ namespace FashionDesk
             if (cliente.Id > 0)
             {
                 txtId.Text = cliente.Id.ToString();
-                MessageBox.Show($"O Cliente {cliente.Nome} com o Id {cliente.Id}, Foi Inserido com Sucesso!!");
+                MessageBox.Show($"O Cliente {cliente.Nome} com o Id {cliente.Id}, Foi Atualizado com Sucesso!!");
                 CarregaGrid();
                 txtNome.Clear();
                 txtEmail.Clear();

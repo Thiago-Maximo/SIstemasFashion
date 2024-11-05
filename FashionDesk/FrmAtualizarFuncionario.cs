@@ -1,4 +1,5 @@
 ﻿using FashionLib;
+using MySqlX.XDevAPI;
 using System;
 using System.Data;
 using System.Linq;
@@ -86,20 +87,33 @@ namespace FashionDesk
             }
 
             Funcionario funcionario = new Funcionario(
+                Convert.ToInt32(txtId.Text),
                  txtNome.Text,
                  rgNumeros,
                  cpfNumeros,
                  dateData_Nasc.Value,
+                 chkAtivo.Checked,
                  Cargo.ObterPorId(cargoId), // Passa o cargo válido
                  txtEmail.Text
              );
 
             funcionario.Atualizar();
 
-            // Recarrega a grid após a atualização
             CarregaGrid();
-
-            MessageBox.Show($"O Funcionário {funcionario.Nome} com o Id {funcionario.Id} foi atualizado com sucesso!");
+            if (funcionario.Id > 0)
+            {
+                txtId.Text = funcionario.Id.ToString();
+                MessageBox.Show($"O Funcionario {funcionario.Nome} com o Id {funcionario.Id}, Foi Atualizado com Sucesso!!");
+                CarregaGrid();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtNome.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao Atualizar Cliente");
+                CarregaGrid();
+            }
         }
 
         private void dgvFuncionariosInserir_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +124,7 @@ namespace FashionDesk
                 DataGridViewRow row = dgvFuncionariosInserir.Rows[e.RowIndex];
 
                 // Preenche os TextBox com os dados da linha selecionada
+                txtId.Text = row.Cells[0].Value?.ToString();
                 txtNome.Text = row.Cells[1].Value?.ToString();
                 txtEmail.Text = row.Cells[2].Value?.ToString();
 
