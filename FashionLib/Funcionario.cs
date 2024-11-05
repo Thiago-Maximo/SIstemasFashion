@@ -19,7 +19,7 @@ namespace FashionLib
         public string Email { get; set; }
 
         // Métodos Construtores
-        public Funcionario(int id, string nome, string email, string rg, string cpf, DateTime data_Nasc, bool ativo,Cargo id_Cargo)
+        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo, bool ativo, string email)
         {
             Id = id;
             Nome = nome;
@@ -74,17 +74,17 @@ namespace FashionLib
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_funcionario_update";
 
-            
+
             cmd.Parameters.AddWithValue("sp_id", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("sprg", Rg);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
             cmd.Parameters.AddWithValue("spativo", Ativo);
-            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id);  
+            cmd.Parameters.AddWithValue("spid_cargo", Id_Cargo.Id);
             cmd.Parameters.AddWithValue("sp_email", Email);
 
-            
+
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
 
@@ -129,10 +129,10 @@ namespace FashionLib
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetString(4),
-                    dr.GetDateTime(5),
+                    dr.GetDateTime(4),
+                    Cargo.ObterPorId(dr.GetInt32(5)),
                     dr.GetBoolean(6),
-                    Cargo.ObterPorId(dr.GetInt32(5))
+                    dr.GetString(7)
                 );
             }
             dr.Close();
@@ -161,10 +161,10 @@ namespace FashionLib
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetString(4),
-                    dr.GetDateTime(5),
+                    dr.GetDateTime(4),
+                    Cargo.ObterPorId(dr.GetInt32(5)),
                     dr.GetBoolean(6),
-                    Cargo.ObterPorId(dr.GetInt32(7))
+                    dr.GetString(7)
                 ));
             }
             dr.Close();

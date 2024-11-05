@@ -30,28 +30,28 @@ namespace FashionDesk
 
             // Carrega os funcionários no DataGridView
             CarregaGrid();
-            dgvFuncionariosAtualizar.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvFuncionariosInserir.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void CarregaGrid(string nome = "")
         {
             var lista = Funcionario.ObterPorLista(nome);
-            dgvFuncionariosAtualizar.Rows.Clear();
+            dgvFuncionariosInserir.Rows.Clear();
             int cont = 0;
             foreach (var funcionario in lista)
             {
-                dgvFuncionariosAtualizar.Rows.Add();
-                dgvFuncionariosAtualizar.Rows[cont].Cells[0].Value = funcionario.Id;
-                dgvFuncionariosAtualizar.Rows[cont].Cells[1].Value = funcionario.Nome;
-                dgvFuncionariosAtualizar.Rows[cont].Cells[2].Value = funcionario.Email;
-                dgvFuncionariosAtualizar.Rows[cont].Cells[3].Value = funcionario.Rg;
-                dgvFuncionariosAtualizar.Rows[cont].Cells[4].Value = funcionario.Cpf;
+                dgvFuncionariosInserir.Rows.Add();
+                dgvFuncionariosInserir.Rows[cont].Cells[0].Value = funcionario.Id;
+                dgvFuncionariosInserir.Rows[cont].Cells[1].Value = funcionario.Nome;
+                dgvFuncionariosInserir.Rows[cont].Cells[2].Value = funcionario.Email;
+                dgvFuncionariosInserir.Rows[cont].Cells[3].Value = funcionario.Rg;
+                dgvFuncionariosInserir.Rows[cont].Cells[4].Value = funcionario.Cpf;
 
                 // Formatar a data para exibir apenas a data
-                dgvFuncionariosAtualizar.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
+                dgvFuncionariosInserir.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvFuncionariosAtualizar.Rows[cont].Cells[6].Value = funcionario.Ativo;
-                dgvFuncionariosAtualizar.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Id;
+                dgvFuncionariosInserir.Rows[cont].Cells[6].Value = funcionario.Ativo;
+                dgvFuncionariosInserir.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Cargos;
 
                 cont++;
             }
@@ -89,12 +89,12 @@ namespace FashionDesk
             Funcionario funcionario = new Funcionario(
                 Convert.ToInt32(txtId.Text),
                  txtNome.Text,
-                 txtEmail.Text,
                  rgNumeros,
                  cpfNumeros,
                  dateData_Nasc.Value,
+                 Cargo.ObterPorId(cargoId),// Passa o cargo válido
                  chkAtivo.Checked,
-                 Cargo.ObterPorId(cargoId) // Passa o cargo válido
+                 txtEmail.Text
              );
 
             funcionario.Atualizar();
@@ -121,7 +121,7 @@ namespace FashionDesk
             // Verifica se o clique foi em uma célula válida e não no cabeçalho
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvFuncionariosAtualizar.Rows[e.RowIndex];
+                DataGridViewRow row = dgvFuncionariosInserir.Rows[e.RowIndex];
 
                 // Preenche os TextBox com os dados da linha selecionada
                 txtId.Text = row.Cells[0].Value?.ToString();
