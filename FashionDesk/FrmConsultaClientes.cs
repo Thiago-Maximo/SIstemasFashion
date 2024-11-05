@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FashionLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace FashionDesk
         private void FrmConsultaClientes_Load(object sender, EventArgs e)
         {
             CarregaGrid();
-            dgvConsultarFuncionario.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvConsultarCliente.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
@@ -50,5 +51,29 @@ namespace FashionDesk
                    MessageBoxDefaultButton.Button1);
             if (msg == DialogResult.No) this.Close();
         }
+
+        private void CarregaGrid(string nome = "")
+        {
+            var lista = Cliente.ObterPorLista(nome);
+            dgvConsultarCliente.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionario in lista)
+            {
+                dgvConsultarCliente.Rows.Add();
+                dgvConsultarCliente.Rows[cont].Cells[0].Value = funcionario.Id;
+                dgvConsultarCliente.Rows[cont].Cells[1].Value = funcionario.Nome;
+                dgvConsultarCliente.Rows[cont].Cells[2].Value = funcionario.Email;
+                dgvConsultarCliente.Rows[cont].Cells[3].Value = funcionario.Cpf;
+                
+                // Formatar a data para exibir apenas a data
+                dgvConsultarCliente.Rows[cont].Cells[4].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
+                
+                dgvConsultarCliente.Rows[cont].Cells[5].Value = funcionario.Ativo;
+                
+
+                cont++;
+            }
+        }
     }
+
 }

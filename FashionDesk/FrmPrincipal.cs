@@ -127,11 +127,7 @@ namespace FashionDesk
             }
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            ShowClientes = !ShowClientes;
-            ExibirDropDown();
-        }
+
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
@@ -145,30 +141,13 @@ namespace FashionDesk
             ExibirDropDown();
         }
 
+
+        // FUNCIONARIO
         private void btnInserirFuncionario_Click(object sender, EventArgs e)
         {
             FrmInserirFuncionario frmInserirFuncionario = new();
             frmInserirFuncionario.MdiParent = this;
             frmInserirFuncionario.Show();
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            ShowUser = !ShowUser;
-            ExibirDropDown();
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            FrmPrincipal frmPrincipal = new();
-            frmPrincipal.Close();
-        }
-
-        private void btnInserirCliente_Click(object sender, EventArgs e)
-        {
-            FrmInserirCliente frmInserirCliente = new();
-            frmInserirCliente.MdiParent = this;
-            frmInserirCliente.Show();
         }
 
         private void btnAtualizarFuncionario_Click(object sender, EventArgs e)
@@ -185,11 +164,47 @@ namespace FashionDesk
             frmConsultarFuncionario.Show();
         }
 
+        // CLIENTE
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ShowClientes = !ShowClientes;
+            ExibirDropDown();
+        }
+
+        private void btnInserirCliente_Click(object sender, EventArgs e)
+        {
+            FrmInserirCliente frmInserirCliente = new();
+            frmInserirCliente.MdiParent = this;
+            frmInserirCliente.Show();
+        }
+
+
         private void btnAtualizarCliente_Click(object sender, EventArgs e)
         {
             FrmAtualizarCliente frmAtualizarCliente = new();
             frmAtualizarCliente.MdiParent = this;
             frmAtualizarCliente.Show();
         }
+
+        private void btnConsultarCliente_Click(object sender, EventArgs e)
+        {
+            FrmConsultaClientes frmConsultaClientes = new();
+            frmConsultaClientes.MdiParent = this;
+            frmConsultaClientes.Show();
+        }
+
+
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            ShowUser = !ShowUser;
+            ExibirDropDown();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal frmPrincipal = new();
+            frmPrincipal.Close();
+        } 
     }
 }
