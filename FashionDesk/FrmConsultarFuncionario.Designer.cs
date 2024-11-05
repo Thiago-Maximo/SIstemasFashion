@@ -35,18 +35,22 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
-            dgvClientesInserir = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvConsultarFuncionario = new Guna.UI2.WinForms.Guna2DataGridView();
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
+            clnRg = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnData_Nasc = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
             clnCargo = new DataGridViewTextBoxColumn();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)dgvClientesInserir).BeginInit();
+            txtConsultar = new Guna.UI2.WinForms.Guna2TextBox();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultarFuncionario).BeginInit();
             SuspendLayout();
             // 
             // btnfecharForm
@@ -60,14 +64,15 @@
             btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 14;
+            btnfecharForm.Click += btnfecharForm_Click;
             // 
-            // dgvClientesInserir
+            // dgvConsultarFuncionario
             // 
-            dgvClientesInserir.AllowUserToAddRows = false;
-            dgvClientesInserir.AllowUserToDeleteRows = false;
-            dgvClientesInserir.AllowUserToOrderColumns = true;
+            dgvConsultarFuncionario.AllowUserToAddRows = false;
+            dgvConsultarFuncionario.AllowUserToDeleteRows = false;
+            dgvConsultarFuncionario.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
-            dgvClientesInserir.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvConsultarFuncionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -75,10 +80,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvClientesInserir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvClientesInserir.ColumnHeadersHeight = 17;
-            dgvClientesInserir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvClientesInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
+            dgvConsultarFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvConsultarFuncionario.ColumnHeadersHeight = 17;
+            dgvConsultarFuncionario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultarFuncionario.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -86,35 +91,35 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvClientesInserir.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvClientesInserir.GridColor = Color.FromArgb(255, 192, 255);
-            dgvClientesInserir.Location = new Point(0, 116);
-            dgvClientesInserir.Name = "dgvClientesInserir";
-            dgvClientesInserir.ReadOnly = true;
-            dgvClientesInserir.RowHeadersVisible = false;
-            dgvClientesInserir.Size = new Size(800, 281);
-            dgvClientesInserir.TabIndex = 25;
-            dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvClientesInserir.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvClientesInserir.ThemeStyle.BackColor = Color.White;
-            dgvClientesInserir.ThemeStyle.GridColor = Color.FromArgb(255, 192, 255);
-            dgvClientesInserir.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvClientesInserir.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvClientesInserir.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dgvClientesInserir.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvClientesInserir.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvClientesInserir.ThemeStyle.HeaderStyle.Height = 17;
-            dgvClientesInserir.ThemeStyle.ReadOnly = true;
-            dgvClientesInserir.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvClientesInserir.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvClientesInserir.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvClientesInserir.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvClientesInserir.ThemeStyle.RowsStyle.Height = 25;
-            dgvClientesInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvClientesInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarFuncionario.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvConsultarFuncionario.GridColor = Color.FromArgb(255, 192, 255);
+            dgvConsultarFuncionario.Location = new Point(0, 116);
+            dgvConsultarFuncionario.Name = "dgvConsultarFuncionario";
+            dgvConsultarFuncionario.ReadOnly = true;
+            dgvConsultarFuncionario.RowHeadersVisible = false;
+            dgvConsultarFuncionario.Size = new Size(800, 281);
+            dgvConsultarFuncionario.TabIndex = 25;
+            dgvConsultarFuncionario.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvConsultarFuncionario.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvConsultarFuncionario.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvConsultarFuncionario.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvConsultarFuncionario.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvConsultarFuncionario.ThemeStyle.BackColor = Color.White;
+            dgvConsultarFuncionario.ThemeStyle.GridColor = Color.FromArgb(255, 192, 255);
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultarFuncionario.ThemeStyle.HeaderStyle.Height = 17;
+            dgvConsultarFuncionario.ThemeStyle.ReadOnly = true;
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.Height = 25;
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvConsultarFuncionario.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // clnID
             // 
@@ -135,6 +140,12 @@
             clnEmail.HeaderText = "Email";
             clnEmail.Name = "clnEmail";
             clnEmail.ReadOnly = true;
+            // 
+            // clnRg
+            // 
+            clnRg.HeaderText = "RG";
+            clnRg.Name = "clnRg";
+            clnRg.ReadOnly = true;
             // 
             // clnCpf
             // 
@@ -181,6 +192,7 @@
             btnFechar.Size = new Size(180, 42);
             btnFechar.TabIndex = 32;
             btnFechar.Text = "&Fechar";
+            btnFechar.Click += btnFechar_Click;
             // 
             // lblPesquisa
             // 
@@ -191,20 +203,46 @@
             lblPesquisa.TabIndex = 34;
             lblPesquisa.Text = "Pesquisar";
             // 
+            // txtConsultar
+            // 
+            txtConsultar.BackgroundImageLayout = ImageLayout.Zoom;
+            txtConsultar.CustomizableEdges = customizableEdges5;
+            txtConsultar.DefaultText = "";
+            txtConsultar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtConsultar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtConsultar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultar.Font = new Font("Segoe UI", 9F);
+            txtConsultar.ForeColor = Color.Black;
+            txtConsultar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultar.IconLeft = Properties.Resources.pesquisa;
+            txtConsultar.Location = new Point(24, 80);
+            txtConsultar.Name = "txtConsultar";
+            txtConsultar.PasswordChar = '\0';
+            txtConsultar.PlaceholderText = "";
+            txtConsultar.SelectedText = "";
+            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtConsultar.Size = new Size(753, 30);
+            txtConsultar.TabIndex = 35;
+            txtConsultar.TextChanged += txtConsultar_TextChanged;
+            // 
             // FrmConsultarFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtConsultar);
             Controls.Add(lblPesquisa);
             Controls.Add(btnFechar);
-            Controls.Add(dgvClientesInserir);
+            Controls.Add(dgvConsultarFuncionario);
             Controls.Add(btnfecharForm);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmConsultarFuncionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmConsultarCliente";
-            ((System.ComponentModel.ISupportInitialize)dgvClientesInserir).EndInit();
+            Load += FrmConsultarFuncionario_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvConsultarFuncionario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,12 +250,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvClientesInserir;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvConsultarFuncionario;
         private Guna.UI2.WinForms.Guna2Button btnFechar;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPesquisa;
+        private Guna.UI2.WinForms.Guna2TextBox txtConsultar;
         private DataGridViewTextBoxColumn clnID;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnEmail;
+        private DataGridViewTextBoxColumn clnRg;
         private DataGridViewTextBoxColumn clnCpf;
         private DataGridViewTextBoxColumn clnData_Nasc;
         private DataGridViewTextBoxColumn clnAtivo;

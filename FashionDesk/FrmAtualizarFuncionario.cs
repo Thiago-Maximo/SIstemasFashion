@@ -148,7 +148,7 @@ namespace FashionDesk
         {
             if (VerificandoControles())
             {
-                var msg = MessageBox.Show("Deseja continuar o cadastro?",
+                var msg = MessageBox.Show("Deseja continuar a atualização ?",
                     "Confirmação de saída",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning,
@@ -160,16 +160,8 @@ namespace FashionDesk
 
         private void btnfecharForm_Click(object sender, EventArgs e)
         {
-            if (VerificandoControles())
-            {
-                var msg = MessageBox.Show("Deseja continuar o cadastro?",
-                    "Confirmação de saída",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button1);
-                if (msg == DialogResult.No) this.Close();
-            }
-            else { this.Close(); }
+            FrmAtualizarFuncionario frmAtualizarFuncionario = new();
+            frmAtualizarFuncionario.Close();
         }
 
         private bool VerificandoControles()
