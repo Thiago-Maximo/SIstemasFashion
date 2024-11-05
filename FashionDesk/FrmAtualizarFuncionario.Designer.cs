@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             mskCpf = new MaskedTextBox();
             txtId = new Guna.UI2.WinForms.Guna2TextBox();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            dgvFuncionariosInserir = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvFuncionariosAtualizar = new Guna.UI2.WinForms.Guna2DataGridView();
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
@@ -77,7 +77,7 @@
             chkAtivo = new Guna.UI2.WinForms.Guna2CheckBox();
             txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosAtualizar).BeginInit();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -91,7 +91,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.CustomizableEdges = customizableEdges1;
+            txtEmail.CustomizableEdges = customizableEdges19;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -105,7 +105,7 @@
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "";
             txtEmail.SelectedText = "";
-            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtEmail.Size = new Size(200, 36);
             txtEmail.TabIndex = 28;
             // 
@@ -118,7 +118,7 @@
             // 
             // txtId
             // 
-            txtId.CustomizableEdges = customizableEdges3;
+            txtId.CustomizableEdges = customizableEdges21;
             txtId.DefaultText = "";
             txtId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -132,7 +132,7 @@
             txtId.PasswordChar = '\0';
             txtId.PlaceholderText = "";
             txtId.SelectedText = "";
-            txtId.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtId.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtId.Size = new Size(40, 36);
             txtId.TabIndex = 26;
             txtId.Visible = false;
@@ -141,7 +141,7 @@
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
-            btnFechar.CustomizableEdges = customizableEdges5;
+            btnFechar.CustomizableEdges = customizableEdges23;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -152,67 +152,67 @@
             btnFechar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnFechar.Location = new Point(393, 493);
             btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnFechar.Size = new Size(180, 45);
             btnFechar.TabIndex = 25;
             btnFechar.Text = "&Fechar";
             btnFechar.Click += btnFechar_Click;
             // 
-            // dgvFuncionariosInserir
+            // dgvFuncionariosAtualizar
             // 
-            dgvFuncionariosInserir.AllowUserToAddRows = false;
-            dgvFuncionariosInserir.AllowUserToDeleteRows = false;
-            dgvFuncionariosInserir.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvFuncionariosInserir.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvFuncionariosInserir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvFuncionariosInserir.ColumnHeadersHeight = 17;
-            dgvFuncionariosInserir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvFuncionariosInserir.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvFuncionariosInserir.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvFuncionariosInserir.GridColor = Color.FromArgb(231, 229, 255);
-            dgvFuncionariosInserir.Location = new Point(6, 252);
-            dgvFuncionariosInserir.Name = "dgvFuncionariosInserir";
-            dgvFuncionariosInserir.ReadOnly = true;
-            dgvFuncionariosInserir.RowHeadersVisible = false;
-            dgvFuncionariosInserir.Size = new Size(753, 233);
-            dgvFuncionariosInserir.TabIndex = 24;
-            dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvFuncionariosInserir.ThemeStyle.BackColor = Color.White;
-            dgvFuncionariosInserir.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvFuncionariosInserir.ThemeStyle.HeaderStyle.Height = 17;
-            dgvFuncionariosInserir.ThemeStyle.ReadOnly = true;
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.Height = 25;
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvFuncionariosInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dgvFuncionariosInserir.CellContentDoubleClick += dgvFuncionariosInserir_CellContentDoubleClick;
+            dgvFuncionariosAtualizar.AllowUserToAddRows = false;
+            dgvFuncionariosAtualizar.AllowUserToDeleteRows = false;
+            dgvFuncionariosAtualizar.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dgvFuncionariosAtualizar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvFuncionariosAtualizar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvFuncionariosAtualizar.ColumnHeadersHeight = 17;
+            dgvFuncionariosAtualizar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvFuncionariosAtualizar.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvFuncionariosAtualizar.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvFuncionariosAtualizar.GridColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosAtualizar.Location = new Point(6, 252);
+            dgvFuncionariosAtualizar.Name = "dgvFuncionariosAtualizar";
+            dgvFuncionariosAtualizar.ReadOnly = true;
+            dgvFuncionariosAtualizar.RowHeadersVisible = false;
+            dgvFuncionariosAtualizar.Size = new Size(753, 233);
+            dgvFuncionariosAtualizar.TabIndex = 24;
+            dgvFuncionariosAtualizar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvFuncionariosAtualizar.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvFuncionariosAtualizar.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvFuncionariosAtualizar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvFuncionariosAtualizar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvFuncionariosAtualizar.ThemeStyle.BackColor = Color.White;
+            dgvFuncionariosAtualizar.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvFuncionariosAtualizar.ThemeStyle.HeaderStyle.Height = 17;
+            dgvFuncionariosAtualizar.ThemeStyle.ReadOnly = true;
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.Height = 25;
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosAtualizar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvFuncionariosAtualizar.CellContentDoubleClick += dgvFuncionariosInserir_CellContentDoubleClick;
             // 
             // clnID
             // 
@@ -272,7 +272,7 @@
             // 
             btnAtualizar.BorderColor = Color.FromArgb(255, 192, 255);
             btnAtualizar.BorderRadius = 10;
-            btnAtualizar.CustomizableEdges = customizableEdges7;
+            btnAtualizar.CustomizableEdges = customizableEdges25;
             btnAtualizar.DisabledState.BorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -283,7 +283,7 @@
             btnAtualizar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAtualizar.Location = new Point(579, 493);
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnAtualizar.Size = new Size(180, 45);
             btnAtualizar.TabIndex = 23;
             btnAtualizar.Text = "&Atualizar";
@@ -299,7 +299,7 @@
             // dateData_Nasc
             // 
             dateData_Nasc.Checked = true;
-            dateData_Nasc.CustomizableEdges = customizableEdges9;
+            dateData_Nasc.CustomizableEdges = customizableEdges27;
             dateData_Nasc.FillColor = Color.FromArgb(255, 192, 255);
             dateData_Nasc.Font = new Font("Segoe UI", 9F);
             dateData_Nasc.Format = DateTimePickerFormat.Long;
@@ -307,7 +307,7 @@
             dateData_Nasc.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dateData_Nasc.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dateData_Nasc.Name = "dateData_Nasc";
-            dateData_Nasc.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            dateData_Nasc.ShadowDecoration.CustomizableEdges = customizableEdges28;
             dateData_Nasc.Size = new Size(200, 36);
             dateData_Nasc.TabIndex = 21;
             dateData_Nasc.Value = new DateTime(2024, 11, 1, 11, 53, 3, 653);
@@ -315,7 +315,7 @@
             // cmbCargo
             // 
             cmbCargo.BackColor = Color.Transparent;
-            cmbCargo.CustomizableEdges = customizableEdges11;
+            cmbCargo.CustomizableEdges = customizableEdges29;
             cmbCargo.DrawMode = DrawMode.OwnerDrawFixed;
             cmbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCargo.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -325,13 +325,13 @@
             cmbCargo.ItemHeight = 30;
             cmbCargo.Location = new Point(407, 144);
             cmbCargo.Name = "cmbCargo";
-            cmbCargo.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbCargo.ShadowDecoration.CustomizableEdges = customizableEdges30;
             cmbCargo.Size = new Size(100, 36);
             cmbCargo.TabIndex = 20;
             // 
             // txtNome
             // 
-            txtNome.CustomizableEdges = customizableEdges13;
+            txtNome.CustomizableEdges = customizableEdges31;
             txtNome.DefaultText = "";
             txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -346,7 +346,7 @@
             txtNome.PasswordChar = '\0';
             txtNome.PlaceholderText = "";
             txtNome.SelectedText = "";
-            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges32;
             txtNome.Size = new Size(200, 36);
             txtNome.TabIndex = 19;
             // 
@@ -398,12 +398,12 @@
             // btnfecharForm
             // 
             btnfecharForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnfecharForm.CustomizableEdges = customizableEdges15;
+            btnfecharForm.CustomizableEdges = customizableEdges33;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
             btnfecharForm.Location = new Point(733, 0);
             btnfecharForm.Name = "btnfecharForm";
-            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges34;
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 13;
             btnfecharForm.Click += btnfecharForm_Click;
@@ -428,7 +428,7 @@
             // txtBusca
             // 
             txtBusca.BackgroundImageLayout = ImageLayout.Zoom;
-            txtBusca.CustomizableEdges = customizableEdges17;
+            txtBusca.CustomizableEdges = customizableEdges35;
             txtBusca.DefaultText = "";
             txtBusca.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtBusca.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -444,7 +444,7 @@
             txtBusca.PasswordChar = '\0';
             txtBusca.PlaceholderText = "";
             txtBusca.SelectedText = "";
-            txtBusca.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtBusca.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtBusca.Size = new Size(753, 30);
             txtBusca.TabIndex = 31;
             txtBusca.TextChanged += txtBusca_TextChanged;
@@ -471,7 +471,7 @@
             Controls.Add(mskCpf);
             Controls.Add(txtId);
             Controls.Add(btnFechar);
-            Controls.Add(dgvFuncionariosInserir);
+            Controls.Add(dgvFuncionariosAtualizar);
             Controls.Add(btnAtualizar);
             Controls.Add(mskRg);
             Controls.Add(dateData_Nasc);
@@ -488,7 +488,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAtualizarFuncionario";
             Load += FrmAtualizarFuncionario_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosAtualizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -500,7 +500,7 @@
         private MaskedTextBox mskCpf;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2Button btnFechar;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvFuncionariosInserir;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvFuncionariosAtualizar;
         private DataGridViewTextBoxColumn clnID;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnEmail;

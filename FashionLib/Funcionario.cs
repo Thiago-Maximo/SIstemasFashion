@@ -19,7 +19,7 @@ namespace FashionLib
         public string Email { get; set; }
 
         // Métodos Construtores
-        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo, string email)
+        public Funcionario(int id, string nome, string email, string rg, string cpf, DateTime data_Nasc, bool ativo,Cargo id_Cargo)
         {
             Id = id;
             Nome = nome;
@@ -129,10 +129,10 @@ namespace FashionLib
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetDateTime(4),
-                    dr.GetBoolean(5),
-                    Cargo.ObterPorId(dr.GetInt32(6)),
-                    dr.GetString(7)
+                    dr.GetString(4),
+                    dr.GetDateTime(5),
+                    dr.GetBoolean(6),
+                    Cargo.ObterPorId(dr.GetInt32(5))
                 );
             }
             dr.Close();
@@ -161,10 +161,10 @@ namespace FashionLib
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetDateTime(4),
-                    dr.GetBoolean(5),
-                    Cargo.ObterPorId(dr.GetInt32(6)),
-                    dr.GetString(7)
+                    dr.GetString(4),
+                    dr.GetDateTime(5),
+                    dr.GetBoolean(6),
+                    Cargo.ObterPorId(dr.GetInt32(7))
                 ));
             }
             dr.Close();
