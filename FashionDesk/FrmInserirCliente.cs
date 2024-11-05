@@ -89,12 +89,12 @@ namespace FashionDesk
             cliente.Inserir();
             if (cliente.Id > 0)
             {
-                MessageBox.Show($"O Funcionario {cliente.Nome} com o Id {cliente.Id}, Foi Inserido com Sucesso!!");
+                MessageBox.Show($"O Cliente {cliente.Nome} com o Id {cliente.Id}, Foi Inserido com Sucesso!!");
                 CarregaGrid();
             }
             else
             {
-                MessageBox.Show("Falha ao Inserir Funcionario");
+                MessageBox.Show("Falha ao Inserir Cliente");
                 CarregaGrid();
             }
         }

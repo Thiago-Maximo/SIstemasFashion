@@ -35,6 +35,9 @@ namespace FashionLib
             Email = email;
         }
 
+       
+
+
         //Método Construtor Sem Id
         public Cliente(string nome, string cpf, DateTime data_Nasc, bool ativo)
         {
@@ -52,6 +55,16 @@ namespace FashionLib
             Nome = nome;
             Cpf = cpf;
             Data_Nasc = data_Nasc;
+            Email = email;
+        }
+
+        public Cliente(string nome, string cpf, DateTime data_Nasc,bool ativo, string email)
+        {
+
+            Nome = nome;
+            Cpf = cpf;
+            Data_Nasc = data_Nasc;
+            Ativo = ativo;
             Email = email;
         }
 
@@ -89,9 +102,12 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cliente_update";
+            cmd.Parameters.AddWithValue("sp_id", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nasc);
+            cmd.Parameters.AddWithValue("spativo", Ativo);
+            cmd.Parameters.AddWithValue("spemail", Email);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }

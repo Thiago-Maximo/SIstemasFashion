@@ -180,9 +180,16 @@ namespace FashionDesk
 
         private void btnConsultarFuncionario_Click(object sender, EventArgs e)
         {
-            FrmConsultarFuncionario frmConsultarFuncionario= new();
+            FrmConsultarFuncionario frmConsultarFuncionario = new();
             frmConsultarFuncionario.MdiParent = this;
             frmConsultarFuncionario.Show();
+        }
+
+        private void btnAtualizarCliente_Click(object sender, EventArgs e)
+        {
+            FrmAtualizarCliente frmAtualizarCliente = new();
+            frmAtualizarCliente.MdiParent = this;
+            frmAtualizarCliente.Show();
         }
     }
 }

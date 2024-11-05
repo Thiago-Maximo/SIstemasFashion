@@ -462,6 +462,7 @@
             btnAtualizarCliente.TabIndex = 4;
             btnAtualizarCliente.Text = "&Atualizar";
             btnAtualizarCliente.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarCliente.Click += btnAtualizarCliente_Click;
             // 
             // btnInserirCliente
             // 
