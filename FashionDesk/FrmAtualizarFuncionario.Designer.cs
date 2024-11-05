@@ -156,6 +156,7 @@
             btnFechar.Size = new Size(180, 45);
             btnFechar.TabIndex = 25;
             btnFechar.Text = "&Fechar";
+            btnFechar.Click += btnFechar_Click;
             // 
             // dgvFuncionariosInserir
             // 
@@ -400,11 +401,12 @@
             btnfecharForm.CustomizableEdges = customizableEdges15;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
-            btnfecharForm.Location = new Point(727, 6);
+            btnfecharForm.Location = new Point(733, 0);
             btnfecharForm.Name = "btnfecharForm";
             btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 13;
+            btnfecharForm.Click += btnfecharForm_Click;
             // 
             // chkAtivo
             // 

@@ -143,5 +143,48 @@ namespace FashionDesk
                 CarregaGrid();
             }
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            if (VerificandoControles())
+            {
+                var msg = MessageBox.Show("Deseja continuar o cadastro?",
+                    "Confirmação de saída",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1);
+                if (msg == DialogResult.No) this.Close();
+            }
+            else { this.Close(); }
+        }
+
+        private void btnfecharForm_Click(object sender, EventArgs e)
+        {
+            if (VerificandoControles())
+            {
+                var msg = MessageBox.Show("Deseja continuar o cadastro?",
+                    "Confirmação de saída",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1);
+                if (msg == DialogResult.No) this.Close();
+            }
+            else { this.Close(); }
+        }
+
+        private bool VerificandoControles()
+        {
+            if (txtNome.Text != string.Empty ||
+                mskCpf.Text != string.Empty ||
+                dateData_Nasc.Text != string.Empty
+                )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -544,6 +544,7 @@
             btnConsultarFuncionario.TabIndex = 4;
             btnConsultarFuncionario.Text = "&Consultar";
             btnConsultarFuncionario.TextAlign = HorizontalAlignment.Left;
+            btnConsultarFuncionario.Click += btnConsultarFuncionario_Click;
             // 
             // btnAtualizarFuncionario
             // 
