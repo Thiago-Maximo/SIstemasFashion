@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace FashionLib
 {
@@ -117,6 +118,14 @@ namespace FashionLib
             cmd.CommandText = $"Select * from agendamentos where id = {Id}";
             cmd.Connection.Close();
             return agendamentos;
+        }
+
+        public void ConsultaHora()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"SELECT FROM agendamentos WHERE hora = {Hora_Agendamento}";
+            cmd.Connection.Close();
+            
         }
     }
 }

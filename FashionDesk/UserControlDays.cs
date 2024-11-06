@@ -28,15 +28,15 @@ namespace FashionDesk
         private void lblDays_Click(object sender, EventArgs e)
         {
             //Abrir Formulario para gravar Eventos
-            FrmInserirAgendamentos frmInserirAgendamentos = new();
-            frmInserirAgendamentos.ShowDialog();
+            FrmInserirAgendamentos form = new FrmInserirAgendamentos(Data);
+            form.ShowDialog();
         }
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
             //Abrir Formulario para Gravar Eventos
-            FrmInserirAgendamentos frmInserirAgendamentos = new();
-            frmInserirAgendamentos.ShowDialog();
+            FrmInserirAgendamentos form = new FrmInserirAgendamentos(Data);
+            form.ShowDialog();
         }
     }
 }
