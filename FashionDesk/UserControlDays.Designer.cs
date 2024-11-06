@@ -35,7 +35,7 @@
             // 
             lblDays.BackColor = Color.Transparent;
             lblDays.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            lblDays.Location = new Point(36, 13);
+            lblDays.Location = new Point(37, 12);
             lblDays.Name = "lblDays";
             lblDays.Size = new Size(31, 33);
             lblDays.TabIndex = 0;
