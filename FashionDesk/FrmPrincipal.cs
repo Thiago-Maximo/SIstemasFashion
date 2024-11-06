@@ -27,13 +27,6 @@ namespace FashionDesk
             panelUser.Height = 0;
         }
 
-        private void btnFuncionarios_Click(object sender, EventArgs e)
-        {
-            ShowFuncionarios = !ShowFuncionarios;
-            ExibirDropDown();
-        }
-
-
         //#######                             ######                       ######                       
         //#       #    # # #####  # #####     #     # #####   ####  #####  #     #  ####  #    # #    # 
         //#        #  #  # #    # # #    #    #     # #    # #    # #    # #     # #    # #    # ##   # 
@@ -55,7 +48,7 @@ namespace FashionDesk
             //#        ####  #    #  ####  #  ####  #    # #    # #    # #  ####  
             if (ShowFuncionarios)
             {
-                panelFuncionarios.Height = 141;
+                panelFuncionarios.Height = 135;
             }
             else
             {
@@ -71,7 +64,7 @@ namespace FashionDesk
             //#####  ###### # ###### #    #   #   ###### 
             if (ShowClientes)
             {
-                panelClientes.Height = 154;
+                panelClientes.Height = 135;
             }
             else
             {
@@ -87,7 +80,7 @@ namespace FashionDesk
             //#     #  ####  ###### #    # #####  #    # #    # ###### #    #   #    ####   ####  
             if (ShowAgendamentos)
             {
-                panelAgendamentos.Height = 148;
+                panelAgendamentos.Height = 135;
             }
             else
             {
@@ -127,22 +120,21 @@ namespace FashionDesk
             }
         }
 
-
-
-        private void btnAgendar_Click(object sender, EventArgs e)
-        {
-            ShowAgendamentos = !ShowAgendamentos;
-            ExibirDropDown();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            ShowAdmin = !ShowAdmin;
-            ExibirDropDown();
-        }
+        
 
 
         // FUNCIONARIO
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            ShowClientes = false;
+            ShowAgendamentos = false;
+            ShowAdmin = false;
+
+            ShowFuncionarios = !ShowFuncionarios;
+            ExibirDropDown();
+        }
+
         private void btnInserirFuncionario_Click(object sender, EventArgs e)
         {
             FrmInserirFuncionario frmInserirFuncionario = new();
@@ -167,6 +159,10 @@ namespace FashionDesk
         // CLIENTE
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            ShowAgendamentos = false;
+            ShowFuncionarios = false;
+            ShowAdmin = false;
+
             ShowClientes = !ShowClientes;
             ExibirDropDown();
         }
@@ -193,7 +189,36 @@ namespace FashionDesk
             frmConsultaClientes.Show();
         }
 
+        // AGENDAMENTO
 
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            ShowClientes = false;
+            ShowFuncionarios = false;
+            ShowAdmin = false;
+
+            ShowAgendamentos = !ShowAgendamentos;
+            ExibirDropDown();
+        }
+
+        private void btnInserirAgendamentos_Click(object sender, EventArgs e)
+        {
+            FrmAgendamentos frmAgendamentos = new();
+            frmAgendamentos.MdiParent = this;
+            frmAgendamentos.Show();
+        }
+
+        // ADMIN
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            ShowClientes = false;
+            ShowFuncionarios = false;
+            ShowAgendamentos = false;
+
+            ShowAdmin = !ShowAdmin;
+            ExibirDropDown();
+        }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
@@ -207,11 +232,6 @@ namespace FashionDesk
             frmPrincipal.Close();
         }
 
-        private void btnInserirAgendamentos_Click(object sender, EventArgs e)
-        {
-            FrmAgendamentos frmAgendamentos = new();
-            frmAgendamentos.MdiParent = this;
-            frmAgendamentos.Show();
-        }
+        
     }
 }
