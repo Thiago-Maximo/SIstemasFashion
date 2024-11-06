@@ -129,20 +129,18 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(229, 1055);
+            panel1.Size = new Size(200, 925);
             panel1.TabIndex = 0;
             // 
             // panelUser
             // 
             panelUser.Controls.Add(btnLogout);
             panelUser.CustomizableEdges = customizableEdges3;
-            panelUser.Location = new Point(0, 1307);
-            panelUser.Margin = new Padding(3, 4, 3, 4);
+            panelUser.Location = new Point(0, 980);
             panelUser.Name = "panelUser";
             panelUser.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            panelUser.Size = new Size(229, 92);
+            panelUser.Size = new Size(200, 69);
             panelUser.TabIndex = 12;
             // 
             // btnLogout
@@ -160,10 +158,9 @@
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnLogout.ImageAlign = HorizontalAlignment.Right;
             btnLogout.Location = new Point(0, 0);
-            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(229, 60);
+            btnLogout.Size = new Size(200, 45);
             btnLogout.TabIndex = 7;
             btnLogout.Text = "&Logout";
             btnLogout.TextAlign = HorizontalAlignment.Left;
@@ -174,9 +171,9 @@
             lblEmailUser.AutoSize = true;
             lblEmailUser.BackColor = Color.Transparent;
             lblEmailUser.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Italic);
-            lblEmailUser.Location = new Point(88, 1279);
+            lblEmailUser.Location = new Point(77, 959);
             lblEmailUser.Name = "lblEmailUser";
-            lblEmailUser.Size = new Size(76, 17);
+            lblEmailUser.Size = new Size(57, 13);
             lblEmailUser.TabIndex = 11;
             lblEmailUser.Text = "Email User";
             // 
@@ -194,11 +191,10 @@
             btnUser.Image = Properties.Resources.Usuario_Rosa;
             btnUser.ImageAlign = HorizontalAlignment.Left;
             btnUser.ImageSize = new Size(50, 50);
-            btnUser.Location = new Point(0, 1231);
-            btnUser.Margin = new Padding(3, 4, 3, 4);
+            btnUser.Location = new Point(0, 923);
             btnUser.Name = "btnUser";
             btnUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnUser.Size = new Size(229, 68);
+            btnUser.Size = new Size(200, 51);
             btnUser.TabIndex = 2;
             btnUser.Text = "User Name - Nivel";
             btnUser.TextAlign = HorizontalAlignment.Right;
@@ -211,11 +207,10 @@
             panelAdmin.Controls.Add(btnInserirAdmin);
             panelAdmin.CustomizableEdges = customizableEdges13;
             panelAdmin.Dock = DockStyle.Top;
-            panelAdmin.Location = new Point(0, 957);
-            panelAdmin.Margin = new Padding(3, 4, 3, 4);
+            panelAdmin.Location = new Point(0, 718);
             panelAdmin.Name = "panelAdmin";
             panelAdmin.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelAdmin.Size = new Size(229, 211);
+            panelAdmin.Size = new Size(200, 158);
             panelAdmin.TabIndex = 1;
             // 
             // btnConsultarAdmin
@@ -232,11 +227,10 @@
             btnConsultarAdmin.ForeColor = Color.Black;
             btnConsultarAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnConsultarAdmin.ImageAlign = HorizontalAlignment.Right;
-            btnConsultarAdmin.Location = new Point(0, 120);
-            btnConsultarAdmin.Margin = new Padding(3, 4, 3, 4);
+            btnConsultarAdmin.Location = new Point(0, 90);
             btnConsultarAdmin.Name = "btnConsultarAdmin";
             btnConsultarAdmin.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnConsultarAdmin.Size = new Size(229, 60);
+            btnConsultarAdmin.Size = new Size(200, 45);
             btnConsultarAdmin.TabIndex = 6;
             btnConsultarAdmin.Text = "&Consultar";
             btnConsultarAdmin.TextAlign = HorizontalAlignment.Left;
@@ -255,11 +249,10 @@
             btnAtualizarAdmin.ForeColor = Color.Black;
             btnAtualizarAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAtualizarAdmin.ImageAlign = HorizontalAlignment.Right;
-            btnAtualizarAdmin.Location = new Point(0, 60);
-            btnAtualizarAdmin.Margin = new Padding(3, 4, 3, 4);
+            btnAtualizarAdmin.Location = new Point(0, 45);
             btnAtualizarAdmin.Name = "btnAtualizarAdmin";
             btnAtualizarAdmin.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnAtualizarAdmin.Size = new Size(229, 60);
+            btnAtualizarAdmin.Size = new Size(200, 45);
             btnAtualizarAdmin.TabIndex = 5;
             btnAtualizarAdmin.Text = "&Atualizar";
             btnAtualizarAdmin.TextAlign = HorizontalAlignment.Left;
@@ -279,10 +272,9 @@
             btnInserirAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnInserirAdmin.ImageAlign = HorizontalAlignment.Right;
             btnInserirAdmin.Location = new Point(0, 0);
-            btnInserirAdmin.Margin = new Padding(3, 4, 3, 4);
             btnInserirAdmin.Name = "btnInserirAdmin";
             btnInserirAdmin.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnInserirAdmin.Size = new Size(229, 60);
+            btnInserirAdmin.Size = new Size(200, 45);
             btnInserirAdmin.TabIndex = 4;
             btnInserirAdmin.Text = "&Inserir";
             btnInserirAdmin.TextAlign = HorizontalAlignment.Left;
@@ -302,11 +294,10 @@
             btnAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAdmin.Image = (Image)resources.GetObject("btnAdmin.Image");
             btnAdmin.ImageAlign = HorizontalAlignment.Right;
-            btnAdmin.Location = new Point(0, 897);
-            btnAdmin.Margin = new Padding(3, 4, 3, 4);
+            btnAdmin.Location = new Point(0, 673);
             btnAdmin.Name = "btnAdmin";
             btnAdmin.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnAdmin.Size = new Size(229, 60);
+            btnAdmin.Size = new Size(200, 45);
             btnAdmin.TabIndex = 10;
             btnAdmin.Text = "A&dmin";
             btnAdmin.TextAlign = HorizontalAlignment.Left;
@@ -319,11 +310,10 @@
             panelAgendamentos.Controls.Add(btnInserirAgendamentos);
             panelAgendamentos.CustomizableEdges = customizableEdges23;
             panelAgendamentos.Dock = DockStyle.Top;
-            panelAgendamentos.Location = new Point(0, 700);
-            panelAgendamentos.Margin = new Padding(3, 4, 3, 4);
+            panelAgendamentos.Location = new Point(0, 525);
             panelAgendamentos.Name = "panelAgendamentos";
             panelAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            panelAgendamentos.Size = new Size(229, 197);
+            panelAgendamentos.Size = new Size(200, 148);
             panelAgendamentos.TabIndex = 9;
             // 
             // btnConsultarAgendamentos
@@ -340,11 +330,10 @@
             btnConsultarAgendamentos.ForeColor = Color.Black;
             btnConsultarAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnConsultarAgendamentos.ImageAlign = HorizontalAlignment.Right;
-            btnConsultarAgendamentos.Location = new Point(0, 120);
-            btnConsultarAgendamentos.Margin = new Padding(3, 4, 3, 4);
+            btnConsultarAgendamentos.Location = new Point(0, 90);
             btnConsultarAgendamentos.Name = "btnConsultarAgendamentos";
             btnConsultarAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnConsultarAgendamentos.Size = new Size(229, 60);
+            btnConsultarAgendamentos.Size = new Size(200, 45);
             btnConsultarAgendamentos.TabIndex = 6;
             btnConsultarAgendamentos.Text = "&Consultar";
             btnConsultarAgendamentos.TextAlign = HorizontalAlignment.Left;
@@ -363,11 +352,10 @@
             btntualizarAgendamentos.ForeColor = Color.Black;
             btntualizarAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btntualizarAgendamentos.ImageAlign = HorizontalAlignment.Right;
-            btntualizarAgendamentos.Location = new Point(0, 60);
-            btntualizarAgendamentos.Margin = new Padding(3, 4, 3, 4);
+            btntualizarAgendamentos.Location = new Point(0, 45);
             btntualizarAgendamentos.Name = "btntualizarAgendamentos";
             btntualizarAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btntualizarAgendamentos.Size = new Size(229, 60);
+            btntualizarAgendamentos.Size = new Size(200, 45);
             btntualizarAgendamentos.TabIndex = 5;
             btntualizarAgendamentos.Text = "&Atualizar";
             btntualizarAgendamentos.TextAlign = HorizontalAlignment.Left;
@@ -387,13 +375,13 @@
             btnInserirAgendamentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnInserirAgendamentos.ImageAlign = HorizontalAlignment.Right;
             btnInserirAgendamentos.Location = new Point(0, 0);
-            btnInserirAgendamentos.Margin = new Padding(3, 4, 3, 4);
             btnInserirAgendamentos.Name = "btnInserirAgendamentos";
             btnInserirAgendamentos.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnInserirAgendamentos.Size = new Size(229, 60);
+            btnInserirAgendamentos.Size = new Size(200, 45);
             btnInserirAgendamentos.TabIndex = 4;
             btnInserirAgendamentos.Text = "&Inserir";
             btnInserirAgendamentos.TextAlign = HorizontalAlignment.Left;
+            btnInserirAgendamentos.Click += btnInserirAgendamentos_Click;
             // 
             // btnAgendar
             // 
@@ -410,11 +398,10 @@
             btnAgendar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAgendar.Image = (Image)resources.GetObject("btnAgendar.Image");
             btnAgendar.ImageAlign = HorizontalAlignment.Right;
-            btnAgendar.Location = new Point(0, 640);
-            btnAgendar.Margin = new Padding(3, 4, 3, 4);
+            btnAgendar.Location = new Point(0, 480);
             btnAgendar.Name = "btnAgendar";
             btnAgendar.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnAgendar.Size = new Size(229, 60);
+            btnAgendar.Size = new Size(200, 45);
             btnAgendar.TabIndex = 7;
             btnAgendar.Text = "&Agendamentos";
             btnAgendar.TextAlign = HorizontalAlignment.Left;
@@ -427,11 +414,10 @@
             panelClientes.Controls.Add(btnInserirCliente);
             panelClientes.CustomizableEdges = customizableEdges33;
             panelClientes.Dock = DockStyle.Top;
-            panelClientes.Location = new Point(0, 435);
-            panelClientes.Margin = new Padding(3, 4, 3, 4);
+            panelClientes.Location = new Point(0, 326);
             panelClientes.Name = "panelClientes";
             panelClientes.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            panelClientes.Size = new Size(229, 205);
+            panelClientes.Size = new Size(200, 154);
             panelClientes.TabIndex = 4;
             // 
             // btnConsultarCliente
@@ -448,11 +434,10 @@
             btnConsultarCliente.ForeColor = Color.Black;
             btnConsultarCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnConsultarCliente.ImageAlign = HorizontalAlignment.Right;
-            btnConsultarCliente.Location = new Point(0, 120);
-            btnConsultarCliente.Margin = new Padding(3, 4, 3, 4);
+            btnConsultarCliente.Location = new Point(0, 90);
             btnConsultarCliente.Name = "btnConsultarCliente";
             btnConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnConsultarCliente.Size = new Size(229, 60);
+            btnConsultarCliente.Size = new Size(200, 45);
             btnConsultarCliente.TabIndex = 5;
             btnConsultarCliente.Text = "&Consultar";
             btnConsultarCliente.TextAlign = HorizontalAlignment.Left;
@@ -472,11 +457,10 @@
             btnAtualizarCliente.ForeColor = Color.Black;
             btnAtualizarCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAtualizarCliente.ImageAlign = HorizontalAlignment.Right;
-            btnAtualizarCliente.Location = new Point(0, 60);
-            btnAtualizarCliente.Margin = new Padding(3, 4, 3, 4);
+            btnAtualizarCliente.Location = new Point(0, 45);
             btnAtualizarCliente.Name = "btnAtualizarCliente";
             btnAtualizarCliente.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            btnAtualizarCliente.Size = new Size(229, 60);
+            btnAtualizarCliente.Size = new Size(200, 45);
             btnAtualizarCliente.TabIndex = 4;
             btnAtualizarCliente.Text = "&Atualizar";
             btnAtualizarCliente.TextAlign = HorizontalAlignment.Left;
@@ -497,10 +481,9 @@
             btnInserirCliente.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnInserirCliente.ImageAlign = HorizontalAlignment.Right;
             btnInserirCliente.Location = new Point(0, 0);
-            btnInserirCliente.Margin = new Padding(3, 4, 3, 4);
             btnInserirCliente.Name = "btnInserirCliente";
             btnInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            btnInserirCliente.Size = new Size(229, 60);
+            btnInserirCliente.Size = new Size(200, 45);
             btnInserirCliente.TabIndex = 3;
             btnInserirCliente.Text = "&Inserir";
             btnInserirCliente.TextAlign = HorizontalAlignment.Left;
@@ -521,11 +504,10 @@
             btnClientes.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnClientes.Image = Properties.Resources.botao_pra_baixo;
             btnClientes.ImageAlign = HorizontalAlignment.Right;
-            btnClientes.Location = new Point(0, 375);
-            btnClientes.Margin = new Padding(3, 4, 3, 4);
+            btnClientes.Location = new Point(0, 281);
             btnClientes.Name = "btnClientes";
             btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            btnClientes.Size = new Size(229, 60);
+            btnClientes.Size = new Size(200, 45);
             btnClientes.TabIndex = 3;
             btnClientes.Text = "&Clientes";
             btnClientes.TextAlign = HorizontalAlignment.Left;
@@ -538,11 +520,10 @@
             panelFuncionarios.Controls.Add(btnInserirFuncionario);
             panelFuncionarios.CustomizableEdges = customizableEdges43;
             panelFuncionarios.Dock = DockStyle.Top;
-            panelFuncionarios.Location = new Point(0, 187);
-            panelFuncionarios.Margin = new Padding(3, 4, 3, 4);
+            panelFuncionarios.Location = new Point(0, 140);
             panelFuncionarios.Name = "panelFuncionarios";
             panelFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            panelFuncionarios.Size = new Size(229, 188);
+            panelFuncionarios.Size = new Size(200, 141);
             panelFuncionarios.TabIndex = 2;
             // 
             // btnConsultarFuncionario
@@ -559,11 +540,10 @@
             btnConsultarFuncionario.ForeColor = Color.Black;
             btnConsultarFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnConsultarFuncionario.ImageAlign = HorizontalAlignment.Right;
-            btnConsultarFuncionario.Location = new Point(0, 120);
-            btnConsultarFuncionario.Margin = new Padding(3, 4, 3, 4);
+            btnConsultarFuncionario.Location = new Point(0, 90);
             btnConsultarFuncionario.Name = "btnConsultarFuncionario";
             btnConsultarFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            btnConsultarFuncionario.Size = new Size(229, 60);
+            btnConsultarFuncionario.Size = new Size(200, 45);
             btnConsultarFuncionario.TabIndex = 4;
             btnConsultarFuncionario.Text = "&Consultar";
             btnConsultarFuncionario.TextAlign = HorizontalAlignment.Left;
@@ -583,11 +563,10 @@
             btnAtualizarFuncionario.ForeColor = Color.Black;
             btnAtualizarFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnAtualizarFuncionario.ImageAlign = HorizontalAlignment.Right;
-            btnAtualizarFuncionario.Location = new Point(0, 60);
-            btnAtualizarFuncionario.Margin = new Padding(3, 4, 3, 4);
+            btnAtualizarFuncionario.Location = new Point(0, 45);
             btnAtualizarFuncionario.Name = "btnAtualizarFuncionario";
             btnAtualizarFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            btnAtualizarFuncionario.Size = new Size(229, 60);
+            btnAtualizarFuncionario.Size = new Size(200, 45);
             btnAtualizarFuncionario.TabIndex = 3;
             btnAtualizarFuncionario.Text = "&Atualizar";
             btnAtualizarFuncionario.TextAlign = HorizontalAlignment.Left;
@@ -608,10 +587,9 @@
             btnInserirFuncionario.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnInserirFuncionario.ImageAlign = HorizontalAlignment.Right;
             btnInserirFuncionario.Location = new Point(0, 0);
-            btnInserirFuncionario.Margin = new Padding(3, 4, 3, 4);
             btnInserirFuncionario.Name = "btnInserirFuncionario";
             btnInserirFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            btnInserirFuncionario.Size = new Size(229, 60);
+            btnInserirFuncionario.Size = new Size(200, 45);
             btnInserirFuncionario.TabIndex = 2;
             btnInserirFuncionario.Text = "&Inserir";
             btnInserirFuncionario.TextAlign = HorizontalAlignment.Left;
@@ -632,11 +610,10 @@
             btnFuncionarios.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnFuncionarios.Image = Properties.Resources.botao_pra_baixo;
             btnFuncionarios.ImageAlign = HorizontalAlignment.Right;
-            btnFuncionarios.Location = new Point(0, 127);
-            btnFuncionarios.Margin = new Padding(3, 4, 3, 4);
+            btnFuncionarios.Location = new Point(0, 95);
             btnFuncionarios.Name = "btnFuncionarios";
             btnFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            btnFuncionarios.Size = new Size(229, 60);
+            btnFuncionarios.Size = new Size(200, 45);
             btnFuncionarios.TabIndex = 1;
             btnFuncionarios.Text = "&Funcionarios";
             btnFuncionarios.TextAlign = HorizontalAlignment.Left;
@@ -648,35 +625,32 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(229, 127);
+            panel2.Size = new Size(200, 95);
             panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(229, 125);
+            pictureBox1.Size = new Size(200, 94);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1230, 1055);
+            ClientSize = new Size(1076, 925);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             IsMdiContainer = true;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmPrincipal";
             SizeGripStyle = SizeGripStyle.Show;
             WindowState = FormWindowState.Maximized;

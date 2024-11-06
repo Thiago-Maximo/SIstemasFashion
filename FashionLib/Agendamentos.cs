@@ -10,54 +10,40 @@ namespace FashionLib
 {
     public class Agendamentos
     {//Declaração das Variaveis
-
+       
 
         public int Id { get; set; }
         public int Id_Cliente { get; set; }
         public int Id_Funcionario { get; set; }
         public DateTime Data_Agendamento { get; set; }
         public DateTime Hora_Agendamento { get; set; }
+        public int Id_procedimentos { get; set; }
 
         //Métodos Construtores
 
-        //Método Com Tudo
-        public Agendamentos(int id, int id_Cliente, int id_Funcionario, DateTime data_Agendamento, DateTime hora_agendamento)
+        public Agendamentos(int id, int id_Cliente, int id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, int id_procedimentos)
         {
             Id = id;
             Id_Cliente = id_Cliente;
             Id_Funcionario = id_Funcionario;
             Data_Agendamento = data_Agendamento;
-            Hora_Agendamento = hora_agendamento;
+            Hora_Agendamento = hora_Agendamento;
+            Id_procedimentos = id_procedimentos;
         }
 
-        //Método sem Nada
+        public Agendamentos( int id_Cliente, int id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, int id_procedimentos)
+        {
+           
+            Id_Cliente = id_Cliente;
+            Id_Funcionario = id_Funcionario;
+            Data_Agendamento = data_Agendamento;
+            Hora_Agendamento = hora_Agendamento;
+            Id_procedimentos = id_procedimentos;
+        }
+
         public Agendamentos()
         {
-            Id = new();
-        }
-
-        //Método sem Id
-        public Agendamentos(int id_Cliente, int id_Funcionario, DateTime data_Agendamento)
-        {
-
-            Id_Cliente = id_Cliente;
-            Id_Funcionario = id_Funcionario;
-            Data_Agendamento = data_Agendamento;
-        }
-
-        //Método sem Id e Data_Agendamento
-        public Agendamentos(int id_Cliente, int id_Funcionario)
-        {
-            Id_Cliente = id_Cliente;
-            Id_Funcionario = id_Funcionario;
-        }
-
-        //Método Com Id e Sem Data_Agendamento
-        public Agendamentos(int id, int id_Cliente, int id_Funcionario)
-        {
-            Id = id;
-            Id_Cliente = id_Cliente;
-            Id_Funcionario = id_Funcionario;
+            
         }
 
         //Funções
@@ -72,6 +58,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario);
             cmd.Parameters.AddWithValue("spdia",Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
+            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -91,6 +78,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario);
             cmd.Parameters.AddWithValue("spdia", Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
+            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
@@ -109,11 +97,11 @@ namespace FashionLib
             while (dr.Read())
             {
                 lista.Add(new(
-                 dr.GetInt32(0),
-                 dr.GetInt32(1),
-                 dr.GetInt32(2),
-                 dr.GetDateTime(3),
-                 dr.GetDateTime(4)
+                dr.GetInt32(0),
+                dr.GetInt32(1),
+                dr.GetDateTime(2),
+                dr.GetDateTime(3),
+                dr.GetInt32(4)
                     ));
             }
             cmd.Connection.Close();

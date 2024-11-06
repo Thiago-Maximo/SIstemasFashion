@@ -205,6 +205,13 @@ namespace FashionDesk
         {
             FrmPrincipal frmPrincipal = new();
             frmPrincipal.Close();
-        } 
+        }
+
+        private void btnInserirAgendamentos_Click(object sender, EventArgs e)
+        {
+            FrmAgendamentos frmAgendamentos = new();
+            frmAgendamentos.MdiParent = this;
+            frmAgendamentos.Show();
+        }
     }
 }

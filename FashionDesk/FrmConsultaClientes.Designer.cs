@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txtConsultar = new Guna.UI2.WinForms.Guna2TextBox();
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
@@ -56,7 +56,7 @@
             // txtConsultar
             // 
             txtConsultar.BackgroundImageLayout = ImageLayout.Zoom;
-            txtConsultar.CustomizableEdges = customizableEdges7;
+            txtConsultar.CustomizableEdges = customizableEdges1;
             txtConsultar.DefaultText = "";
             txtConsultar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConsultar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -67,24 +67,23 @@
             txtConsultar.ForeColor = Color.Black;
             txtConsultar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConsultar.IconLeft = Properties.Resources.pesquisa;
-            txtConsultar.Location = new Point(27, 111);
-            txtConsultar.Margin = new Padding(3, 5, 3, 5);
+            txtConsultar.Location = new Point(24, 83);
+            txtConsultar.Margin = new Padding(3, 4, 3, 4);
             txtConsultar.Name = "txtConsultar";
             txtConsultar.PasswordChar = '\0';
             txtConsultar.PlaceholderText = "";
             txtConsultar.SelectedText = "";
-            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtConsultar.Size = new Size(861, 40);
+            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtConsultar.Size = new Size(753, 30);
             txtConsultar.TabIndex = 40;
             txtConsultar.TextChanged += txtConsultar_TextChanged;
             // 
             // lblPesquisa
             // 
             lblPesquisa.BackColor = Color.Transparent;
-            lblPesquisa.Location = new Point(29, 88);
-            lblPesquisa.Margin = new Padding(3, 4, 3, 4);
+            lblPesquisa.Location = new Point(25, 66);
             lblPesquisa.Name = "lblPesquisa";
-            lblPesquisa.Size = new Size(65, 22);
+            lblPesquisa.Size = new Size(53, 17);
             lblPesquisa.TabIndex = 39;
             lblPesquisa.Text = "Pesquisar";
             // 
@@ -92,7 +91,7 @@
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
-            btnFechar.CustomizableEdges = customizableEdges9;
+            btnFechar.CustomizableEdges = customizableEdges3;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -101,11 +100,10 @@
             btnFechar.Font = new Font("Segoe UI", 9F);
             btnFechar.ForeColor = Color.Black;
             btnFechar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnFechar.Location = new Point(682, 541);
-            btnFechar.Margin = new Padding(3, 4, 3, 4);
+            btnFechar.Location = new Point(597, 406);
             btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnFechar.Size = new Size(206, 56);
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnFechar.Size = new Size(180, 42);
             btnFechar.TabIndex = 38;
             btnFechar.Text = "&Fechar";
             btnFechar.Click += btnFechar_Click;
@@ -113,14 +111,13 @@
             // btnfecharForm
             // 
             btnfecharForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnfecharForm.CustomizableEdges = customizableEdges11;
+            btnfecharForm.CustomizableEdges = customizableEdges5;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
-            btnfecharForm.Location = new Point(864, -1);
-            btnfecharForm.Margin = new Padding(3, 4, 3, 4);
+            btnfecharForm.Location = new Point(756, -1);
             btnfecharForm.Name = "btnfecharForm";
-            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnfecharForm.Size = new Size(50, 32);
+            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 36;
             btnfecharForm.Click += btnfecharForm_Click;
             // 
@@ -129,36 +126,34 @@
             dgvConsultarCliente.AllowUserToAddRows = false;
             dgvConsultarCliente.AllowUserToDeleteRows = false;
             dgvConsultarCliente.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvConsultarCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvConsultarCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvConsultarCliente.ColumnHeadersHeight = 17;
             dgvConsultarCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvConsultarCliente.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvConsultarCliente.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvConsultarCliente.DefaultCellStyle = dataGridViewCellStyle3;
             dgvConsultarCliente.GridColor = Color.FromArgb(231, 229, 255);
-            dgvConsultarCliente.Location = new Point(14, 175);
-            dgvConsultarCliente.Margin = new Padding(3, 4, 3, 4);
+            dgvConsultarCliente.Location = new Point(12, 131);
             dgvConsultarCliente.Name = "dgvConsultarCliente";
             dgvConsultarCliente.ReadOnly = true;
             dgvConsultarCliente.RowHeadersVisible = false;
             dgvConsultarCliente.RowHeadersWidth = 51;
-            dgvConsultarCliente.RowTemplate.Height = 25;
-            dgvConsultarCliente.Size = new Size(887, 359);
+            dgvConsultarCliente.Size = new Size(776, 269);
             dgvConsultarCliente.TabIndex = 41;
             dgvConsultarCliente.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvConsultarCliente.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -246,16 +241,15 @@
             // 
             // FrmConsultaClientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(dgvConsultarCliente);
             Controls.Add(txtConsultar);
             Controls.Add(lblPesquisa);
             Controls.Add(btnFechar);
             Controls.Add(btnfecharForm);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmConsultaClientes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmConsultaClientes";

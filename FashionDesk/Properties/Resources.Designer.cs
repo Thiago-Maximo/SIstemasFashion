@@ -73,6 +73,16 @@ namespace FashionDesk.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botão_avancar {
+            get {
+                object obj = ResourceManager.GetObject("botão-avancar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botao_lado {
             get {
                 object obj = ResourceManager.GetObject("botao-lado", resourceCulture);
@@ -86,6 +96,16 @@ namespace FashionDesk.Properties {
         internal static System.Drawing.Bitmap botao_pra_baixo {
             get {
                 object obj = ResourceManager.GetObject("botao-pra-baixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botão_voltar {
+            get {
+                object obj = ResourceManager.GetObject("botão-voltar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,26 @@ namespace FashionDesk.Properties {
         internal static System.Drawing.Bitmap pesquisa {
             get {
                 object obj = ResourceManager.GetObject("pesquisa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_circulo {
+            get {
+                object obj = ResourceManager.GetObject("seta-circulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_voltar_circulo {
+            get {
+                object obj = ResourceManager.GetObject("seta-voltar-circulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
