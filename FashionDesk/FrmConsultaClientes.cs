@@ -13,6 +13,8 @@ namespace FashionDesk
 {
     public partial class FrmConsultaClientes : Form
     {
+        public string ClienteSelecionado { get; private set; }
+        public int IdClienteSelecionado { get; set; }
         public FrmConsultaClientes()
         {
             InitializeComponent();
@@ -64,16 +66,28 @@ namespace FashionDesk
                 dgvConsultarCliente.Rows[cont].Cells[1].Value = funcionario.Nome;
                 dgvConsultarCliente.Rows[cont].Cells[2].Value = funcionario.Email;
                 dgvConsultarCliente.Rows[cont].Cells[3].Value = funcionario.Cpf;
-                
+
                 // Formatar a data para exibir apenas a data
                 dgvConsultarCliente.Rows[cont].Cells[4].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
-                
+
                 dgvConsultarCliente.Rows[cont].Cells[5].Value = funcionario.Ativo;
-                
+
 
                 cont++;
             }
         }
-    }
 
+        private void dgvConsultarCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Pegue o nome do cliente da linha selecionada
+                ClienteSelecionado = dgvConsultarCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdClienteSelecionado = Convert.ToInt32(dgvConsultarCliente.Rows[e.RowIndex].Cells[0].Value.ToString());
+                // Fecha o formulário após selecionar o cliente
+                this.Close();
+            }
+
+        }
+    }
 }

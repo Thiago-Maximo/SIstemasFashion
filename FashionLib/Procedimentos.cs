@@ -47,6 +47,12 @@ namespace FashionLib
             Id = new();
         }
 
+        public Procedimentos(int id, string nome)
+        {
+            Id = id;
+            Nome = nome;
+        }
+
         // Funções
 
         // Função Inserir
@@ -82,6 +88,27 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("sp_classificacao", Classificacao);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
+        }
+
+        public static List<Procedimentos> ObterPorLista(string? procedimentos = "")
+        {
+            List<Procedimentos> lista = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            if (procedimentos == "")
+            {
+                cmd.CommandText = "select id,nome from procedimentos order by nome";
+            }
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(new(
+                    dr.GetInt32(0),
+                    dr.GetString(1)
+                    ));
+            }
+            cmd.Connection.Close();
+            return lista;
         }
     }
 }

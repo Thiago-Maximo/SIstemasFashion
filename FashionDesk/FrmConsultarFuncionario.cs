@@ -13,6 +13,8 @@ namespace FashionDesk
 {
     public partial class FrmConsultarFuncionario : Form
     {
+        public string FuncionarioSelecionado { get; private set; }
+        public int IdFuncionarioSelecionado { get; set; }
         public FrmConsultarFuncionario()
         {
             InitializeComponent();
@@ -68,12 +70,24 @@ namespace FashionDesk
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-                var msg = MessageBox.Show("Deseja continuar a consulta?",
-                    "Confirmação de saída",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button1);
-                if (msg == DialogResult.No) this.Close();
+            var msg = MessageBox.Show("Deseja continuar a consulta?",
+                "Confirmação de saída",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button1);
+            if (msg == DialogResult.No) this.Close();
+        }
+
+        private void dgvConsultarFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Pegue o nome do cliente da linha selecionada
+                FuncionarioSelecionado = dgvConsultarFuncionario.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdFuncionarioSelecionado = Convert.ToInt32(dgvConsultarFuncionario.Rows[e.RowIndex].Cells[0].Value.ToString());
+                // Fecha o formulário após selecionar o cliente
+                this.Close();
+            }
         }
     }
 }

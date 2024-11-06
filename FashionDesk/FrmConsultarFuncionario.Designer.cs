@@ -120,6 +120,7 @@
             dgvConsultarFuncionario.ThemeStyle.RowsStyle.Height = 25;
             dgvConsultarFuncionario.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvConsultarFuncionario.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarFuncionario.CellContentClick += dgvConsultarFuncionario_CellContentClick;
             // 
             // clnID
             // 

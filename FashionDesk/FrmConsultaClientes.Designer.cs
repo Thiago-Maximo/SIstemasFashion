@@ -176,6 +176,7 @@
             dgvConsultarCliente.ThemeStyle.RowsStyle.Height = 25;
             dgvConsultarCliente.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvConsultarCliente.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarCliente.CellContentClick += dgvConsultarCliente_CellContentClick;
             // 
             // clnID
             // 
