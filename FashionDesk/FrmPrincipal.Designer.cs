@@ -337,6 +337,7 @@
             btnConsultarAgendamentos.TabIndex = 6;
             btnConsultarAgendamentos.Text = "&Consultar";
             btnConsultarAgendamentos.TextAlign = HorizontalAlignment.Left;
+            btnConsultarAgendamentos.Click += btnConsultarAgendamentos_Click;
             // 
             // btntualizarAgendamentos
             // 

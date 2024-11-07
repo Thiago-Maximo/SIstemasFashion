@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FashionLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -120,7 +121,7 @@ namespace FashionDesk
             }
         }
 
-        
+
 
 
         // FUNCIONARIO
@@ -232,6 +233,11 @@ namespace FashionDesk
             frmPrincipal.Close();
         }
 
-        
+        private void btnConsultarAgendamentos_Click(object sender, EventArgs e)
+        {
+            FrmConsultaAgendamento frmAgendamentos = new();
+            frmAgendamentos.MdiParent = this;
+            frmAgendamentos.Show();
+        }
     }
 }

@@ -110,6 +110,32 @@ namespace FashionLib
             cmd.Connection.Close();
             return lista;
         }
+
+        public static Procedimentos ObterPorId(int id)
+        {
+            Procedimentos procedimento = null;
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT id, nome, descricao, valor, duracao_estimada, classificacao " +
+                              "FROM procedimentos WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                procedimento = new Procedimentos(
+                    dr.GetInt32(0),          // Id
+                    dr.GetString(1),         // Nome
+                    dr.GetString(2),         // Descrição
+                    dr.GetDecimal(3),        // Valor
+                    TimeOnly.FromTimeSpan(dr.GetTimeSpan(4)), // Duracao Estimada
+                    dr.GetChar(5)            // Classificação
+                );
+
+            }
+            cmd.Connection.Close();
+            return procedimento;
+        }
     }
 }
 
