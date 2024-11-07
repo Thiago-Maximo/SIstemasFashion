@@ -64,13 +64,7 @@ namespace FashionDesk
             }
         }
 
-        private void FrmInserirAgendamentos_Load(object sender, EventArgs e)
-        {
-            var procedimentos = Procedimentos.ObterPorLista();
-            cmbProcedimentos.DataSource = procedimentos;
-            cmbProcedimentos.DisplayMember = "Nome";
-            cmbProcedimentos.ValueMember = "Id";
-        }
+
 
         private void btnEscolherCliente_Click(object sender, EventArgs e)
         {
@@ -88,15 +82,19 @@ namespace FashionDesk
 
         private void btnEscolherFuncionario_Click(object sender, EventArgs e)
         {
-            using (FrmConsultarFuncionario frmConsultarFuncionario = new FrmConsultarFuncionario())
+            if (cmbProcedimentos.SelectedValue == null || string.IsNullOrEmpty(cmbHora.Text))
             {
-                frmConsultarFuncionario.ShowDialog();
+                MessageBox.Show("Por favor, selecione um procedimento e um horário primeiro.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                if (!string.IsNullOrEmpty(frmConsultarFuncionario.FuncionarioSelecionado) || frmConsultarFuncionario.IdFuncionarioSelecionado != 0)
-                {
-                    TxtFuncionarios.Text = frmConsultarFuncionario.FuncionarioSelecionado;
-                    TxtIdFuncionarios.Text = frmConsultarFuncionario.IdFuncionarioSelecionado.ToString();
-                }
+            int procedimentoId = Convert.ToInt32(cmbProcedimentos.SelectedValue);
+            DateTime data = DateTime.Parse(txtDate.Text);
+            string hora = cmbHora.Text;
+
+            using (FrmSelecionarFuncionario frmSelecionarFuncionario = new FrmSelecionarFuncionario(procedimentoId, data, hora, this))
+            {
+                frmSelecionarFuncionario.ShowDialog();
             }
         }
 
@@ -150,6 +148,14 @@ namespace FashionDesk
             TxtIdFuncionarios.Clear();
             cmbHora.SelectedIndex = -1;
             cmbProcedimentos.SelectedIndex = -1;
+        }
+
+        private void FrmInserirAgendamentos_Load(object sender, EventArgs e)
+        {
+            var procedimentos = Procedimentos.ObterPorLista();
+            cmbProcedimentos.DataSource = procedimentos;
+            cmbProcedimentos.DisplayMember = "Nome";
+            cmbProcedimentos.ValueMember = "Id";
         }
     }
 }

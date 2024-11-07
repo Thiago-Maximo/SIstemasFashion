@@ -171,5 +171,33 @@ namespace FashionLib
             cmd.Connection.Close();
             return lista;
         }
+
+        public static List<Funcionario> ObterFuncionariosPorProcedimento(int procedimentoId)
+        {
+            List<Funcionario> lista = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT funcionarios.* FROM funcionarios JOIN funcionarios_procedimentos ON funcionarios.id = funcionarios_procedimentos.id_funcionario WHERE funcionarios_procedimentos.id_procedimento = @procedimentoId";
+            cmd.Parameters.AddWithValue("@procedimentoId", procedimentoId);
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(new Funcionario(
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetDateTime(4),
+                    Cargo.ObterPorId(dr.GetInt32(5)),
+                    dr.GetBoolean(6),
+                    dr.GetString(7)
+                ));
+            }
+            dr.Close();
+            cmd.Connection.Close();
+            return lista;
+        }
+
     }
 }

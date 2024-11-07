@@ -133,5 +133,24 @@ namespace FashionLib
             cmd.Connection.Close();
             return agendamento;
         }
+
+        public static List<string> ObterHorasAgendadasPorDataFuncionario(DateTime data, int funcionarioId)
+        {
+            List<string> horasAgendadas = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT hora FROM agendamentos WHERE data_agendamento = @data AND id_funcionario = @funcionarioId";
+            cmd.Parameters.AddWithValue("@data", data.Date);
+            cmd.Parameters.AddWithValue("@funcionarioId", funcionarioId);
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                horasAgendadas.Add(((TimeSpan)dr["hora"]).ToString(@"hh\:mm"));
+            }
+            cmd.Connection.Close();
+            return horasAgendadas;
+        }
+
     }
 }
