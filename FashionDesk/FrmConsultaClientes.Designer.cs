@@ -46,11 +46,9 @@
             clnID = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
-            clnRg = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnData_Nasc = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
-            clnCargo = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvConsultarCliente).BeginInit();
             SuspendLayout();
             // 
@@ -134,7 +132,6 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvConsultarCliente.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(253, 187, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -145,7 +142,7 @@
             dgvConsultarCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvConsultarCliente.ColumnHeadersHeight = 17;
             dgvConsultarCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvConsultarCliente.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnRg, clnCpf, clnData_Nasc, clnAtivo, clnCargo });
+            dgvConsultarCliente.Columns.AddRange(new DataGridViewColumn[] { clnID, clnNome, clnEmail, clnCpf, clnData_Nasc, clnAtivo });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -217,14 +214,6 @@
             clnEmail.Name = "clnEmail";
             clnEmail.ReadOnly = true;
             // 
-            // clnRg
-            // 
-            clnRg.FillWeight = 69.28934F;
-            clnRg.HeaderText = "RG";
-            clnRg.MinimumWidth = 6;
-            clnRg.Name = "clnRg";
-            clnRg.ReadOnly = true;
-            // 
             // clnCpf
             // 
             clnCpf.FillWeight = 69.28934F;
@@ -247,14 +236,6 @@
             clnAtivo.MinimumWidth = 6;
             clnAtivo.Name = "clnAtivo";
             clnAtivo.ReadOnly = true;
-            // 
-            // clnCargo
-            // 
-            clnCargo.FillWeight = 69.28934F;
-            clnCargo.HeaderText = "Cargo";
-            clnCargo.MinimumWidth = 6;
-            clnCargo.Name = "clnCargo";
-            clnCargo.ReadOnly = true;
             // 
             // FrmConsultaClientes
             // 
@@ -286,10 +267,8 @@
         private DataGridViewTextBoxColumn clnID;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnEmail;
-        private DataGridViewTextBoxColumn clnRg;
         private DataGridViewTextBoxColumn clnCpf;
         private DataGridViewTextBoxColumn clnData_Nasc;
         private DataGridViewTextBoxColumn clnAtivo;
-        private DataGridViewTextBoxColumn clnCargo;
     }
 }
