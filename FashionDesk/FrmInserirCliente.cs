@@ -118,10 +118,10 @@ namespace FashionDesk
 
 
 
-            FrmInserirCliente frmInserirCliente= new();
+            FrmInserirCliente frmInserirCliente = new();
             frmInserirCliente.Close();
 
-          
+
         }
     }
 }

@@ -97,14 +97,18 @@ namespace FashionLib
             cmd.CommandType = CommandType.Text;
             if (procedimentos == "")
             {
-                cmd.CommandText = "select id,nome from procedimentos order by nome";
+                cmd.CommandText = "select * from procedimentos order by nome";
             }
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 lista.Add(new(
-                    dr.GetInt32(0),
-                    dr.GetString(1)
+                    dr.GetInt32(0),          // Id
+                    dr.GetString(1),         // Nome
+                    dr.GetString(2),         // Descrição
+                    dr.GetDecimal(3),        // Valor
+                    TimeOnly.FromTimeSpan(dr.GetTimeSpan(4)), // Duracao Estimada
+                    dr.GetChar(5)            // Classificação
                     ));
             }
             cmd.Connection.Close();
