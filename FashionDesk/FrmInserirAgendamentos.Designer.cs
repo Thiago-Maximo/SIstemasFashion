@@ -82,6 +82,7 @@
             btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 38;
+            
             // 
             // lblData
             // 
