@@ -34,6 +34,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtConsultar = new Guna.UI2.WinForms.Guna2TextBox();
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvConsultaAgendamento = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -43,6 +45,7 @@
             clnNomeCliente = new DataGridViewTextBoxColumn();
             clnNomeFuncionario = new DataGridViewTextBoxColumn();
             clnProcedimento = new DataGridViewTextBoxColumn();
+            btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)dgvConsultaAgendamento).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +72,7 @@
             txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtConsultar.Size = new Size(776, 30);
             txtConsultar.TabIndex = 42;
+            txtConsultar.TextChanged += txtConsultar_TextChanged;
             // 
             // lblPesquisa
             // 
@@ -84,17 +88,17 @@
             dgvConsultaAgendamento.AllowUserToAddRows = false;
             dgvConsultaAgendamento.AllowUserToDeleteRows = false;
             dgvConsultaAgendamento.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 255);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 128, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgvConsultaAgendamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 192, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 192, 255);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvConsultaAgendamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -104,13 +108,13 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvConsultaAgendamento.DefaultCellStyle = dataGridViewCellStyle3;
             dgvConsultaAgendamento.GridColor = Color.FromArgb(231, 229, 255);
-            dgvConsultaAgendamento.Location = new Point(13, 133);
+            dgvConsultaAgendamento.Location = new Point(13, 114);
             dgvConsultaAgendamento.Name = "dgvConsultaAgendamento";
             dgvConsultaAgendamento.ReadOnly = true;
             dgvConsultaAgendamento.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -123,7 +127,7 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgvConsultaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvConsultaAgendamento.RowHeadersVisible = false;
-            dgvConsultaAgendamento.Size = new Size(775, 218);
+            dgvConsultaAgendamento.Size = new Size(775, 332);
             dgvConsultaAgendamento.TabIndex = 43;
             dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -183,11 +187,25 @@
             clnProcedimento.Name = "clnProcedimento";
             clnProcedimento.ReadOnly = true;
             // 
+            // btnfecharForm
+            // 
+            btnfecharForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnfecharForm.CustomizableEdges = customizableEdges3;
+            btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
+            btnfecharForm.IconColor = Color.White;
+            btnfecharForm.Location = new Point(756, -1);
+            btnfecharForm.Name = "btnfecharForm";
+            btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnfecharForm.Size = new Size(44, 24);
+            btnfecharForm.TabIndex = 44;
+            btnfecharForm.Click += btnfecharForm_Click;
+            // 
             // FrmConsultaAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnfecharForm);
             Controls.Add(dgvConsultaAgendamento);
             Controls.Add(txtConsultar);
             Controls.Add(lblPesquisa);
@@ -211,5 +229,6 @@
         private DataGridViewTextBoxColumn clnNomeCliente;
         private DataGridViewTextBoxColumn clnNomeFuncionario;
         private DataGridViewTextBoxColumn clnProcedimento;
+        private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
     }
 }

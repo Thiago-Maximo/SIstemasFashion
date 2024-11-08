@@ -115,11 +115,11 @@ namespace FashionDesk
                 // Cria um novo objeto de Agendamentos com os valores do formulário
                 Agendamentos novoAgendamento = new Agendamentos
                 {
-                    Id_Cliente = int.Parse(TxtIdClientes.Text),
-                    Id_Funcionario = int.Parse(TxtIdFuncionarios.Text),
+                    Id_Cliente = Cliente.ObterPorId(int.Parse(TxtIdClientes.Text)),
+                    Id_Funcionario = Funcionario.ObterPorId(int.Parse(TxtIdFuncionarios.Text)),
                     Data_Agendamento = DateTime.Parse(txtDate.Text),
-                    Hora_Agendamento = DateTime.Parse($"{txtDate.Text} {cmbHora.Text}"),
-                    Id_procedimentos = int.Parse(cmbProcedimentos.SelectedValue.ToString())
+                    Hora_Agendamento = TimeSpan.Parse($"{txtDate.Text} {cmbHora.Text}"),
+                    Id_procedimentos = Procedimentos.ObterPorId(int.Parse(cmbProcedimentos.SelectedValue.ToString()))
                 };
 
                 // Insere o agendamento no banco de dados
