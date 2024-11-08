@@ -157,5 +157,7 @@ namespace FashionDesk
             cmbProcedimentos.DisplayMember = "Nome";
             cmbProcedimentos.ValueMember = "Id";
         }
+
+        
     }
 }

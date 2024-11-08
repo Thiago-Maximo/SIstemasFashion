@@ -13,6 +13,11 @@ namespace FashionDesk
 {
     public partial class FrmInserirFuncionario : Form
     {
+        public string NomeFuncionarioInserir { get; private set; }
+        public int IdFuncionairoInserir { get; set; }
+        public string NomeProcedimentoInserir { get; private set; }
+        private int IdProcedimentoInserir { get; set; }
+
         public FrmInserirFuncionario()
         {
             InitializeComponent();
@@ -88,7 +93,7 @@ namespace FashionDesk
             if (funcionario.Id > 0)
             {
                 MessageBox.Show($"O Funcionario {funcionario.Nome} com o Id {funcionario.Id}, Foi Inserido com Sucesso!!");
-                
+
                 CarregaGrid();
             }
             else
@@ -149,6 +154,25 @@ namespace FashionDesk
             else
             {
                 return false;
+            }
+        }
+
+        private void btnEscolherCliente_Click(object sender, EventArgs e)
+        {
+            using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
+            {
+                frmConsultaFuncionario.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
             }
         }
     }

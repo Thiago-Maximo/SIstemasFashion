@@ -15,6 +15,8 @@ namespace FashionDesk
     {
         public string FuncionarioSelecionado { get; private set; }
         public int IdFuncionarioSelecionado { get; set; }
+        public string NomeFuncionarioInserir { get; private set; }
+        public int IdFuncionairoInserir { get; set; }
         public FrmConsultarFuncionario()
         {
             InitializeComponent();
@@ -85,6 +87,8 @@ namespace FashionDesk
                 // Pegue o nome do cliente da linha selecionada
                 FuncionarioSelecionado = dgvConsultarFuncionario.Rows[e.RowIndex].Cells[1].Value.ToString();
                 IdFuncionarioSelecionado = Convert.ToInt32(dgvConsultarFuncionario.Rows[e.RowIndex].Cells[0].Value.ToString());
+                NomeFuncionarioInserir = dgvConsultarFuncionario.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdFuncionairoInserir = Convert.ToInt32(dgvConsultarFuncionario.Rows[e.RowIndex].Cells[0].Value.ToString());
                 // Fecha o formulário após selecionar o cliente
                 this.Close();
             }

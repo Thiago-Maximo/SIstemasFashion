@@ -395,7 +395,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(616, 445);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Atualizar Procedimentos";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -405,7 +405,7 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(616, 445);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "Consultar Procedimentos";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // FrmProcedimentos
