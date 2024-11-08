@@ -15,6 +15,8 @@ namespace FashionDesk
     {
         public string NomeFuncionarioInserir { get; private set; }
         public int IdFuncionairoInserir { get; set; }
+        public string NomeProcedimentoInserir { get; private set; }
+        private int IdProcedimentoInserir { get; set; }
 
         public FrmInserirFuncionario()
         {
@@ -163,9 +165,13 @@ namespace FashionDesk
 
                 if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
                 {
-                    txtNome2.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
-                    txtId2.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
-                    
+                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
                 }
             }
         }
