@@ -53,5 +53,35 @@ namespace FashionDesk
         {
             CarregaGrid();
         }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+
+            if (txtClassificacao.TextLength > 1)
+            {
+                MessageBox.Show("A Classificação deve conter apenas 1 caracter");
+            }
+
+            Procedimentos procedimentos = new Procedimentos(
+                txtnome.Text,
+                txtDescricao.Text,
+                nmrValor.Value,
+                new TimeSpan(int.Parse(txtDuracaoEstimada.Text)),
+                txtClassificacao.Text
+                );
+
+
+            procedimentos.Inserir();
+            if (procedimentos.Id > 0)
+            {
+                MessageBox.Show($"O Cliente {procedimentos.Nome} com o Id {procedimentos.Id}, Foi Inserido com Sucesso!!");
+                CarregaGrid();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao Inserir Cliente");
+                CarregaGrid();
+            }
+        }
     }
 }

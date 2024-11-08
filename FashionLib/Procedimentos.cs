@@ -15,14 +15,14 @@ namespace FashionLib
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Valor { get; set; }
-        public TimeOnly Duracacao_Estimada { get; set; }
-        public char Classificacao { get; set; }
+        public TimeSpan Duracacao_Estimada { get; set; }
+        public string Classificacao { get; set; }
 
         // Métodos Construtores
 
         // Método com Tudo
 
-        public Procedimentos(int id, string nome, string descricao, decimal valor, TimeOnly duracao_estimada, char classificacao)
+        public Procedimentos(int id, string nome, string descricao, decimal valor, TimeSpan duracao_estimada, string classificacao)
         {
             Id = id;
             Nome = nome;
@@ -32,7 +32,7 @@ namespace FashionLib
             Classificacao = classificacao;
         }
         // Método sem Id
-        public Procedimentos(string nome, string descricao, decimal valor, TimeOnly duracao_estimada, char classificacao)
+        public Procedimentos(string nome, string descricao, decimal valor, TimeSpan duracao_estimada, string classificacao)
         {
             Nome = nome;
             Descricao = descricao;
@@ -107,8 +107,8 @@ namespace FashionLib
                     dr.GetString(1),         // Nome
                     dr.GetString(2),         // Descrição
                     dr.GetDecimal(3),        // Valor
-                    TimeOnly.FromTimeSpan(dr.GetTimeSpan(4)), // Duracao Estimada
-                    dr.GetChar(5)            // Classificação
+                    (dr.GetTimeSpan(4)), // Duracao Estimada
+                    dr.GetString(5)            // Classificação
                     ));
             }
             cmd.Connection.Close();
@@ -132,8 +132,8 @@ namespace FashionLib
                     dr.GetString(1),         // Nome
                     dr.GetString(2),         // Descrição
                     dr.GetDecimal(3),        // Valor
-                    TimeOnly.FromTimeSpan(dr.GetTimeSpan(4)), // Duracao Estimada
-                    dr.GetChar(5)            // Classificação
+                    (dr.GetTimeSpan(4)), // Duracao Estimada
+                    dr.GetString(5)            // Classificação
                 );
 
             }
