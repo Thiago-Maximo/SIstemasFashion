@@ -8,13 +8,13 @@ namespace FashionLib
     public class Agendamentos
     {
         public int Id { get; set; }
-        public int Id_Cliente { get; set; }
-        public int Id_Funcionario { get; set; }
+        public Cliente Id_Cliente { get; set; }
+        public Funcionario Id_Funcionario { get; set; }
         public DateTime Data_Agendamento { get; set; }
-        public DateTime Hora_Agendamento { get; set; }
-        public int Id_procedimentos { get; set; }
+        public TimeSpan Hora_Agendamento { get; set; }
+        public Procedimentos Id_procedimentos { get; set; }
 
-        public Agendamentos(int id, int id_Cliente, int id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, int id_procedimentos)
+        public Agendamentos(int id, Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, TimeSpan hora_Agendamento, Procedimentos id_procedimentos)
         {
             Id = id;
             Id_Cliente = id_Cliente;
@@ -24,7 +24,7 @@ namespace FashionLib
             Id_procedimentos = id_procedimentos;
         }
 
-        public Agendamentos(int id_Cliente, int id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, int id_procedimentos)
+        public Agendamentos(Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, TimeSpan hora_Agendamento, Procedimentos id_procedimentos)
         {
             Id_Cliente = id_Cliente;
             Id_Funcionario = id_Funcionario;
@@ -87,30 +87,7 @@ namespace FashionLib
             cmd.Connection.Close();
         }
 
-        public static List<Agendamentos> ObterPorLista(string? nome = "")
-        {
-            List<Agendamentos> lista = new();
-            var cmd = Banco.Abrir();
-            cmd.CommandType = CommandType.Text;
-            if (nome == "")
-            {
-                cmd.CommandText = "SELECT * FROM agendamentos";
-            }
-            var dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                lista.Add(new(
-                    dr.GetInt32(0),
-                    dr.GetInt32(1),
-                    dr.GetInt32(2),
-                    dr.GetDateTime(3),
-                    dr.GetDateTime(4),
-                    dr.GetInt32(5)
-                ));
-            }
-            cmd.Connection.Close();
-            return lista;
-        }
+        
 
         public static Agendamentos ObterPorId(int Id)
         {
@@ -123,11 +100,11 @@ namespace FashionLib
             {
                 agendamento = new Agendamentos(
                     dr.GetInt32(0),
-                    dr.GetInt32(1),
-                    dr.GetInt32(2),
+                    Cliente.ObterPorId(dr.GetInt32(1)),
+                    Funcionario.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
-                    dr.GetInt32(5)
+                    dr.GetTimeSpan(4),
+                    Procedimentos.ObterPorId(dr.GetInt32(5))
                 );
             }
             cmd.Connection.Close();
@@ -151,6 +128,42 @@ namespace FashionLib
             cmd.Connection.Close();
             return horasAgendadas;
         }
+
+        public static List<Agendamentos> ObterPorLista(string? nome = "")
+        {
+            List<Agendamentos> lista = new();
+            var cmd = Banco.Abrir();  // Assume-se que Banco.Abrir() retorna uma conexão aberta
+            cmd.CommandType = CommandType.Text;
+
+            // Verifique se o nome foi informado e construa a consulta adequadamente
+            if (string.IsNullOrEmpty(nome))
+            {
+                // Se nome estiver vazio ou nulo, use uma consulta simples
+                cmd.CommandText = "SELECT * FROM agendamentos";
+            }
+            else
+            {
+                // Se nome não estiver vazio, adicione uma condição à consulta
+                cmd.CommandText = "SELECT * FROM agendamentos WHERE data_agendamento LIKE @nome";
+                cmd.Parameters.AddWithValue("@nome", "%" + nome + "%");  // Parâmetro para evitar SQL Injection
+            }
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(new Agendamentos(
+                    dr.GetInt32(0),
+                    Cliente.ObterPorId(dr.GetInt32(1)),
+                    Funcionario.ObterPorId(dr.GetInt32(2)),
+                    dr.GetDateTime(3),
+                    dr.GetTimeSpan(4),
+                    Procedimentos.ObterPorId(dr.GetInt32(5))
+                ));
+            }
+            cmd.Connection.Close();
+            return lista;
+        }
+
 
     }
 }

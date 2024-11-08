@@ -132,6 +132,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvConsultarCliente.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(253, 187, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);

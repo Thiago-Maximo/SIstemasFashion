@@ -78,12 +78,11 @@
             panel1 = new Panel();
             panelUser = new Guna.UI2.WinForms.Guna2Panel();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            lblEmailUser = new Label();
             btnUser = new Guna.UI2.WinForms.Guna2Button();
             panelAdmin = new Guna.UI2.WinForms.Guna2Panel();
             btnConsultarAdmin = new Guna.UI2.WinForms.Guna2Button();
             btnAtualizarAdmin = new Guna.UI2.WinForms.Guna2Button();
-            btnInserirAdmin = new Guna.UI2.WinForms.Guna2Button();
+            btnProcedimentos = new Guna.UI2.WinForms.Guna2Button();
             btnAdmin = new Guna.UI2.WinForms.Guna2Button();
             panelAgendamentos = new Guna.UI2.WinForms.Guna2Panel();
             btnConsultarAgendamentos = new Guna.UI2.WinForms.Guna2Button();
@@ -116,7 +115,6 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panelUser);
-            panel1.Controls.Add(lblEmailUser);
             panel1.Controls.Add(btnUser);
             panel1.Controls.Add(panelAdmin);
             panel1.Controls.Add(btnAdmin);
@@ -130,17 +128,17 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 925);
+            panel1.Size = new Size(200, 1061);
             panel1.TabIndex = 0;
             // 
             // panelUser
             // 
             panelUser.Controls.Add(btnLogout);
             panelUser.CustomizableEdges = customizableEdges3;
-            panelUser.Location = new Point(0, 980);
+            panelUser.Location = new Point(0, 929);
             panelUser.Name = "panelUser";
             panelUser.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            panelUser.Size = new Size(200, 69);
+            panelUser.Size = new Size(200, 35);
             panelUser.TabIndex = 12;
             // 
             // btnLogout
@@ -151,31 +149,19 @@
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogout.Dock = DockStyle.Top;
             btnLogout.FillColor = Color.White;
             btnLogout.Font = new Font("Segoe UI", 9F);
             btnLogout.ForeColor = Color.Black;
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnLogout.ImageAlign = HorizontalAlignment.Right;
-            btnLogout.Location = new Point(0, 0);
+            btnLogout.Location = new Point(0, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(200, 45);
+            btnLogout.Size = new Size(200, 28);
             btnLogout.TabIndex = 7;
             btnLogout.Text = "&Logout";
             btnLogout.TextAlign = HorizontalAlignment.Left;
             btnLogout.Click += btnLogout_Click;
-            // 
-            // lblEmailUser
-            // 
-            lblEmailUser.AutoSize = true;
-            lblEmailUser.BackColor = Color.Transparent;
-            lblEmailUser.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Italic);
-            lblEmailUser.Location = new Point(77, 959);
-            lblEmailUser.Name = "lblEmailUser";
-            lblEmailUser.Size = new Size(57, 13);
-            lblEmailUser.TabIndex = 11;
-            lblEmailUser.Text = "Email User";
             // 
             // btnUser
             // 
@@ -191,10 +177,10 @@
             btnUser.Image = Properties.Resources.Usuario_Rosa;
             btnUser.ImageAlign = HorizontalAlignment.Left;
             btnUser.ImageSize = new Size(50, 50);
-            btnUser.Location = new Point(0, 923);
+            btnUser.Location = new Point(0, 882);
             btnUser.Name = "btnUser";
             btnUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnUser.Size = new Size(200, 51);
+            btnUser.Size = new Size(200, 52);
             btnUser.TabIndex = 2;
             btnUser.Text = "User Name - Nivel";
             btnUser.TextAlign = HorizontalAlignment.Right;
@@ -204,7 +190,7 @@
             // 
             panelAdmin.Controls.Add(btnConsultarAdmin);
             panelAdmin.Controls.Add(btnAtualizarAdmin);
-            panelAdmin.Controls.Add(btnInserirAdmin);
+            panelAdmin.Controls.Add(btnProcedimentos);
             panelAdmin.CustomizableEdges = customizableEdges13;
             panelAdmin.Dock = DockStyle.Top;
             panelAdmin.Location = new Point(0, 718);
@@ -257,27 +243,28 @@
             btnAtualizarAdmin.Text = "&Atualizar";
             btnAtualizarAdmin.TextAlign = HorizontalAlignment.Left;
             // 
-            // btnInserirAdmin
+            // btnProcedimentos
             // 
-            btnInserirAdmin.BackgroundImageLayout = ImageLayout.Zoom;
-            btnInserirAdmin.CustomizableEdges = customizableEdges11;
-            btnInserirAdmin.DisabledState.BorderColor = Color.DarkGray;
-            btnInserirAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnInserirAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnInserirAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnInserirAdmin.Dock = DockStyle.Top;
-            btnInserirAdmin.FillColor = Color.White;
-            btnInserirAdmin.Font = new Font("Segoe UI", 9F);
-            btnInserirAdmin.ForeColor = Color.Black;
-            btnInserirAdmin.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnInserirAdmin.ImageAlign = HorizontalAlignment.Right;
-            btnInserirAdmin.Location = new Point(0, 0);
-            btnInserirAdmin.Name = "btnInserirAdmin";
-            btnInserirAdmin.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnInserirAdmin.Size = new Size(200, 45);
-            btnInserirAdmin.TabIndex = 4;
-            btnInserirAdmin.Text = "&Inserir";
-            btnInserirAdmin.TextAlign = HorizontalAlignment.Left;
+            btnProcedimentos.BackgroundImageLayout = ImageLayout.Zoom;
+            btnProcedimentos.CustomizableEdges = customizableEdges11;
+            btnProcedimentos.DisabledState.BorderColor = Color.DarkGray;
+            btnProcedimentos.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnProcedimentos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnProcedimentos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProcedimentos.Dock = DockStyle.Top;
+            btnProcedimentos.FillColor = Color.White;
+            btnProcedimentos.Font = new Font("Segoe UI", 9F);
+            btnProcedimentos.ForeColor = Color.Black;
+            btnProcedimentos.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnProcedimentos.ImageAlign = HorizontalAlignment.Right;
+            btnProcedimentos.Location = new Point(0, 0);
+            btnProcedimentos.Name = "btnProcedimentos";
+            btnProcedimentos.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnProcedimentos.Size = new Size(200, 45);
+            btnProcedimentos.TabIndex = 4;
+            btnProcedimentos.Text = "&Procedimentos";
+            btnProcedimentos.TextAlign = HorizontalAlignment.Left;
+            btnProcedimentos.Click += btnProcedimentos_Click;
             // 
             // btnAdmin
             // 
@@ -647,7 +634,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1076, 925);
+            ClientSize = new Size(1076, 1061);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -656,7 +643,6 @@
             SizeGripStyle = SizeGripStyle.Show;
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panelUser.ResumeLayout(false);
             panelAdmin.ResumeLayout(false);
             panelAgendamentos.ResumeLayout(false);
@@ -689,12 +675,11 @@
         private Guna.UI2.WinForms.Guna2Panel panelAdmin;
         private Guna.UI2.WinForms.Guna2Button btnConsultarAdmin;
         private Guna.UI2.WinForms.Guna2Button btnAtualizarAdmin;
-        private Guna.UI2.WinForms.Guna2Button btnInserirAdmin;
+        private Guna.UI2.WinForms.Guna2Button btnProcedimentos;
         private Guna.UI2.WinForms.Guna2Button btnConsultarAgendamentos;
         private Guna.UI2.WinForms.Guna2Button btntualizarAgendamentos;
         private Guna.UI2.WinForms.Guna2Button btnInserirAgendamentos;
         private Guna.UI2.WinForms.Guna2Button btnUser;
-        private Label lblEmailUser;
         private Guna.UI2.WinForms.Guna2Panel panelUser;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
     }

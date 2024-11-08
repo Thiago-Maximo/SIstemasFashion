@@ -199,6 +199,7 @@
             dgvClientesInserir.ThemeStyle.RowsStyle.Height = 25;
             dgvClientesInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvClientesInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            
             // 
             // clnID
             // 
