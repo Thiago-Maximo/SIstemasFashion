@@ -252,5 +252,11 @@ namespace FashionDesk
             FrmConsultaAgendamento frmConsultaAgendamento = new();
             frmConsultaAgendamento.ShowDialog();
         }
+
+        private void btnTrocarDia_Click(object sender, EventArgs e)
+        {
+            FrmAgendamentos frmAgendamentos = new();
+            frmAgendamentos.ShowDialog();
+        }
     }
 }

@@ -64,6 +64,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtIdFuncionarios = new Guna.UI2.WinForms.Guna2TextBox();
             txtIdClientes = new Guna.UI2.WinForms.Guna2TextBox();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
@@ -97,6 +99,7 @@
             txtConsultar = new Guna.UI2.WinForms.Guna2TextBox();
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnConsultar = new Guna.UI2.WinForms.Guna2Button();
+            btnTrocarDia = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dgvConsultaAgendamento).BeginInit();
             SuspendLayout();
             // 
@@ -229,7 +232,7 @@
             cmbProcedimentos.Font = new Font("Segoe UI", 10F);
             cmbProcedimentos.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProcedimentos.ItemHeight = 30;
-            cmbProcedimentos.Location = new Point(249, 213);
+            cmbProcedimentos.Location = new Point(212, 213);
             cmbProcedimentos.Name = "cmbProcedimentos";
             cmbProcedimentos.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbProcedimentos.Size = new Size(200, 36);
@@ -246,7 +249,7 @@
             cmbHora.Font = new Font("Segoe UI", 10F);
             cmbHora.ForeColor = Color.FromArgb(68, 88, 112);
             cmbHora.ItemHeight = 30;
-            cmbHora.Location = new Point(249, 132);
+            cmbHora.Location = new Point(212, 132);
             cmbHora.Name = "cmbHora";
             cmbHora.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbHora.Size = new Size(200, 36);
@@ -303,7 +306,7 @@
             txtDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDate.Font = new Font("Segoe UI", 9F);
             txtDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDate.Location = new Point(249, 51);
+            txtDate.Location = new Point(212, 51);
             txtDate.Name = "txtDate";
             txtDate.PasswordChar = '\0';
             txtDate.PlaceholderText = "";
@@ -318,7 +321,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Times New Roman", 18F, FontStyle.Italic);
-            guna2HtmlLabel4.Location = new Point(252, 190);
+            guna2HtmlLabel4.Location = new Point(215, 190);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(140, 29);
             guna2HtmlLabel4.TabIndex = 49;
@@ -328,7 +331,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Times New Roman", 18F, FontStyle.Italic);
-            guna2HtmlLabel3.Location = new Point(251, 107);
+            guna2HtmlLabel3.Location = new Point(214, 107);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(54, 29);
             guna2HtmlLabel3.TabIndex = 48;
@@ -358,7 +361,7 @@
             // 
             lblData.BackColor = Color.Transparent;
             lblData.Font = new Font("Times New Roman", 18F, FontStyle.Italic);
-            lblData.Location = new Point(249, 26);
+            lblData.Location = new Point(212, 26);
             lblData.Name = "lblData";
             lblData.Size = new Size(51, 29);
             lblData.TabIndex = 50;
@@ -607,6 +610,25 @@
             btnConsultar.Text = "&Consultar";
             btnConsultar.Click += btnConsultar_Click;
             // 
+            // btnTrocarDia
+            // 
+            btnTrocarDia.BorderRadius = 20;
+            btnTrocarDia.CustomizableEdges = customizableEdges33;
+            btnTrocarDia.DisabledState.BorderColor = Color.DarkGray;
+            btnTrocarDia.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnTrocarDia.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnTrocarDia.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnTrocarDia.FillColor = Color.White;
+            btnTrocarDia.Font = new Font("Segoe UI", 9F);
+            btnTrocarDia.ForeColor = Color.White;
+            btnTrocarDia.Image = Properties.Resources.pesquisa;
+            btnTrocarDia.Location = new Point(418, 51);
+            btnTrocarDia.Name = "btnTrocarDia";
+            btnTrocarDia.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnTrocarDia.Size = new Size(37, 36);
+            btnTrocarDia.TabIndex = 56;
+            btnTrocarDia.Click += btnTrocarDia_Click;
+            // 
             // FrmAtualizarAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -622,6 +644,7 @@
             Controls.Add(btnConsultar);
             Controls.Add(btnAtualizar);
             Controls.Add(btnEscolherFuncionario);
+            Controls.Add(btnTrocarDia);
             Controls.Add(btnEscolherCliente);
             Controls.Add(cmbProcedimentos);
             Controls.Add(cmbHora);
@@ -682,5 +705,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtConsultar;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPesquisa;
         private Guna.UI2.WinForms.Guna2Button btnConsultar;
+        private Guna.UI2.WinForms.Guna2Button btnTrocarDia;
     }
 }
