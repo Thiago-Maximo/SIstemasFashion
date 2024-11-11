@@ -340,7 +340,7 @@
             btnfecharForm.CustomizableEdges = customizableEdges23;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
-            btnfecharForm.Location = new Point(465, 17);
+            btnfecharForm.Location = new Point(471, 0);
             btnfecharForm.Name = "btnfecharForm";
             btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnfecharForm.Size = new Size(44, 24);

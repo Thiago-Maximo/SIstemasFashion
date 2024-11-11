@@ -68,7 +68,7 @@ namespace FashionDesk
 
         private void btnEscolherCliente_Click(object sender, EventArgs e)
         {
-            using (FrmConsultaClientes frmConsultaClientes = new FrmConsultaClientes())
+            using (FrmSelecionarCliente frmConsultaClientes = new FrmSelecionarCliente())
             {
                 frmConsultaClientes.ShowDialog();
 

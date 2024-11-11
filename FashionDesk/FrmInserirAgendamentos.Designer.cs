@@ -326,6 +326,7 @@
             txtIdClientes.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtIdClientes.Size = new Size(29, 36);
             txtIdClientes.TabIndex = 44;
+            txtIdClientes.Visible = false;
             // 
             // txtIdFuncionarios
             // 
@@ -346,6 +347,7 @@
             txtIdFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtIdFuncionarios.Size = new Size(29, 36);
             txtIdFuncionarios.TabIndex = 44;
+            txtIdFuncionarios.Visible = false;
             // 
             // FrmInserirAgendamentos
             // 

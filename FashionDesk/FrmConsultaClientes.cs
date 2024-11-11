@@ -46,12 +46,8 @@ namespace FashionDesk
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            var msg = MessageBox.Show("Deseja continuar a consulta?",
-                   "Confirmação de saída",
-                   MessageBoxButtons.YesNo,
-                   MessageBoxIcon.Warning,
-                   MessageBoxDefaultButton.Button1);
-            if (msg == DialogResult.No) this.Close();
+            FrmConsultaClientes frmConsultaClientes = new();
+            frmConsultaClientes.Close();
         }
 
         private void CarregaGrid(string nome = "")
@@ -70,7 +66,7 @@ namespace FashionDesk
                 // Formatar a data para exibir apenas a data
                 dgvConsultarCliente.Rows[cont].Cells[4].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvConsultarCliente.Rows[cont].Cells[5].Value = funcionario.Ativo;
+                dgvConsultarCliente.Rows[cont].Cells[5].Value = funcionario.Ativo ? "Sim" : "Não";
 
 
                 cont++;

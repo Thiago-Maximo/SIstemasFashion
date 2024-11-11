@@ -46,7 +46,7 @@ namespace FashionDesk
                 // Formatar a data para exibir apenas a data
                 dgvClientesAtualizar.Rows[cont].Cells[4].Value = cliente.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvClientesAtualizar.Rows[cont].Cells[5].Value = cliente.Ativo;
+                dgvClientesAtualizar.Rows[cont].Cells[5].Value = cliente.Ativo ? "Sim" : "Não";
                 cont++;
             }
         }

@@ -51,7 +51,7 @@ namespace FashionDesk
                 // Formatar a data para exibir apenas a data
                 dgvConsultarFuncionario.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
 
-                dgvConsultarFuncionario.Rows[cont].Cells[6].Value = funcionario.Ativo;
+                dgvConsultarFuncionario.Rows[cont].Cells[6].Value = funcionario.Ativo ? "Sim" : "Não";
                 dgvConsultarFuncionario.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Cargos;
 
                 cont++;

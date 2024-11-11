@@ -28,6 +28,11 @@ namespace FashionDesk
             dgvSelecionarFuncionario.Rows.Clear();
             foreach (var funcionario in funcionariosDisponiveis)
             {
+                if (!funcionario.Ativo)
+                {
+                    continue;
+                }
+
                 int rowIndex = dgvSelecionarFuncionario.Rows.Add();
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[0].Value = funcionario.Id;
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[1].Value = funcionario.Nome;
@@ -35,9 +40,12 @@ namespace FashionDesk
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[3].Value = funcionario.Rg;
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[4].Value = funcionario.Cpf;
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[5].Value = funcionario.Data_Nasc;
-                dgvSelecionarFuncionario.Rows[rowIndex].Cells[6].Value = funcionario.Ativo;
+                dgvSelecionarFuncionario.Rows[rowIndex].Cells[6].Value = funcionario.Ativo ? "Sim" : "Não";
                 dgvSelecionarFuncionario.Rows[rowIndex].Cells[7].Value = funcionario.Id_Cargo.Cargos;
             }
+
+
+            
         }
 
         private void dgvSelecionarFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
