@@ -11,10 +11,10 @@ namespace FashionLib
         public Cliente Id_Cliente { get; set; }
         public Funcionario Id_Funcionario { get; set; }
         public DateTime Data_Agendamento { get; set; }
-        public TimeSpan Hora_Agendamento { get; set; }
+        public DateTime Hora_Agendamento { get; set; }
         public Procedimentos Id_procedimentos { get; set; }
 
-        public Agendamentos(int id, Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, TimeSpan hora_Agendamento, Procedimentos id_procedimentos)
+        public Agendamentos(int id, Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos)
         {
             Id = id;
             Id_Cliente = id_Cliente;
@@ -24,7 +24,7 @@ namespace FashionLib
             Id_procedimentos = id_procedimentos;
         }
 
-        public Agendamentos(Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, TimeSpan hora_Agendamento, Procedimentos id_procedimentos)
+        public Agendamentos(Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos)
         {
             Id_Cliente = id_Cliente;
             Id_Funcionario = id_Funcionario;
@@ -59,11 +59,11 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_agendamento_insert";
-            cmd.Parameters.AddWithValue("spid_cliente", Id_Cliente);
-            cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario);
+            cmd.Parameters.AddWithValue("spid_cliente", Id_Cliente.Id);
+            cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario.Id);
             cmd.Parameters.AddWithValue("spdia", Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
-            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos);
+            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos.Id);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -103,7 +103,7 @@ namespace FashionLib
                     Cliente.ObterPorId(dr.GetInt32(1)),
                     Funcionario.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetTimeSpan(4),
+                    dr.GetDateTime(4),
                     Procedimentos.ObterPorId(dr.GetInt32(5))
                 );
             }
@@ -156,7 +156,7 @@ namespace FashionLib
                     Cliente.ObterPorId(dr.GetInt32(1)),
                     Funcionario.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetTimeSpan(4),
+                    dr.GetDateTime(4),
                     Procedimentos.ObterPorId(dr.GetInt32(5))
                 ));
             }
