@@ -18,6 +18,13 @@ namespace FashionDesk
             CarregarFuncionariosDisponiveis(procedimentoId, data, hora);
             _frmInserirAgendamentos = frmInserirAgendamentos;
         }
+        public FrmSelecionarFuncionario(int procedimentoId, DateTime data, string hora)
+        {
+            InitializeComponent();
+            CarregarFuncionariosDisponiveis(procedimentoId, data, hora);
+            
+        }
+        
 
         private void CarregarFuncionariosDisponiveis(int procedimentoId, DateTime data, string hora)
         {
@@ -55,9 +62,6 @@ namespace FashionDesk
                 IdFuncionarioSelecionado = Convert.ToInt32(dgvSelecionarFuncionario.Rows[e.RowIndex].Cells[0].Value);
                 FuncionarioSelecionado = dgvSelecionarFuncionario.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-                // Atualiza os TextBoxes no FrmInserirAgendamentos com os dados do funcionário selecionado
-                _frmInserirAgendamentos.TxtIdFuncionarios.Text = IdFuncionarioSelecionado.ToString();
-                _frmInserirAgendamentos.TxtFuncionarios.Text = FuncionarioSelecionado;
 
                 this.Close();
             }

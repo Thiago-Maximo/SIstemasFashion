@@ -35,6 +35,7 @@ namespace FashionDesk
                 dgvConsultaAgendamento.Rows[cont].Cells[2].Value = agendamentos.Hora_Agendamento.ToString(@"hh\:mm\:ss");
 
                 dgvConsultaAgendamento.Rows[cont].Cells[5].Value = agendamentos.Id_procedimentos.Nome;
+                dgvConsultaAgendamento.Rows[cont].Cells[6].Value = agendamentos.Status;
 
 
                 cont++;

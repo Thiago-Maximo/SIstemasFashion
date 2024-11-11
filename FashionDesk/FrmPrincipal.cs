@@ -246,5 +246,12 @@ namespace FashionDesk
             frmProcedimentos.MdiParent = this;
             frmProcedimentos.Show();
         }
+
+        private void btntualizarAgendamentos_Click(object sender, EventArgs e)
+        {
+            FrmAtualizarAgendamento frmAtualizarAgendamento = new();
+            frmAtualizarAgendamento.MdiParent = this;
+            frmAtualizarAgendamento.Show();
+        }
     }
 }

@@ -92,9 +92,11 @@ namespace FashionDesk
             DateTime data = DateTime.Parse(txtDate.Text);
             string hora = cmbHora.Text;
 
-            using (FrmSelecionarFuncionario frmSelecionarFuncionario = new FrmSelecionarFuncionario(procedimentoId, data, hora, this))
+            using (FrmSelecionarFuncionario frmSelecionarFuncionario = new FrmSelecionarFuncionario(procedimentoId, data, hora))
             {
                 frmSelecionarFuncionario.ShowDialog();
+                TxtFuncionarios.Text = frmSelecionarFuncionario.FuncionarioSelecionado;
+                TxtIdFuncionarios.Text = frmSelecionarFuncionario.IdFuncionarioSelecionado.ToString();
             }
         }
 

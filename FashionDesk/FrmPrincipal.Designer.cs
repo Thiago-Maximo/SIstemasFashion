@@ -347,6 +347,7 @@
             btntualizarAgendamentos.TabIndex = 5;
             btntualizarAgendamentos.Text = "&Atualizar";
             btntualizarAgendamentos.TextAlign = HorizontalAlignment.Left;
+            btntualizarAgendamentos.Click += btntualizarAgendamentos_Click;
             // 
             // btnInserirAgendamentos
             // 

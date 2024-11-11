@@ -52,6 +52,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtIdFuncionarios = new Guna.UI2.WinForms.Guna2TextBox();
             txtIdClientes = new Guna.UI2.WinForms.Guna2TextBox();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
@@ -69,6 +81,23 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnEscolherAgendamento = new Guna.UI2.WinForms.Guna2Button();
+            dgvConsultaAgendamento = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnData = new DataGridViewTextBoxColumn();
+            clnHora = new DataGridViewTextBoxColumn();
+            clnID = new DataGridViewTextBoxColumn();
+            clnIDCliente = new DataGridViewTextBoxColumn();
+            clnNomeCliente = new DataGridViewTextBoxColumn();
+            clnIDFuncionario = new DataGridViewTextBoxColumn();
+            clnNomeFuncionario = new DataGridViewTextBoxColumn();
+            clnProcedimento = new DataGridViewTextBoxColumn();
+            clnStatus = new DataGridViewTextBoxColumn();
+            txtConsultar = new Guna.UI2.WinForms.Guna2TextBox();
+            lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultaAgendamento).BeginInit();
             SuspendLayout();
             // 
             // txtIdFuncionarios
@@ -82,7 +111,7 @@
             txtIdFuncionarios.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtIdFuncionarios.Font = new Font("Segoe UI", 9F);
             txtIdFuncionarios.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtIdFuncionarios.Location = new Point(227, 186);
+            txtIdFuncionarios.Location = new Point(749, 132);
             txtIdFuncionarios.Name = "txtIdFuncionarios";
             txtIdFuncionarios.PasswordChar = '\0';
             txtIdFuncionarios.PlaceholderText = "";
@@ -90,7 +119,6 @@
             txtIdFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtIdFuncionarios.Size = new Size(29, 36);
             txtIdFuncionarios.TabIndex = 61;
-            txtIdFuncionarios.Visible = false;
             // 
             // txtIdClientes
             // 
@@ -103,7 +131,7 @@
             txtIdClientes.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtIdClientes.Font = new Font("Segoe UI", 9F);
             txtIdClientes.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtIdClientes.Location = new Point(219, 24);
+            txtIdClientes.Location = new Point(462, 9);
             txtIdClientes.Name = "txtIdClientes";
             txtIdClientes.PasswordChar = '\0';
             txtIdClientes.PlaceholderText = "";
@@ -111,7 +139,6 @@
             txtIdClientes.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtIdClientes.Size = new Size(29, 36);
             txtIdClientes.TabIndex = 60;
-            txtIdClientes.Visible = false;
             // 
             // btnFechar
             // 
@@ -126,7 +153,7 @@
             btnFechar.Font = new Font("Segoe UI", 9F);
             btnFechar.ForeColor = Color.Black;
             btnFechar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnFechar.Location = new Point(227, 220);
+            btnFechar.Location = new Point(353, 274);
             btnFechar.Name = "btnFechar";
             btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnFechar.Size = new Size(120, 45);
@@ -146,7 +173,7 @@
             btnAtualizar.Font = new Font("Segoe UI", 9F);
             btnAtualizar.ForeColor = Color.Black;
             btnAtualizar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnAtualizar.Location = new Point(357, 220);
+            btnAtualizar.Location = new Point(483, 274);
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAtualizar.Size = new Size(120, 45);
@@ -165,11 +192,12 @@
             btnEscolherFuncionario.Font = new Font("Segoe UI", 9F);
             btnEscolherFuncionario.ForeColor = Color.White;
             btnEscolherFuncionario.Image = Properties.Resources.pesquisa;
-            btnEscolherFuncionario.Location = new Point(469, 147);
+            btnEscolherFuncionario.Location = new Point(706, 132);
             btnEscolherFuncionario.Name = "btnEscolherFuncionario";
             btnEscolherFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnEscolherFuncionario.Size = new Size(37, 36);
             btnEscolherFuncionario.TabIndex = 57;
+            btnEscolherFuncionario.Click += btnEscolherFuncionario_Click;
             // 
             // btnEscolherCliente
             // 
@@ -183,11 +211,12 @@
             btnEscolherCliente.Font = new Font("Segoe UI", 9F);
             btnEscolherCliente.ForeColor = Color.White;
             btnEscolherCliente.Image = Properties.Resources.pesquisa;
-            btnEscolherCliente.Location = new Point(450, 66);
+            btnEscolherCliente.Location = new Point(693, 51);
             btnEscolherCliente.Name = "btnEscolherCliente";
             btnEscolherCliente.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnEscolherCliente.Size = new Size(37, 36);
             btnEscolherCliente.TabIndex = 56;
+            btnEscolherCliente.Click += btnEscolherCliente_Click;
             // 
             // cmbProcedimentos
             // 
@@ -200,7 +229,7 @@
             cmbProcedimentos.Font = new Font("Segoe UI", 10F);
             cmbProcedimentos.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProcedimentos.ItemHeight = 30;
-            cmbProcedimentos.Location = new Point(6, 228);
+            cmbProcedimentos.Location = new Point(249, 213);
             cmbProcedimentos.Name = "cmbProcedimentos";
             cmbProcedimentos.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbProcedimentos.Size = new Size(200, 36);
@@ -217,7 +246,7 @@
             cmbHora.Font = new Font("Segoe UI", 10F);
             cmbHora.ForeColor = Color.FromArgb(68, 88, 112);
             cmbHora.ItemHeight = 30;
-            cmbHora.Location = new Point(6, 147);
+            cmbHora.Location = new Point(249, 132);
             cmbHora.Name = "cmbHora";
             cmbHora.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbHora.Size = new Size(200, 36);
@@ -234,7 +263,7 @@
             TextFuncionarios.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextFuncionarios.Font = new Font("Segoe UI", 9F);
             TextFuncionarios.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextFuncionarios.Location = new Point(227, 147);
+            TextFuncionarios.Location = new Point(470, 132);
             TextFuncionarios.Name = "TextFuncionarios";
             TextFuncionarios.PasswordChar = '\0';
             TextFuncionarios.PlaceholderText = "";
@@ -254,7 +283,7 @@
             textClientes.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textClientes.Font = new Font("Segoe UI", 9F);
             textClientes.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textClientes.Location = new Point(227, 66);
+            textClientes.Location = new Point(470, 51);
             textClientes.Name = "textClientes";
             textClientes.PasswordChar = '\0';
             textClientes.PlaceholderText = "";
@@ -274,7 +303,7 @@
             txtDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDate.Font = new Font("Segoe UI", 9F);
             txtDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDate.Location = new Point(6, 66);
+            txtDate.Location = new Point(249, 51);
             txtDate.Name = "txtDate";
             txtDate.PasswordChar = '\0';
             txtDate.PlaceholderText = "";
@@ -288,7 +317,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            guna2HtmlLabel4.Location = new Point(26, 189);
+            guna2HtmlLabel4.Location = new Point(269, 174);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(159, 33);
             guna2HtmlLabel4.TabIndex = 49;
@@ -298,7 +327,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            guna2HtmlLabel3.Location = new Point(44, 108);
+            guna2HtmlLabel3.Location = new Point(287, 93);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(62, 33);
             guna2HtmlLabel3.TabIndex = 48;
@@ -308,7 +337,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            guna2HtmlLabel2.Location = new Point(227, 108);
+            guna2HtmlLabel2.Location = new Point(470, 93);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(250, 33);
             guna2HtmlLabel2.TabIndex = 47;
@@ -318,7 +347,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            guna2HtmlLabel1.Location = new Point(254, 27);
+            guna2HtmlLabel1.Location = new Point(497, 12);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(190, 33);
             guna2HtmlLabel1.TabIndex = 46;
@@ -328,7 +357,7 @@
             // 
             lblData.BackColor = Color.Transparent;
             lblData.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
-            lblData.Location = new Point(44, 27);
+            lblData.Location = new Point(287, 12);
             lblData.Name = "lblData";
             lblData.Size = new Size(59, 33);
             lblData.TabIndex = 50;
@@ -340,30 +369,266 @@
             btnfecharForm.CustomizableEdges = customizableEdges23;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
-            btnfecharForm.Location = new Point(471, 0);
+            btnfecharForm.Location = new Point(944, 0);
             btnfecharForm.Name = "btnfecharForm";
             btnfecharForm.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 45;
             // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.CustomizableEdges = customizableEdges25;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Segoe UI", 9F);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(466, 213);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2TextBox1.Size = new Size(221, 36);
+            guna2TextBox1.TabIndex = 53;
+            // 
+            // guna2TextBox2
+            // 
+            guna2TextBox2.CustomizableEdges = customizableEdges27;
+            guna2TextBox2.DefaultText = "";
+            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Font = new Font("Segoe UI", 9F);
+            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Location = new Point(674, 255);
+            guna2TextBox2.Name = "guna2TextBox2";
+            guna2TextBox2.PasswordChar = '\0';
+            guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.SelectedText = "";
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2TextBox2.Size = new Size(29, 36);
+            guna2TextBox2.TabIndex = 61;
+            guna2TextBox2.Visible = false;
+            // 
+            // guna2HtmlLabel5
+            // 
+            guna2HtmlLabel5.BackColor = Color.Transparent;
+            guna2HtmlLabel5.Font = new Font("Times New Roman", 20.25F, FontStyle.Italic);
+            guna2HtmlLabel5.Location = new Point(466, 174);
+            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            guna2HtmlLabel5.Size = new Size(262, 33);
+            guna2HtmlLabel5.TabIndex = 47;
+            guna2HtmlLabel5.Text = "Escolher Agendamento";
+            // 
+            // btnEscolherAgendamento
+            // 
+            btnEscolherAgendamento.BorderRadius = 20;
+            btnEscolherAgendamento.CustomizableEdges = customizableEdges29;
+            btnEscolherAgendamento.DisabledState.BorderColor = Color.DarkGray;
+            btnEscolherAgendamento.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEscolherAgendamento.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEscolherAgendamento.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEscolherAgendamento.FillColor = Color.White;
+            btnEscolherAgendamento.Font = new Font("Segoe UI", 9F);
+            btnEscolherAgendamento.ForeColor = Color.White;
+            btnEscolherAgendamento.Image = Properties.Resources.pesquisa;
+            btnEscolherAgendamento.Location = new Point(706, 213);
+            btnEscolherAgendamento.Name = "btnEscolherAgendamento";
+            btnEscolherAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnEscolherAgendamento.Size = new Size(37, 36);
+            btnEscolherAgendamento.TabIndex = 57;
+            btnEscolherAgendamento.Click += btnEscolherFuncionario_Click;
+            // 
+            // dgvConsultaAgendamento
+            // 
+            dgvConsultaAgendamento.AllowUserToAddRows = false;
+            dgvConsultaAgendamento.AllowUserToDeleteRows = false;
+            dgvConsultaAgendamento.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dgvConsultaAgendamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvConsultaAgendamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvConsultaAgendamento.ColumnHeadersHeight = 17;
+            dgvConsultaAgendamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultaAgendamento.Columns.AddRange(new DataGridViewColumn[] { clnData, clnHora, clnID, clnIDCliente, clnNomeCliente, clnIDFuncionario, clnNomeFuncionario, clnProcedimento, clnStatus });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvConsultaAgendamento.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvConsultaAgendamento.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultaAgendamento.Location = new Point(131, 363);
+            dgvConsultaAgendamento.Name = "dgvConsultaAgendamento";
+            dgvConsultaAgendamento.ReadOnly = true;
+            dgvConsultaAgendamento.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvConsultaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvConsultaAgendamento.RowHeadersVisible = false;
+            dgvConsultaAgendamento.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvConsultaAgendamento.Size = new Size(754, 308);
+            dgvConsultaAgendamento.TabIndex = 64;
+            dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(255, 128, 255);
+            dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultaAgendamento.ThemeStyle.BackColor = Color.White;
+            dgvConsultaAgendamento.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultaAgendamento.ThemeStyle.HeaderStyle.Height = 17;
+            dgvConsultaAgendamento.ThemeStyle.ReadOnly = true;
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.Height = 25;
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvConsultaAgendamento.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultaAgendamento.CellContentClick += dgvConsultaAgendamento_CellContentClick;
+            // 
+            // clnData
+            // 
+            clnData.HeaderText = "Data";
+            clnData.Name = "clnData";
+            clnData.ReadOnly = true;
+            // 
+            // clnHora
+            // 
+            clnHora.HeaderText = "Hora";
+            clnHora.Name = "clnHora";
+            clnHora.ReadOnly = true;
+            // 
+            // clnID
+            // 
+            clnID.HeaderText = "ID";
+            clnID.Name = "clnID";
+            clnID.ReadOnly = true;
+            // 
+            // clnIDCliente
+            // 
+            clnIDCliente.HeaderText = "ID do Cliente";
+            clnIDCliente.Name = "clnIDCliente";
+            clnIDCliente.ReadOnly = true;
+            clnIDCliente.Visible = false;
+            // 
+            // clnNomeCliente
+            // 
+            clnNomeCliente.HeaderText = "Cliente";
+            clnNomeCliente.Name = "clnNomeCliente";
+            clnNomeCliente.ReadOnly = true;
+            // 
+            // clnIDFuncionario
+            // 
+            clnIDFuncionario.HeaderText = "ID do Funcionarios";
+            clnIDFuncionario.Name = "clnIDFuncionario";
+            clnIDFuncionario.ReadOnly = true;
+            clnIDFuncionario.Visible = false;
+            // 
+            // clnNomeFuncionario
+            // 
+            clnNomeFuncionario.HeaderText = "Funcionario";
+            clnNomeFuncionario.Name = "clnNomeFuncionario";
+            clnNomeFuncionario.ReadOnly = true;
+            // 
+            // clnProcedimento
+            // 
+            clnProcedimento.HeaderText = "Procedimento";
+            clnProcedimento.Name = "clnProcedimento";
+            clnProcedimento.ReadOnly = true;
+            // 
+            // clnStatus
+            // 
+            clnStatus.HeaderText = "Status";
+            clnStatus.Name = "clnStatus";
+            clnStatus.ReadOnly = true;
+            // 
+            // txtConsultar
+            // 
+            txtConsultar.BackgroundImageLayout = ImageLayout.Zoom;
+            txtConsultar.CustomizableEdges = customizableEdges31;
+            txtConsultar.DefaultText = "";
+            txtConsultar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtConsultar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtConsultar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultar.Font = new Font("Segoe UI", 9F);
+            txtConsultar.ForeColor = Color.Black;
+            txtConsultar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultar.IconLeft = Properties.Resources.pesquisa;
+            txtConsultar.Location = new Point(130, 326);
+            txtConsultar.Margin = new Padding(3, 4, 3, 4);
+            txtConsultar.Name = "txtConsultar";
+            txtConsultar.PasswordChar = '\0';
+            txtConsultar.PlaceholderText = "";
+            txtConsultar.SelectedText = "";
+            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtConsultar.Size = new Size(755, 30);
+            txtConsultar.TabIndex = 63;
+            // 
+            // lblPesquisa
+            // 
+            lblPesquisa.BackColor = Color.Transparent;
+            lblPesquisa.Location = new Point(131, 309);
+            lblPesquisa.Name = "lblPesquisa";
+            lblPesquisa.Size = new Size(53, 17);
+            lblPesquisa.TabIndex = 62;
+            lblPesquisa.Text = "Pesquisar";
+            // 
             // FrmAtualizarAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(515, 282);
+            ClientSize = new Size(988, 683);
+            Controls.Add(dgvConsultaAgendamento);
+            Controls.Add(txtConsultar);
+            Controls.Add(lblPesquisa);
+            Controls.Add(guna2TextBox2);
             Controls.Add(txtIdFuncionarios);
             Controls.Add(txtIdClientes);
             Controls.Add(btnFechar);
             Controls.Add(btnAtualizar);
+            Controls.Add(btnEscolherAgendamento);
             Controls.Add(btnEscolherFuncionario);
             Controls.Add(btnEscolherCliente);
             Controls.Add(cmbProcedimentos);
             Controls.Add(cmbHora);
+            Controls.Add(guna2TextBox1);
             Controls.Add(TextFuncionarios);
             Controls.Add(textClientes);
             Controls.Add(txtDate);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
+            Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(lblData);
@@ -372,6 +637,8 @@
             Name = "FrmAtualizarAgendamento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAtualizarAgendamento";
+            Load += FrmAtualizarAgendamento_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvConsultaAgendamento).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -395,5 +662,21 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblData;
         private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2Button btnEscolherAgendamento;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvConsultaAgendamento;
+        private DataGridViewTextBoxColumn clnData;
+        private DataGridViewTextBoxColumn clnHora;
+        private DataGridViewTextBoxColumn clnID;
+        private DataGridViewTextBoxColumn clnIDCliente;
+        private DataGridViewTextBoxColumn clnNomeCliente;
+        private DataGridViewTextBoxColumn clnIDFuncionario;
+        private DataGridViewTextBoxColumn clnNomeFuncionario;
+        private DataGridViewTextBoxColumn clnProcedimento;
+        private DataGridViewTextBoxColumn clnStatus;
+        private Guna.UI2.WinForms.Guna2TextBox txtConsultar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPesquisa;
     }
 }

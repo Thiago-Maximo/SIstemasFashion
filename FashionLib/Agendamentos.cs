@@ -13,8 +13,9 @@ namespace FashionLib
         public DateTime Data_Agendamento { get; set; }
         public DateTime Hora_Agendamento { get; set; }
         public Procedimentos Id_procedimentos { get; set; }
+        public string Status { get; set; }
 
-        public Agendamentos(int id, Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos)
+        public Agendamentos(int id, Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos, string status)
         {
             Id = id;
             Id_Cliente = id_Cliente;
@@ -22,15 +23,17 @@ namespace FashionLib
             Data_Agendamento = data_Agendamento;
             Hora_Agendamento = hora_Agendamento;
             Id_procedimentos = id_procedimentos;
+            Status = status;
         }
 
-        public Agendamentos(Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos)
+        public Agendamentos(Cliente id_Cliente, Funcionario id_Funcionario, DateTime data_Agendamento, DateTime hora_Agendamento, Procedimentos id_procedimentos, string status)
         {
             Id_Cliente = id_Cliente;
             Id_Funcionario = id_Funcionario;
             Data_Agendamento = data_Agendamento;
             Hora_Agendamento = hora_Agendamento;
             Id_procedimentos = id_procedimentos;
+            Status = status;
         }
 
         public Agendamentos() { }
@@ -67,6 +70,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spdia", Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
             cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos.Id);
+            cmd.Parameters.AddWithValue("spstatus", Status);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -86,6 +90,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spdia", Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
             cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos);
+            cmd.Parameters.AddWithValue("spstatus", Status);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
@@ -107,7 +112,8 @@ namespace FashionLib
                     Funcionario.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetDateTime(4),
-                    Procedimentos.ObterPorId(dr.GetInt32(5))
+                    Procedimentos.ObterPorId(dr.GetInt32(5)),
+                    dr.GetString(6)
                 );
             }
             cmd.Connection.Close();
@@ -167,13 +173,12 @@ namespace FashionLib
                     Funcionario.ObterPorId(dr.GetInt32(2)),
                     dataAgendamento,
                     dataHoraAgendamento,  // Aqui passa-se o DateTime combinado, não mais TimeSpan
-                    Procedimentos.ObterPorId(dr.GetInt32(5))
+                    Procedimentos.ObterPorId(dr.GetInt32(5)),
+                    dr.GetString(6)
                 ));
             }
             cmd.Connection.Close();
             return lista;
         }
-
-
     }
 }
