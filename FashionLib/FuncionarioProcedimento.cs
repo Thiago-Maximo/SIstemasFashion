@@ -15,6 +15,7 @@ namespace FashionLib
         public Funcionario Id_funcionario { get; set; }
         public Procedimentos Id_Procedimentos { get; set; }
 
+
         // Métodos Construtores
         public FuncionarioProcedimento(int id, Funcionario id_funcionario, Procedimentos id_procedimentos)
         {
@@ -41,8 +42,8 @@ namespace FashionLib
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_funcionarios_procedimentos_insert";
 
-            cmd.Parameters.AddWithValue("spid_funcionario", Id_funcionario);
-            cmd.Parameters.AddWithValue("spid_procedimentos", Id_Procedimentos);
+            cmd.Parameters.AddWithValue("spid_funcionario", Id_funcionario.Id);
+            cmd.Parameters.AddWithValue("spid_procedimento", Id_Procedimentos.Id);
 
             var dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -51,6 +52,27 @@ namespace FashionLib
             }
             dr.Close();
             cmd.Connection.Close();
+        }
+        public static FuncionarioProcedimento ObterPorId(int id)
+        {
+            FuncionarioProcedimento funcionarioProcedimento = null;
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * from funcionarios_procedimentos where id = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                funcionarioProcedimento = new FuncionarioProcedimento(
+                    dr.GetInt32(0),
+                    Funcionario.ObterPorId(dr.GetInt32(1)),
+                    Procedimentos.ObterPorId(dr.GetInt32(2))
+                );
+            }
+            dr.Close();
+            cmd.Connection.Close();
+            return funcionarioProcedimento;
         }
     }
 }

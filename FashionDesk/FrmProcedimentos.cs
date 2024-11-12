@@ -13,6 +13,12 @@ namespace FashionDesk
 {
     public partial class FrmProcedimentos : Form
     {
+        public string ProcedimentoSelecionado { get; set; }
+        public int IdProcedimentoSelecionado { get; set; }
+        public string NomeProcedimentoInserir { get; set; }
+        public int IdProcedimentoInserir { get; set; }
+
+
         public FrmProcedimentos()
         {
             InitializeComponent();
@@ -54,33 +60,17 @@ namespace FashionDesk
             CarregaGrid();
         }
 
-        private void btnInserir_Click(object sender, EventArgs e)
+        private void dgvInserirProcedimentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (txtClassificacao.TextLength > 1)
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("A Classificação deve conter apenas 1 caracter");
-            }
-
-            Procedimentos procedimentos = new Procedimentos(
-                txtnome.Text,
-                txtDescricao.Text,
-                nmrValor.Value,
-                new TimeSpan(int.Parse(txtDuracaoEstimada.Text)),
-                txtClassificacao.Text
-                );
-
-
-            procedimentos.Inserir();
-            if (procedimentos.Id > 0)
-            {
-                MessageBox.Show($"O Cliente {procedimentos.Nome} com o Id {procedimentos.Id}, Foi Inserido com Sucesso!!");
-                CarregaGrid();
-            }
-            else
-            {
-                MessageBox.Show("Falha ao Inserir Cliente");
-                CarregaGrid();
+                // Pegue o nome do cliente da linha selecionada
+                ProcedimentoSelecionado = dgvInserirProcedimentos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdProcedimentoSelecionado = Convert.ToInt32(dgvInserirProcedimentos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                NomeProcedimentoInserir = dgvInserirProcedimentos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdProcedimentoInserir = Convert.ToInt32(dgvInserirProcedimentos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                // Fecha o formulário após selecionar o cliente
+                this.Close();
             }
         }
     }

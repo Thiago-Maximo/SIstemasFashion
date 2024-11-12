@@ -326,7 +326,7 @@
             btnInserir.Size = new Size(180, 36);
             btnInserir.TabIndex = 1;
             btnInserir.Text = "&Inserir";
-            btnInserir.Click += btnInserir_Click;
+          
             // 
             // txtDuracaoEstimada
             // 

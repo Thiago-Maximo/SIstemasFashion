@@ -13,10 +13,22 @@ namespace FashionDesk
 {
     public partial class FrmInserirFuncionario : Form
     {
-        public string NomeFuncionarioInserir { get; private set; }
-        public int IdFuncionairoInserir { get; set; }
-        public string NomeProcedimentoInserir { get; private set; }
-        private int IdProcedimentoInserir { get; set; }
+        public Guna.UI2.WinForms.Guna2TextBox TxtNomeFunc
+        {
+            get { return txtNomeFunc; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtIdFunc
+        {
+            get { return txtIdFunc; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtNomeProc
+        {
+            get { return txtProcedimento; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtIdProc
+        {
+            get { return txtIdProc; }
+        }
 
         public FrmInserirFuncionario()
         {
@@ -49,6 +61,76 @@ namespace FashionDesk
             CarregaGrid();
             dgvFuncionariosInserir.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
+
+        private void CarregaGrid(string nome = "")
+        {
+            var lista = Funcionario.ObterPorLista(nome);
+            dgvFuncionariosInserir.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionario in lista)
+            {
+                dgvFuncionariosInserir.Rows.Add();
+                dgvFuncionariosInserir.Rows[cont].Cells[0].Value = funcionario.Id;
+                dgvFuncionariosInserir.Rows[cont].Cells[1].Value = funcionario.Nome;
+                dgvFuncionariosInserir.Rows[cont].Cells[2].Value = funcionario.Email;
+                dgvFuncionariosInserir.Rows[cont].Cells[3].Value = funcionario.Rg;
+                dgvFuncionariosInserir.Rows[cont].Cells[4].Value = funcionario.Cpf;
+
+                // Formatar a data para exibir apenas a data
+                dgvFuncionariosInserir.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
+
+                dgvFuncionariosInserir.Rows[cont].Cells[6].Value = funcionario.Ativo;
+                dgvFuncionariosInserir.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Cargos;
+
+                cont++;
+            }
+        }
+
+        private bool VerificandoControles()
+        {
+            if (txtNome.Text != string.Empty ||
+                mskCpf.Text != string.Empty ||
+                mskRg.Text != string.Empty ||
+                dateData_Nasc.Text != string.Empty
+                )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void btnEscolherCliente_Click(object sender, EventArgs e)
+        {
+            using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
+            {
+                frmConsultaFuncionario.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    TxtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    TxtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
+            }
+        }
+
+        private void btnEscolherProcedimento_Click(object sender, EventArgs e)
+        {
+            using (FrmProcedimentos frmProcedimentos = new FrmProcedimentos())
+            {
+                frmProcedimentos.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmProcedimentos.ProcedimentoSelecionado) || frmProcedimentos.IdProcedimentoSelecionado != 0)
+                {
+                    TxtNomeProc.Text = frmProcedimentos.NomeProcedimentoInserir;
+                    TxtIdProc.Text = frmProcedimentos.IdProcedimentoInserir.ToString();
+                }
+            }
+        }
+
+
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
@@ -103,31 +185,7 @@ namespace FashionDesk
             }
         }
 
-        private void CarregaGrid(string nome = "")
-        {
-            var lista = Funcionario.ObterPorLista(nome);
-            dgvFuncionariosInserir.Rows.Clear();
-            int cont = 0;
-            foreach (var funcionario in lista)
-            {
-                dgvFuncionariosInserir.Rows.Add();
-                dgvFuncionariosInserir.Rows[cont].Cells[0].Value = funcionario.Id;
-                dgvFuncionariosInserir.Rows[cont].Cells[1].Value = funcionario.Nome;
-                dgvFuncionariosInserir.Rows[cont].Cells[2].Value = funcionario.Email;
-                dgvFuncionariosInserir.Rows[cont].Cells[3].Value = funcionario.Rg;
-                dgvFuncionariosInserir.Rows[cont].Cells[4].Value = funcionario.Cpf;
-
-                // Formatar a data para exibir apenas a data
-                dgvFuncionariosInserir.Rows[cont].Cells[5].Value = funcionario.Data_Nasc.ToString("dd/MM/yyyy"); // Ou outro formato desejado
-
-                dgvFuncionariosInserir.Rows[cont].Cells[6].Value = funcionario.Ativo ? "Sim" : "Não";
-                dgvFuncionariosInserir.Rows[cont].Cells[7].Value = funcionario.Id_Cargo.Cargos;
-
-                cont++;
-            }
-        }
-
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void btnFecharFuncProc_Click(object sender, EventArgs e)
         {
             if (VerificandoControles())
             {
@@ -141,38 +199,26 @@ namespace FashionDesk
             else { this.Close(); }
         }
 
-        private bool VerificandoControles()
+        private void btnInserirFuncProc_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text != string.Empty ||
-                mskCpf.Text != string.Empty ||
-                mskRg.Text != string.Empty ||
-                dateData_Nasc.Text != string.Empty
-                )
+            FuncionarioProcedimento funcionarioProcedimento = new FuncionarioProcedimento
             {
-                return true;
+                Id_funcionario = Funcionario.ObterPorId(int.Parse(txtIdFunc.Text)),
+                Id_Procedimentos = Procedimentos.ObterPorId(int.Parse(txtIdProc.Text))
+            };
+
+
+            funcionarioProcedimento.Inserir();
+            if (funcionarioProcedimento.Id > 0)
+            {
+                MessageBox.Show($"Sucesso!!");
+
+                CarregaGrid();
             }
             else
             {
-                return false;
-            }
-        }
-
-        private void btnEscolherCliente_Click(object sender, EventArgs e)
-        {
-            using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
-            {
-                frmConsultaFuncionario.ShowDialog();
-
-                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
-                {
-                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
-                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
-                }
-                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
-                {
-                    txtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
-                    txtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
-                }
+                MessageBox.Show("Falha");
+                CarregaGrid();
             }
         }
     }
