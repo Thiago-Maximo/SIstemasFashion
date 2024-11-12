@@ -36,7 +36,7 @@ namespace FashionDesk
             get { return txtIdFuncionarios; }
         }
 
-        public  Guna.UI2.WinForms.Guna2TextBox TxtData
+        public Guna.UI2.WinForms.Guna2TextBox TxtData
         {
             get { return txtDate; }
         }
@@ -49,6 +49,11 @@ namespace FashionDesk
         public Guna.UI2.WinForms.Guna2TextBox TxtStatus
         {
             get { return txtStatus; }
+        }
+
+        public Guna.UI2.WinForms.Guna2TextBox TxtIdProcedimento
+        {
+            get { return txtIDProcedimentos; }
         }
 
         public string DiaSelecionado { get; set; }
@@ -190,6 +195,7 @@ namespace FashionDesk
                 TxtIdClientes.Text = Convert.ToString(Convert.ToInt32(dgvConsultaAgendamento.Rows[e.RowIndex].Cells[3].Value.ToString()));
                 TxtData.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[1].Value.ToString();
                 TxtStatus.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[8].Value.ToString();
+                TxtIdProcedimento.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string procedimentoNome = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[7].Value.ToString();
                 cmbProcedimentos.Text = procedimentoNome;
 
@@ -276,7 +282,44 @@ namespace FashionDesk
             frmAgendamentos.ShowDialog();
             frmAgendamentos.Close();
 
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Agendamentos agendamentos = new Agendamentos(
+                Convert.ToInt32(txtIDProcedimentos.Text),
+                Cliente.ObterPorId(int.Parse(TxtIdClientes.Text)),
+                Funcionario.ObterPorId(int.Parse(TxtIdFuncionarios.Text)),
+                Convert.ToDateTime(txtDate.Text),
+                Convert.ToDateTime(cmbHora.Text),
+                Procedimentos.ObterPorId(int.Parse(cmbProcedimentos.SelectedValue.ToString())),
+                txtStatus.Text
+             );
+
+          
+
+                agendamentos.Atualizar();
+
+                if (agendamentos.Id > 0)
+                {
+                    MessageBox.Show($"O Agendamento do Dia {agendamentos.Data_Agendamento} Foi Atualizado com Sucesso");
+                    FrmAtualizarAgendamento frmAtualizarAgendamento = new();
+                    frmAtualizarAgendamento.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao Atualizar Agendamento");
+                }
+
+            // Recarrega a grid após a atualização
+            CarregaGrid();
+
             
+
+            
+            FrmAtualizarAgendamento frmAtualizar = new();
+            frmAtualizar.Close();
         }
     }
 }

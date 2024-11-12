@@ -51,7 +51,7 @@
             Cursor = Cursors.Hand;
             Name = "UserControlDiaAtulizaAgendamento";
             Size = new Size(108, 59);
-            Click += UserControlDiaAtulizaAgendamento_Click;
+            
             ResumeLayout(false);
             PerformLayout();
         }

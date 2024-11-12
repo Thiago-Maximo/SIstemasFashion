@@ -184,6 +184,7 @@
             btnAtualizar.Size = new Size(120, 45);
             btnAtualizar.TabIndex = 58;
             btnAtualizar.Text = "&Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // btnEscolherFuncionario
             // 

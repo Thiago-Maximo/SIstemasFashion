@@ -85,11 +85,12 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_agendamento_update";
-            cmd.Parameters.AddWithValue("spid_cliente", Id_Cliente);
-            cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario);
-            cmd.Parameters.AddWithValue("spdia", Data_Agendamento);
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spid_cliente", Id_Cliente.Id);
+            cmd.Parameters.AddWithValue("spid_funcionario", Id_Funcionario.Id);
+            cmd.Parameters.AddWithValue("spdata_agendamento", Data_Agendamento);
             cmd.Parameters.AddWithValue("sphora", Hora_Agendamento);
-            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos);
+            cmd.Parameters.AddWithValue("spid_procedimentos", Id_procedimentos.Id);
             cmd.Parameters.AddWithValue("spstatus", Status);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();

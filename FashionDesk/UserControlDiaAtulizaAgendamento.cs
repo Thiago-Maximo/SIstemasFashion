@@ -46,24 +46,7 @@ namespace FashionDesk
                 parentForm.Close();
             }
 
-            // Recarrega o formulário FrmAtualizarAgendamento com a nova data
-            FrmAtualizarAgendamento frmAtualizarAgendamento = new FrmAtualizarAgendamento();
-            frmAtualizarAgendamento.Show();
-        }
-
-        private void UserControlDiaAtulizaAgendamento_Click(object sender, EventArgs e)
-        {
-            // Passa a data completa para a variável estática dataNova no FrmAtualizarAgendamento
-            FrmAtualizarAgendamento.dataNova = this.Data.ToString("dd/MM/yyyy");
-
-            // Fecha o formulário atual (onde está o UserControl)
-            FrmAtualizaDiaAgendado parentForm = this.FindForm() as FrmAtualizaDiaAgendado; // Conversão explícita para FrmAtualizaDiaAgendado
-
-            // Verifique se a conversão foi bem-sucedida
-            if (parentForm != null)
-            {
-                parentForm.Close();
-            }
+            
 
             // Recarrega o formulário FrmAtualizarAgendamento com a nova data
             FrmAtualizarAgendamento frmAtualizarAgendamento = new FrmAtualizarAgendamento();
