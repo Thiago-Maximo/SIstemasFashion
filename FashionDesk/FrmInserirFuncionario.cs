@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FashionDesk
 {
@@ -40,7 +41,6 @@ namespace FashionDesk
             FrmInserirFuncionario frmInserirFuncionario = new();
             frmInserirFuncionario.Close();
 
-
         }
 
         private void FrmInserirFuncionario_Load(object sender, EventArgs e)
@@ -60,6 +60,8 @@ namespace FashionDesk
             mskCpf.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             CarregaGrid();
             dgvFuncionariosInserir.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
         }
 
         private void CarregaGrid(string nome = "")
@@ -102,7 +104,7 @@ namespace FashionDesk
             }
         }
 
-        private void btnEscolherCliente_Click(object sender, EventArgs e)
+        private void btnEscolherFuncionario_Click(object sender, EventArgs e)
         {
             using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
             {
@@ -130,7 +132,19 @@ namespace FashionDesk
             }
         }
 
-
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            if (VerificandoControles())
+            {
+                var msg = MessageBox.Show("Deseja continuar o cadastro?",
+                    "Confirmação de saída",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1);
+                if (msg == DialogResult.No) this.Close();
+            }
+            else { this.Close(); }
+        }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
@@ -185,20 +199,6 @@ namespace FashionDesk
             }
         }
 
-        private void btnFecharFuncProc_Click(object sender, EventArgs e)
-        {
-            if (VerificandoControles())
-            {
-                var msg = MessageBox.Show("Deseja continuar o cadastro?",
-                    "Confirmação de saída",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button1);
-                if (msg == DialogResult.No) this.Close();
-            }
-            else { this.Close(); }
-        }
-
         private void btnInserirFuncProc_Click(object sender, EventArgs e)
         {
             FuncionarioProcedimento funcionarioProcedimento = new FuncionarioProcedimento
@@ -211,15 +211,21 @@ namespace FashionDesk
             funcionarioProcedimento.Inserir();
             if (funcionarioProcedimento.Id > 0)
             {
-                MessageBox.Show($"Sucesso!!");
+                MessageBox.Show("Sucesso");
 
-                CarregaGrid();
+                CarregaGridFuncProd();
             }
             else
             {
                 MessageBox.Show("Falha");
-                CarregaGrid();
+                CarregaGridFuncProd();
             }
+
+        }
+
+        private void CarregaGridFuncProd()
+        {
+
         }
     }
 }

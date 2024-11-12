@@ -76,7 +76,7 @@
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             mskCpf = new MaskedTextBox();
             txtId = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnFechar = new Guna.UI2.WinForms.Guna2Button();
             dgvFuncionariosInserir = new Guna.UI2.WinForms.Guna2DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -86,7 +86,7 @@
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnInserir = new Guna.UI2.WinForms.Guna2Button();
             mskRg = new MaskedTextBox();
             dateData_Nasc = new Guna.UI2.WinForms.Guna2DateTimePicker();
             cmbCargo = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -97,16 +97,18 @@
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tabPage2 = new TabPage();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnFecharFuncProc = new Guna.UI2.WinForms.Guna2Button();
             btnInserirFuncProc = new Guna.UI2.WinForms.Guna2Button();
             txtIdProc = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvFuncionariosProcedimentos = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnFuncionario = new DataGridViewTextBoxColumn();
             clnProcedimento = new DataGridViewTextBoxColumn();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            btnEscolherCliente = new Guna.UI2.WinForms.Guna2Button();
+            btnEscolherProcedimento = new Guna.UI2.WinForms.Guna2Button();
+            btnEscolherFuncionario = new Guna.UI2.WinForms.Guna2Button();
             txtProcedimento = new Guna.UI2.WinForms.Guna2TextBox();
             txtNomeFunc = new Guna.UI2.WinForms.Guna2TextBox();
             txtIdFunc = new Guna.UI2.WinForms.Guna2TextBox();
@@ -115,7 +117,7 @@
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosProcedimentos).BeginInit();
             SuspendLayout();
             // 
             // btnfecharForm
@@ -169,9 +171,9 @@
             tabPage1.Controls.Add(txtEmail);
             tabPage1.Controls.Add(mskCpf);
             tabPage1.Controls.Add(txtId);
-            tabPage1.Controls.Add(guna2Button1);
+            tabPage1.Controls.Add(btnFechar);
             tabPage1.Controls.Add(dgvFuncionariosInserir);
-            tabPage1.Controls.Add(guna2Button2);
+            tabPage1.Controls.Add(btnInserir);
             tabPage1.Controls.Add(mskRg);
             tabPage1.Controls.Add(dateData_Nasc);
             tabPage1.Controls.Add(cmbCargo);
@@ -246,25 +248,26 @@
             txtId.TabIndex = 25;
             txtId.Visible = false;
             // 
-            // guna2Button1
+            // btnFechar
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button1.Location = new Point(376, 505);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(180, 45);
-            guna2Button1.TabIndex = 24;
-            guna2Button1.Text = "&Fechar";
+            btnFechar.BackColor = Color.Transparent;
+            btnFechar.BorderRadius = 10;
+            btnFechar.CustomizableEdges = customizableEdges7;
+            btnFechar.DisabledState.BorderColor = Color.DarkGray;
+            btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFechar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFechar.FillColor = Color.White;
+            btnFechar.Font = new Font("Segoe UI", 9F);
+            btnFechar.ForeColor = Color.Black;
+            btnFechar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnFechar.Location = new Point(376, 505);
+            btnFechar.Name = "btnFechar";
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnFechar.Size = new Size(180, 45);
+            btnFechar.TabIndex = 24;
+            btnFechar.Text = "&Fechar";
+            btnFechar.Click += btnFechar_Click;
             // 
             // dgvFuncionariosInserir
             // 
@@ -375,25 +378,26 @@
             dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // guna2Button2
+            // btnInserir
             // 
-            guna2Button2.BorderColor = Color.FromArgb(255, 192, 255);
-            guna2Button2.BorderRadius = 10;
-            guna2Button2.CustomizableEdges = customizableEdges9;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.White;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.Black;
-            guna2Button2.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            guna2Button2.Location = new Point(562, 505);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button2.Size = new Size(180, 45);
-            guna2Button2.TabIndex = 22;
-            guna2Button2.Text = "&Inserir";
+            btnInserir.BorderColor = Color.FromArgb(255, 192, 255);
+            btnInserir.BorderRadius = 10;
+            btnInserir.CustomizableEdges = customizableEdges9;
+            btnInserir.DisabledState.BorderColor = Color.DarkGray;
+            btnInserir.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserir.FillColor = Color.White;
+            btnInserir.Font = new Font("Segoe UI", 9F);
+            btnInserir.ForeColor = Color.Black;
+            btnInserir.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserir.Location = new Point(562, 505);
+            btnInserir.Name = "btnInserir";
+            btnInserir.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnInserir.Size = new Size(180, 45);
+            btnInserir.TabIndex = 22;
+            btnInserir.Text = "&Inserir";
+            btnInserir.Click += btnInserir_Click;
             // 
             // mskRg
             // 
@@ -502,13 +506,15 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(guna2HtmlLabel2);
+            tabPage2.Controls.Add(guna2HtmlLabel1);
             tabPage2.Controls.Add(btnFecharFuncProc);
             tabPage2.Controls.Add(btnInserirFuncProc);
             tabPage2.Controls.Add(txtIdProc);
             tabPage2.Controls.Add(guna2ControlBox1);
-            tabPage2.Controls.Add(guna2DataGridView1);
-            tabPage2.Controls.Add(guna2Button3);
-            tabPage2.Controls.Add(btnEscolherCliente);
+            tabPage2.Controls.Add(dgvFuncionariosProcedimentos);
+            tabPage2.Controls.Add(btnEscolherProcedimento);
+            tabPage2.Controls.Add(btnEscolherFuncionario);
             tabPage2.Controls.Add(txtProcedimento);
             tabPage2.Controls.Add(txtNomeFunc);
             tabPage2.Controls.Add(txtIdFunc);
@@ -520,6 +526,24 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Funcionarios Procedimentos";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Location = new Point(425, 94);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(78, 17);
+            guna2HtmlLabel2.TabIndex = 51;
+            guna2HtmlLabel2.Text = "Procedimento";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Location = new Point(89, 94);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(66, 17);
+            guna2HtmlLabel1.TabIndex = 50;
+            guna2HtmlLabel1.Text = "Funcionario";
             // 
             // btnFecharFuncProc
             // 
@@ -534,13 +558,12 @@
             btnFecharFuncProc.Font = new Font("Segoe UI", 9F);
             btnFecharFuncProc.ForeColor = Color.Black;
             btnFecharFuncProc.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnFecharFuncProc.Location = new Point(339, 515);
+            btnFecharFuncProc.Location = new Point(375, 523);
             btnFecharFuncProc.Name = "btnFecharFuncProc";
             btnFecharFuncProc.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnFecharFuncProc.Size = new Size(180, 45);
             btnFecharFuncProc.TabIndex = 49;
             btnFecharFuncProc.Text = "&Fechar";
-            btnFecharFuncProc.Click += btnFecharFuncProc_Click;
             // 
             // btnInserirFuncProc
             // 
@@ -555,7 +578,7 @@
             btnInserirFuncProc.Font = new Font("Segoe UI", 9F);
             btnInserirFuncProc.ForeColor = Color.Black;
             btnInserirFuncProc.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnInserirFuncProc.Location = new Point(525, 515);
+            btnInserirFuncProc.Location = new Point(561, 523);
             btnInserirFuncProc.Name = "btnInserirFuncProc";
             btnInserirFuncProc.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnInserirFuncProc.Size = new Size(180, 45);
@@ -596,12 +619,12 @@
             guna2ControlBox1.Size = new Size(44, 24);
             guna2ControlBox1.TabIndex = 46;
             // 
-            // guna2DataGridView1
+            // dgvFuncionariosProcedimentos
             // 
-            guna2DataGridView1.AllowUserToAddRows = false;
-            guna2DataGridView1.AllowUserToDeleteRows = false;
+            dgvFuncionariosProcedimentos.AllowUserToAddRows = false;
+            dgvFuncionariosProcedimentos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvFuncionariosProcedimentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
@@ -609,10 +632,10 @@
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            guna2DataGridView1.ColumnHeadersHeight = 17;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { clnId, clnFuncionario, clnProcedimento });
+            dgvFuncionariosProcedimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvFuncionariosProcedimentos.ColumnHeadersHeight = 17;
+            dgvFuncionariosProcedimentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvFuncionariosProcedimentos.Columns.AddRange(new DataGridViewColumn[] { clnId, clnFuncionario, clnProcedimento });
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -620,11 +643,11 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(76, 188);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.ReadOnly = true;
+            dgvFuncionariosProcedimentos.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvFuncionariosProcedimentos.GridColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosProcedimentos.Location = new Point(0, 188);
+            dgvFuncionariosProcedimentos.Name = "dgvFuncionariosProcedimentos";
+            dgvFuncionariosProcedimentos.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = SystemColors.Control;
             dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
@@ -632,31 +655,31 @@
             dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(602, 312);
-            guna2DataGridView1.TabIndex = 45;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 17;
-            guna2DataGridView1.ThemeStyle.ReadOnly = true;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvFuncionariosProcedimentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dgvFuncionariosProcedimentos.RowHeadersVisible = false;
+            dgvFuncionariosProcedimentos.Size = new Size(747, 293);
+            dgvFuncionariosProcedimentos.TabIndex = 45;
+            dgvFuncionariosProcedimentos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvFuncionariosProcedimentos.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvFuncionariosProcedimentos.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvFuncionariosProcedimentos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvFuncionariosProcedimentos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvFuncionariosProcedimentos.ThemeStyle.BackColor = Color.White;
+            dgvFuncionariosProcedimentos.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvFuncionariosProcedimentos.ThemeStyle.HeaderStyle.Height = 17;
+            dgvFuncionariosProcedimentos.ThemeStyle.ReadOnly = true;
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.Height = 25;
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvFuncionariosProcedimentos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // clnId
             // 
@@ -676,42 +699,43 @@
             clnProcedimento.Name = "clnProcedimento";
             clnProcedimento.ReadOnly = true;
             // 
-            // guna2Button3
+            // btnEscolherProcedimento
             // 
-            guna2Button3.BorderRadius = 20;
-            guna2Button3.CustomizableEdges = customizableEdges25;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.White;
-            guna2Button3.Font = new Font("Segoe UI", 9F);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Image = Properties.Resources.pesquisa;
-            guna2Button3.Location = new Point(631, 129);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Button3.Size = new Size(37, 36);
-            guna2Button3.TabIndex = 44;
+            btnEscolherProcedimento.BorderRadius = 20;
+            btnEscolherProcedimento.CustomizableEdges = customizableEdges25;
+            btnEscolherProcedimento.DisabledState.BorderColor = Color.DarkGray;
+            btnEscolherProcedimento.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEscolherProcedimento.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEscolherProcedimento.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEscolherProcedimento.FillColor = Color.White;
+            btnEscolherProcedimento.Font = new Font("Segoe UI", 9F);
+            btnEscolherProcedimento.ForeColor = Color.White;
+            btnEscolherProcedimento.Image = Properties.Resources.pesquisa;
+            btnEscolherProcedimento.Location = new Point(631, 117);
+            btnEscolherProcedimento.Name = "btnEscolherProcedimento";
+            btnEscolherProcedimento.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnEscolherProcedimento.Size = new Size(37, 36);
+            btnEscolherProcedimento.TabIndex = 44;
+            btnEscolherProcedimento.Click += btnEscolherProcedimento_Click;
             // 
-            // btnEscolherCliente
+            // btnEscolherFuncionario
             // 
-            btnEscolherCliente.BorderRadius = 20;
-            btnEscolherCliente.CustomizableEdges = customizableEdges27;
-            btnEscolherCliente.DisabledState.BorderColor = Color.DarkGray;
-            btnEscolherCliente.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEscolherCliente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEscolherCliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEscolherCliente.FillColor = Color.White;
-            btnEscolherCliente.Font = new Font("Segoe UI", 9F);
-            btnEscolherCliente.ForeColor = Color.White;
-            btnEscolherCliente.Image = Properties.Resources.pesquisa;
-            btnEscolherCliente.Location = new Point(295, 129);
-            btnEscolherCliente.Name = "btnEscolherCliente";
-            btnEscolherCliente.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnEscolherCliente.Size = new Size(37, 36);
-            btnEscolherCliente.TabIndex = 43;
-            btnEscolherCliente.Click += btnEscolherCliente_Click;
+            btnEscolherFuncionario.BorderRadius = 20;
+            btnEscolherFuncionario.CustomizableEdges = customizableEdges27;
+            btnEscolherFuncionario.DisabledState.BorderColor = Color.DarkGray;
+            btnEscolherFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEscolherFuncionario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEscolherFuncionario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEscolherFuncionario.FillColor = Color.White;
+            btnEscolherFuncionario.Font = new Font("Segoe UI", 9F);
+            btnEscolherFuncionario.ForeColor = Color.White;
+            btnEscolherFuncionario.Image = Properties.Resources.pesquisa;
+            btnEscolherFuncionario.Location = new Point(295, 117);
+            btnEscolherFuncionario.Name = "btnEscolherFuncionario";
+            btnEscolherFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnEscolherFuncionario.Size = new Size(37, 36);
+            btnEscolherFuncionario.TabIndex = 43;
+            btnEscolherFuncionario.Click += btnEscolherFuncionario_Click;
             // 
             // txtProcedimento
             // 
@@ -724,7 +748,7 @@
             txtProcedimento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProcedimento.Font = new Font("Segoe UI", 9F);
             txtProcedimento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtProcedimento.Location = new Point(425, 129);
+            txtProcedimento.Location = new Point(425, 117);
             txtProcedimento.Name = "txtProcedimento";
             txtProcedimento.PasswordChar = '\0';
             txtProcedimento.PlaceholderText = "";
@@ -744,7 +768,7 @@
             txtNomeFunc.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNomeFunc.Font = new Font("Segoe UI", 9F);
             txtNomeFunc.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNomeFunc.Location = new Point(89, 129);
+            txtNomeFunc.Location = new Point(89, 117);
             txtNomeFunc.Name = "txtNomeFunc";
             txtNomeFunc.PasswordChar = '\0';
             txtNomeFunc.PlaceholderText = "";
@@ -801,7 +825,8 @@
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).EndInit();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionariosProcedimentos).EndInit();
             ResumeLayout(false);
         }
 
@@ -814,7 +839,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private MaskedTextBox mskCpf;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnFechar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvFuncionariosInserir;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -824,7 +849,7 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnInserir;
         private MaskedTextBox mskRg;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateData_Nasc;
         private Guna.UI2.WinForms.Guna2ComboBox cmbCargo;
@@ -838,16 +863,18 @@
         private Guna.UI2.WinForms.Guna2TextBox txtProcedimento;
         private Guna.UI2.WinForms.Guna2TextBox txtNomeFunc;
         private Guna.UI2.WinForms.Guna2TextBox txtIdFunc;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvFuncionariosProcedimentos;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnFuncionario;
         private DataGridViewTextBoxColumn clnProcedimento;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button btnEscolherCliente;
+        private Guna.UI2.WinForms.Guna2Button btnEscolherProcedimento;
+        private Guna.UI2.WinForms.Guna2Button btnEscolherFuncionario;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProc;
         private Guna.UI2.WinForms.Guna2Button btnFecharFuncProc;
         private Guna.UI2.WinForms.Guna2Button btnInserirFuncProc;
         private TabPage tabPage3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

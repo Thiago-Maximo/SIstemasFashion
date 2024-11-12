@@ -60,7 +60,7 @@ namespace FashionDesk
             CarregaGrid();
         }
 
-        private void dgvInserirProcedimentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvInserirProcedimentos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
