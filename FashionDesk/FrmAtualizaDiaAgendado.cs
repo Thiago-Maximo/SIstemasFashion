@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace FashionDesk
 {
-    public partial class FrmAgendamentos : Form
+    public partial class FrmAtualizaDiaAgendado : Form
     {
         public DateTime dataAtual;
-
-        public FrmAgendamentos()
+        public FrmAtualizaDiaAgendado()
         {
             InitializeComponent();
+
             dataAtual = DateTime.Now;
             DisplayDays();
         }
-
         private void DisplayDays()
         {
             lblTitulo.Text = dataAtual.ToString("MMMM yyyy");
@@ -31,7 +30,7 @@ namespace FashionDesk
             int y = 0;
             for (int i = 0; i < diaDaSemana; i++)
             {
-                UserControlBlank ucblank = new UserControlBlank();
+                UserControlBlankDiaAtualizado ucblank = new UserControlBlankDiaAtualizado();
                 ucblank.Width = 108;
                 ucblank.Height = 59;
                 ucblank.Location = new Point(x, y);
@@ -43,7 +42,7 @@ namespace FashionDesk
             for (int i = 1; i <= diasDoMes; i++)
             {
                 DateTime data = new DateTime(dataAtual.Year, dataAtual.Month, i);
-                UserControlDays ucdays = new UserControlDays(data);
+                UserControlDiaAtulizaAgendamento ucdays = new UserControlDiaAtulizaAgendamento(data);
                 ucdays.Dia = i;
                 ucdays.Data = data;
                 ucdays.Width = 108;
@@ -73,13 +72,9 @@ namespace FashionDesk
 
         private void btnfecharForm_Click(object sender, EventArgs e)
         {
-            FrmAgendamentos frmAgendamentos = new();
+
+            FrmAtualizaDiaAgendado frmAgendamentos = new();
             frmAgendamentos.Close();
-        }
-
-        private void FrmAgendamentos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

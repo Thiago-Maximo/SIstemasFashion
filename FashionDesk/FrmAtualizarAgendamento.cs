@@ -13,6 +13,9 @@ namespace FashionDesk
 {
     public partial class FrmAtualizarAgendamento : Form
     {
+
+        public static string dataNova = "";
+
         public Guna.UI2.WinForms.Guna2TextBox TxtClientes
         {
             get { return textClientes; }
@@ -33,7 +36,7 @@ namespace FashionDesk
             get { return txtIdFuncionarios; }
         }
 
-        public Guna.UI2.WinForms.Guna2TextBox TxtData
+        public  Guna.UI2.WinForms.Guna2TextBox TxtData
         {
             get { return txtDate; }
         }
@@ -47,6 +50,8 @@ namespace FashionDesk
         {
             get { return txtStatus; }
         }
+
+        public string DiaSelecionado { get; set; }
 
         public FrmAtualizarAgendamento()
         {
@@ -64,7 +69,18 @@ namespace FashionDesk
 
             CarregaGrid();
 
+            // Carrega a data nova, caso ela tenha sido definida
+            if (!string.IsNullOrEmpty(dataNova))
+            {
+                txtDate.Text = dataNova;  // Atualiza o TextBox com a nova data
+            }
+            else
+            {
+                txtDate.Text = DateTime.Now.ToString("dd/MM/yyyy");  // Caso não tenha uma nova data, define a data atual
+            }
 
+            // Continue o carregamento das outras informações, como procedimentos, etc.
+            CarregarProcedimentos();
         }
 
         public FrmAtualizarAgendamento(DateTime data)
@@ -255,8 +271,12 @@ namespace FashionDesk
 
         private void btnTrocarDia_Click(object sender, EventArgs e)
         {
-            FrmAgendamentos frmAgendamentos = new();
+            FrmAtualizaDiaAgendado frmAgendamentos = new();
+            txtDate.Text = FrmAtualizarAgendamento.dataNova;
             frmAgendamentos.ShowDialog();
+            frmAgendamentos.Close();
+
+            
         }
     }
 }

@@ -2,6 +2,7 @@ namespace FashionDesk
 {
     internal static class Program
     {
+        public static string dateRetorno = ""; 
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

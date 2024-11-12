@@ -202,6 +202,7 @@
             btnEscolherFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnEscolherFuncionario.Size = new Size(37, 36);
             btnEscolherFuncionario.TabIndex = 57;
+            btnEscolherFuncionario.Visible = false;
             // 
             // btnEscolherCliente
             // 
@@ -220,6 +221,7 @@
             btnEscolherCliente.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnEscolherCliente.Size = new Size(37, 36);
             btnEscolherCliente.TabIndex = 56;
+            btnEscolherCliente.Visible = false;
             // 
             // cmbProcedimentos
             // 
@@ -270,6 +272,7 @@
             TextFuncionarios.Name = "TextFuncionarios";
             TextFuncionarios.PasswordChar = '\0';
             TextFuncionarios.PlaceholderText = "";
+            TextFuncionarios.ReadOnly = true;
             TextFuncionarios.SelectedText = "";
             TextFuncionarios.ShadowDecoration.CustomizableEdges = customizableEdges18;
             TextFuncionarios.Size = new Size(221, 36);
@@ -290,6 +293,7 @@
             textClientes.Name = "textClientes";
             textClientes.PasswordChar = '\0';
             textClientes.PlaceholderText = "";
+            textClientes.ReadOnly = true;
             textClientes.SelectedText = "";
             textClientes.ShadowDecoration.CustomizableEdges = customizableEdges20;
             textClientes.Size = new Size(221, 36);
@@ -474,7 +478,6 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgvConsultaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvConsultaAgendamento.RowHeadersVisible = false;
-            dgvConsultaAgendamento.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvConsultaAgendamento.Size = new Size(754, 308);
             dgvConsultaAgendamento.TabIndex = 64;
             dgvConsultaAgendamento.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -682,7 +685,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbHora;
         private Guna.UI2.WinForms.Guna2TextBox TextFuncionarios;
         private Guna.UI2.WinForms.Guna2TextBox textClientes;
-        private Guna.UI2.WinForms.Guna2TextBox txtDate;
+        public Guna.UI2.WinForms.Guna2TextBox txtDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

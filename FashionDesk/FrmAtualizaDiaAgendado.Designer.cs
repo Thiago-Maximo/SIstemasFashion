@@ -1,6 +1,6 @@
 ﻿namespace FashionDesk
 {
-    partial class FrmAgendamentos
+    partial class FrmAtualizaDiaAgendado
     {
         /// <summary>
         /// Required designer variable.
@@ -205,7 +205,7 @@
             btnfecharForm.TabIndex = 37;
             btnfecharForm.Click += btnfecharForm_Click;
             // 
-            // FrmAgendamentos
+            // FrmAtualizaDiaAgendado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -225,10 +225,9 @@
             Controls.Add(lblDomingo);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmAgendamentos";
+            Name = "FrmAtualizaDiaAgendado";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAgendamentos";
-            Load += FrmAgendamentos_Load;
             ResumeLayout(false);
             PerformLayout();
         }
