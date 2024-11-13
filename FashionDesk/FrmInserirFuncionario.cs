@@ -63,6 +63,9 @@ namespace FashionDesk
 
             var FuncionarioProcedimentos = FuncionarioProcedimento.ObterPorLista();
             CarregaGridFuncProd();
+
+            var Enderecos = Endereco.ObterPorLista();
+            CarregaGridEndereco();
         }
 
         private void CarregaGrid(string nome = "")
@@ -238,6 +241,84 @@ namespace FashionDesk
             }
         }
 
-        
+        private void btnInserirEnder_Click(object sender, EventArgs e)
+        {
+            Endereco endereco = new Endereco(
+                txtLogradouro.Text,
+                txtNumero.Text,
+                txtBairro.Text,
+                txtCidade.Text,
+                txtEstado.Text,
+                txtCep.Text
+                );
+
+            endereco.Inserir();
+            if (endereco.Id > 0)
+            {
+                MessageBox.Show($"O Endereço foi Inserido com Sucesso!!");
+
+                CarregaGridEndereco();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao InserirEndereço");
+                CarregaGridEndereco();
+            }
+        }
+        private void CarregaGridEndereco()
+        {
+            var lista = Endereco.ObterPorLista();
+            dgvEndereco.Rows.Clear();
+            int cont = 0;
+            foreach (var endereco in lista)
+            {
+                dgvEndereco.Rows.Add();
+                dgvEndereco.Rows[cont].Cells[0].Value = endereco.Id;
+                dgvEndereco.Rows[cont].Cells[1].Value = endereco.Logradouro;
+                dgvEndereco.Rows[cont].Cells[2].Value = endereco.Numero;
+                dgvEndereco.Rows[cont].Cells[3].Value = endereco.Bairro;
+                dgvEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
+                dgvEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
+                dgvEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
+
+                cont++;
+            }
+        }
+        private async Task<Endereco> BuscaEndereco(string cep)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    // Faz a requisição para a API ViaCEP
+                    var response = await client.GetStringAsync($"https://viacep.com.br/ws/{cep}/json/");
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<Endereco>(response);
+                }
+                catch
+                {
+                    return null; // Em caso de erro
+                }
+            }
+        }
+
+        private async void txtBuscarCep_Click(object sender, EventArgs e)
+        {
+            string cep = txtCep.Text;
+            if (!string.IsNullOrEmpty(cep))
+            {
+                var endereco = await  BuscaEndereco(cep);
+                if (endereco != null)
+                {
+                    txtLogradouro.Text = endereco.Logradouro;
+                    txtBairro.Text = endereco.Bairro;
+                    txtCidade.Text = endereco.Cidade;
+                    txtEstado.Text = endereco.Estado;
+                }
+                else
+                {
+                    MessageBox.Show("CEP não encontrado.", "SmLocações");
+                }
+            }
+        }
     }
 }

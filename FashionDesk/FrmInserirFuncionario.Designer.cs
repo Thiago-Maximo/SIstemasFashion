@@ -69,6 +69,29 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             tabPage1 = new TabPage();
@@ -113,11 +136,42 @@
             txtNomeFunc = new Guna.UI2.WinForms.Guna2TextBox();
             txtIdFunc = new Guna.UI2.WinForms.Guna2TextBox();
             tabPage3 = new TabPage();
+            tabControl1 = new TabControl();
+            tabPage4 = new TabPage();
+            txtBuscarCep = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnFecharEnder = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirEnder = new Guna.UI2.WinForms.Guna2Button();
+            txtIdEndereco = new Guna.UI2.WinForms.Guna2TextBox();
+            dgvEndereco = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnIdEndereço = new DataGridViewTextBoxColumn();
+            clnLogradouro = new DataGridViewTextBoxColumn();
+            clnNumero = new DataGridViewTextBoxColumn();
+            clnBairro = new DataGridViewTextBoxColumn();
+            clnCidade = new DataGridViewTextBoxColumn();
+            clnEstado = new DataGridViewTextBoxColumn();
+            clnCep = new DataGridViewTextBoxColumn();
+            txtCep = new Guna.UI2.WinForms.Guna2TextBox();
+            txtBairro = new Guna.UI2.WinForms.Guna2TextBox();
+            txtCidade = new Guna.UI2.WinForms.Guna2TextBox();
+            txtEstado = new Guna.UI2.WinForms.Guna2TextBox();
+            txtNumero = new Guna.UI2.WinForms.Guna2TextBox();
+            txtLogradouro = new Guna.UI2.WinForms.Guna2TextBox();
+            tabPage5 = new TabPage();
             guna2TabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosProcedimentos).BeginInit();
+            tabPage3.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEndereco).BeginInit();
             SuspendLayout();
             // 
             // btnfecharForm
@@ -800,6 +854,7 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(tabControl1);
             tabPage3.Location = new Point(184, 4);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -807,6 +862,401 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Funcionario Endereço";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Location = new Point(0, -4);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(751, 597);
+            tabControl1.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(txtBuscarCep);
+            tabPage4.Controls.Add(guna2HtmlLabel14);
+            tabPage4.Controls.Add(guna2HtmlLabel13);
+            tabPage4.Controls.Add(guna2HtmlLabel6);
+            tabPage4.Controls.Add(guna2HtmlLabel5);
+            tabPage4.Controls.Add(guna2HtmlLabel4);
+            tabPage4.Controls.Add(guna2HtmlLabel3);
+            tabPage4.Controls.Add(btnFecharEnder);
+            tabPage4.Controls.Add(btnInserirEnder);
+            tabPage4.Controls.Add(txtIdEndereco);
+            tabPage4.Controls.Add(dgvEndereco);
+            tabPage4.Controls.Add(txtCep);
+            tabPage4.Controls.Add(txtBairro);
+            tabPage4.Controls.Add(txtCidade);
+            tabPage4.Controls.Add(txtEstado);
+            tabPage4.Controls.Add(txtNumero);
+            tabPage4.Controls.Add(txtLogradouro);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(743, 569);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "tabPage4";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarCep
+            // 
+            txtBuscarCep.CustomizableEdges = customizableEdges35;
+            txtBuscarCep.DisabledState.BorderColor = Color.DarkGray;
+            txtBuscarCep.DisabledState.CustomBorderColor = Color.DarkGray;
+            txtBuscarCep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            txtBuscarCep.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            txtBuscarCep.Font = new Font("Segoe UI", 9F);
+            txtBuscarCep.ForeColor = Color.White;
+            txtBuscarCep.Location = new Point(553, 84);
+            txtBuscarCep.Name = "txtBuscarCep";
+            txtBuscarCep.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtBuscarCep.Size = new Size(107, 36);
+            txtBuscarCep.TabIndex = 58;
+            txtBuscarCep.Text = "Buscar Por Cep";
+            txtBuscarCep.Click += txtBuscarCep_Click;
+            // 
+            // guna2HtmlLabel14
+            // 
+            guna2HtmlLabel14.BackColor = Color.Transparent;
+            guna2HtmlLabel14.Location = new Point(351, 100);
+            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            guna2HtmlLabel14.Size = new Size(24, 17);
+            guna2HtmlLabel14.TabIndex = 57;
+            guna2HtmlLabel14.Text = "Cep";
+            // 
+            // guna2HtmlLabel13
+            // 
+            guna2HtmlLabel13.BackColor = Color.Transparent;
+            guna2HtmlLabel13.Location = new Point(286, 100);
+            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            guna2HtmlLabel13.Size = new Size(38, 17);
+            guna2HtmlLabel13.TabIndex = 56;
+            guna2HtmlLabel13.Text = "Estado";
+            // 
+            // guna2HtmlLabel6
+            // 
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Location = new Point(84, 100);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(40, 17);
+            guna2HtmlLabel6.TabIndex = 55;
+            guna2HtmlLabel6.Text = "Cidade";
+            // 
+            // guna2HtmlLabel5
+            // 
+            guna2HtmlLabel5.BackColor = Color.Transparent;
+            guna2HtmlLabel5.Location = new Point(370, 19);
+            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            guna2HtmlLabel5.Size = new Size(34, 17);
+            guna2HtmlLabel5.TabIndex = 54;
+            guna2HtmlLabel5.Text = "Bairro";
+            // 
+            // guna2HtmlLabel4
+            // 
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Location = new Point(307, 19);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(47, 17);
+            guna2HtmlLabel4.TabIndex = 53;
+            guna2HtmlLabel4.Text = "Número";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Location = new Point(84, 19);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(65, 17);
+            guna2HtmlLabel3.TabIndex = 52;
+            guna2HtmlLabel3.Text = "Logradouro";
+            // 
+            // btnFecharEnder
+            // 
+            btnFecharEnder.BackColor = Color.Transparent;
+            btnFecharEnder.BorderRadius = 10;
+            btnFecharEnder.CustomizableEdges = customizableEdges37;
+            btnFecharEnder.DisabledState.BorderColor = Color.DarkGray;
+            btnFecharEnder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFecharEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFecharEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFecharEnder.FillColor = Color.White;
+            btnFecharEnder.Font = new Font("Segoe UI", 9F);
+            btnFecharEnder.ForeColor = Color.Black;
+            btnFecharEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnFecharEnder.Location = new Point(370, 507);
+            btnFecharEnder.Name = "btnFecharEnder";
+            btnFecharEnder.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnFecharEnder.Size = new Size(180, 45);
+            btnFecharEnder.TabIndex = 51;
+            btnFecharEnder.Text = "&Fechar";
+            // 
+            // btnInserirEnder
+            // 
+            btnInserirEnder.BorderColor = Color.FromArgb(255, 192, 255);
+            btnInserirEnder.BorderRadius = 10;
+            btnInserirEnder.CustomizableEdges = customizableEdges39;
+            btnInserirEnder.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirEnder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirEnder.FillColor = Color.White;
+            btnInserirEnder.Font = new Font("Segoe UI", 9F);
+            btnInserirEnder.ForeColor = Color.Black;
+            btnInserirEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirEnder.Location = new Point(556, 507);
+            btnInserirEnder.Name = "btnInserirEnder";
+            btnInserirEnder.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btnInserirEnder.Size = new Size(180, 45);
+            btnInserirEnder.TabIndex = 50;
+            btnInserirEnder.Text = "&Inserir";
+            btnInserirEnder.Click += btnInserirEnder_Click;
+            // 
+            // txtIdEndereco
+            // 
+            txtIdEndereco.CustomizableEdges = customizableEdges41;
+            txtIdEndereco.DefaultText = "";
+            txtIdEndereco.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdEndereco.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdEndereco.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdEndereco.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdEndereco.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdEndereco.Font = new Font("Segoe UI", 9F);
+            txtIdEndereco.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdEndereco.Location = new Point(6, 19);
+            txtIdEndereco.Name = "txtIdEndereco";
+            txtIdEndereco.PasswordChar = '\0';
+            txtIdEndereco.PlaceholderText = "";
+            txtIdEndereco.SelectedText = "";
+            txtIdEndereco.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            txtIdEndereco.Size = new Size(30, 36);
+            txtIdEndereco.TabIndex = 7;
+            // 
+            // dgvEndereco
+            // 
+            dgvEndereco.AllowUserToAddRows = false;
+            dgvEndereco.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dgvEndereco.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvEndereco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dgvEndereco.ColumnHeadersHeight = 17;
+            dgvEndereco.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEndereco.Columns.AddRange(new DataGridViewColumn[] { clnIdEndereço, clnLogradouro, clnNumero, clnBairro, clnCidade, clnEstado, clnCep });
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dgvEndereco.DefaultCellStyle = dataGridViewCellStyle10;
+            dgvEndereco.GridColor = Color.FromArgb(231, 229, 255);
+            dgvEndereco.Location = new Point(-4, 220);
+            dgvEndereco.Name = "dgvEndereco";
+            dgvEndereco.ReadOnly = true;
+            dgvEndereco.RowHeadersVisible = false;
+            dgvEndereco.Size = new Size(747, 270);
+            dgvEndereco.TabIndex = 6;
+            dgvEndereco.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvEndereco.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvEndereco.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvEndereco.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvEndereco.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvEndereco.ThemeStyle.BackColor = Color.White;
+            dgvEndereco.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvEndereco.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvEndereco.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvEndereco.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvEndereco.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvEndereco.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEndereco.ThemeStyle.HeaderStyle.Height = 17;
+            dgvEndereco.ThemeStyle.ReadOnly = true;
+            dgvEndereco.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvEndereco.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvEndereco.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvEndereco.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvEndereco.ThemeStyle.RowsStyle.Height = 25;
+            dgvEndereco.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvEndereco.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // clnIdEndereço
+            // 
+            clnIdEndereço.HeaderText = "Id";
+            clnIdEndereço.Name = "clnIdEndereço";
+            clnIdEndereço.ReadOnly = true;
+            // 
+            // clnLogradouro
+            // 
+            clnLogradouro.HeaderText = "Logradouro";
+            clnLogradouro.Name = "clnLogradouro";
+            clnLogradouro.ReadOnly = true;
+            // 
+            // clnNumero
+            // 
+            clnNumero.HeaderText = "Número";
+            clnNumero.Name = "clnNumero";
+            clnNumero.ReadOnly = true;
+            // 
+            // clnBairro
+            // 
+            clnBairro.HeaderText = "Bairro";
+            clnBairro.Name = "clnBairro";
+            clnBairro.ReadOnly = true;
+            // 
+            // clnCidade
+            // 
+            clnCidade.HeaderText = "Cidade";
+            clnCidade.Name = "clnCidade";
+            clnCidade.ReadOnly = true;
+            // 
+            // clnEstado
+            // 
+            clnEstado.HeaderText = "Estado";
+            clnEstado.Name = "clnEstado";
+            clnEstado.ReadOnly = true;
+            // 
+            // clnCep
+            // 
+            clnCep.HeaderText = "Cep";
+            clnCep.Name = "clnCep";
+            clnCep.ReadOnly = true;
+            // 
+            // txtCep
+            // 
+            txtCep.CustomizableEdges = customizableEdges43;
+            txtCep.DefaultText = "";
+            txtCep.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCep.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCep.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCep.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCep.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCep.Font = new Font("Segoe UI", 9F);
+            txtCep.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCep.Location = new Point(351, 123);
+            txtCep.Name = "txtCep";
+            txtCep.PasswordChar = '\0';
+            txtCep.PlaceholderText = "";
+            txtCep.SelectedText = "";
+            txtCep.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            txtCep.Size = new Size(161, 36);
+            txtCep.TabIndex = 5;
+            // 
+            // txtBairro
+            // 
+            txtBairro.CustomizableEdges = customizableEdges45;
+            txtBairro.DefaultText = "";
+            txtBairro.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtBairro.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtBairro.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtBairro.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtBairro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBairro.Font = new Font("Segoe UI", 9F);
+            txtBairro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBairro.Location = new Point(370, 42);
+            txtBairro.Name = "txtBairro";
+            txtBairro.PasswordChar = '\0';
+            txtBairro.PlaceholderText = "";
+            txtBairro.SelectedText = "";
+            txtBairro.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            txtBairro.Size = new Size(142, 36);
+            txtBairro.TabIndex = 4;
+            // 
+            // txtCidade
+            // 
+            txtCidade.CustomizableEdges = customizableEdges47;
+            txtCidade.DefaultText = "";
+            txtCidade.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCidade.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCidade.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCidade.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCidade.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCidade.Font = new Font("Segoe UI", 9F);
+            txtCidade.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCidade.Location = new Point(84, 123);
+            txtCidade.Name = "txtCidade";
+            txtCidade.PasswordChar = '\0';
+            txtCidade.PlaceholderText = "";
+            txtCidade.SelectedText = "";
+            txtCidade.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            txtCidade.Size = new Size(176, 36);
+            txtCidade.TabIndex = 3;
+            // 
+            // txtEstado
+            // 
+            txtEstado.CustomizableEdges = customizableEdges49;
+            txtEstado.DefaultText = "";
+            txtEstado.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEstado.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEstado.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEstado.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEstado.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEstado.Font = new Font("Segoe UI", 9F);
+            txtEstado.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEstado.Location = new Point(282, 123);
+            txtEstado.Name = "txtEstado";
+            txtEstado.PasswordChar = '\0';
+            txtEstado.PlaceholderText = "";
+            txtEstado.SelectedText = "";
+            txtEstado.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            txtEstado.Size = new Size(47, 36);
+            txtEstado.TabIndex = 2;
+            // 
+            // txtNumero
+            // 
+            txtNumero.CustomizableEdges = customizableEdges51;
+            txtNumero.DefaultText = "";
+            txtNumero.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNumero.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNumero.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNumero.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNumero.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNumero.Font = new Font("Segoe UI", 9F);
+            txtNumero.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNumero.Location = new Point(307, 42);
+            txtNumero.Name = "txtNumero";
+            txtNumero.PasswordChar = '\0';
+            txtNumero.PlaceholderText = "";
+            txtNumero.SelectedText = "";
+            txtNumero.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            txtNumero.Size = new Size(47, 36);
+            txtNumero.TabIndex = 1;
+            // 
+            // txtLogradouro
+            // 
+            txtLogradouro.CustomizableEdges = customizableEdges53;
+            txtLogradouro.DefaultText = "";
+            txtLogradouro.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtLogradouro.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtLogradouro.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtLogradouro.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtLogradouro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtLogradouro.Font = new Font("Segoe UI", 9F);
+            txtLogradouro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtLogradouro.Location = new Point(84, 42);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.PasswordChar = '\0';
+            txtLogradouro.PlaceholderText = "";
+            txtLogradouro.SelectedText = "";
+            txtLogradouro.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            txtLogradouro.Size = new Size(207, 36);
+            txtLogradouro.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(743, 569);
+            tabPage5.TabIndex = 1;
+            tabPage5.Text = "tabPage5";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // FrmInserirFuncionario
             // 
@@ -827,6 +1277,11 @@
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosProcedimentos).EndInit();
+            tabPage3.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEndereco).EndInit();
             ResumeLayout(false);
         }
 
@@ -876,5 +1331,32 @@
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnFuncionario;
         private DataGridViewTextBoxColumn clnProcedimento;
+        private TabControl tabControl1;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
+        private Guna.UI2.WinForms.Guna2TextBox txtCep;
+        private Guna.UI2.WinForms.Guna2TextBox txtBairro;
+        private Guna.UI2.WinForms.Guna2TextBox txtCidade;
+        private Guna.UI2.WinForms.Guna2TextBox txtEstado;
+        private Guna.UI2.WinForms.Guna2TextBox txtNumero;
+        private Guna.UI2.WinForms.Guna2TextBox txtLogradouro;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvEndereco;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdEndereco;
+        private DataGridViewTextBoxColumn clnIdEndereço;
+        private DataGridViewTextBoxColumn clnLogradouro;
+        private DataGridViewTextBoxColumn clnNumero;
+        private DataGridViewTextBoxColumn clnBairro;
+        private DataGridViewTextBoxColumn clnCidade;
+        private DataGridViewTextBoxColumn clnEstado;
+        private DataGridViewTextBoxColumn clnCep;
+        private Guna.UI2.WinForms.Guna2Button btnFecharEnder;
+        private Guna.UI2.WinForms.Guna2Button btnInserirEnder;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button txtBuscarCep;
     }
 }
