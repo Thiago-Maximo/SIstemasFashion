@@ -61,7 +61,8 @@ namespace FashionDesk
             CarregaGrid();
             dgvFuncionariosInserir.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-
+            var FuncionarioProcedimentos = FuncionarioProcedimento.ObterPorLista();
+            CarregaGridFuncProd();
         }
 
         private void CarregaGrid(string nome = "")
@@ -207,7 +208,6 @@ namespace FashionDesk
                 Id_Procedimentos = Procedimentos.ObterPorId(int.Parse(txtIdProc.Text))
             };
 
-
             funcionarioProcedimento.Inserir();
             if (funcionarioProcedimento.Id > 0)
             {
@@ -222,10 +222,22 @@ namespace FashionDesk
             }
 
         }
-
         private void CarregaGridFuncProd()
         {
+            var lista = FuncionarioProcedimento.ObterPorLista();
+            dgvFuncionariosProcedimentos.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionarioProcedimentos in lista)
+            {
+                dgvFuncionariosProcedimentos.Rows.Add();
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[0].Value = funcionarioProcedimentos.Id;
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[1].Value = funcionarioProcedimentos.Id_funcionario.Nome;
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[2].Value = funcionarioProcedimentos.Id_Procedimentos.Nome;
 
+                cont++;
+            }
         }
+
+        
     }
 }

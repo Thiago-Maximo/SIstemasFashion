@@ -74,5 +74,31 @@ namespace FashionLib
             cmd.Connection.Close();
             return funcionarioProcedimento;
         }
+        public static List<FuncionarioProcedimento> ObterPorLista(string? nome = "")
+        {
+            List<FuncionarioProcedimento> lista = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            if (nome == "")
+            {
+                cmd.CommandText = "Select * from funcionarios_procedimentos order by Id";
+            }
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(
+                    new(
+                        dr.GetInt32(0),
+                        Funcionario.ObterPorId(dr.GetInt32(1)),
+                        Procedimentos.ObterPorId(dr.GetInt32(2))
+                        )
+
+                  
+                    );
+            }
+            cmd.Connection.Close();
+            return lista;
+        }
     }
 }

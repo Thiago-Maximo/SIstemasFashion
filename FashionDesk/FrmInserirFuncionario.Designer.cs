@@ -296,11 +296,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvFuncionariosInserir.DefaultCellStyle = dataGridViewCellStyle3;
             dgvFuncionariosInserir.GridColor = Color.FromArgb(231, 229, 255);
-            dgvFuncionariosInserir.Location = new Point(0, 266);
+            dgvFuncionariosInserir.Location = new Point(0, 233);
             dgvFuncionariosInserir.Name = "dgvFuncionariosInserir";
             dgvFuncionariosInserir.ReadOnly = true;
             dgvFuncionariosInserir.RowHeadersVisible = false;
-            dgvFuncionariosInserir.Size = new Size(744, 233);
+            dgvFuncionariosInserir.Size = new Size(744, 266);
             dgvFuncionariosInserir.TabIndex = 23;
             dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvFuncionariosInserir.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -683,7 +683,7 @@
             // 
             // clnId
             // 
-            clnId.HeaderText = "ID";
+            clnId.HeaderText = "Id";
             clnId.Name = "clnId";
             clnId.ReadOnly = true;
             // 
@@ -864,9 +864,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNomeFunc;
         private Guna.UI2.WinForms.Guna2TextBox txtIdFunc;
         private Guna.UI2.WinForms.Guna2DataGridView dgvFuncionariosProcedimentos;
-        private DataGridViewTextBoxColumn clnId;
-        private DataGridViewTextBoxColumn clnFuncionario;
-        private DataGridViewTextBoxColumn clnProcedimento;
         private Guna.UI2.WinForms.Guna2Button btnEscolherProcedimento;
         private Guna.UI2.WinForms.Guna2Button btnEscolherFuncionario;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
@@ -876,5 +873,8 @@
         private TabPage tabPage3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnFuncionario;
+        private DataGridViewTextBoxColumn clnProcedimento;
     }
 }
