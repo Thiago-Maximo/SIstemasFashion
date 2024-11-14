@@ -256,9 +256,28 @@ namespace FashionDesk
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //FrmLogin frmLogin = new();
-            ////frmLogin.MdiParent = this;
-            //frmLogin.ShowDialog();
+            // Verifica o nível do usuário logado
+            string nivelUsuario = Program.UsuarioLogado.Nivel;
+
+            // Ajusta a visibilidade ou desabilitação dos botões com base no nível
+            if (nivelUsuario == "Recepcionista")
+            {
+                // Desabilita ou oculta botões para funcionários
+                panelFuncionarios.Visible = false; // Oculta o botão
+                panelFuncionarios.Enabled = false;
+                btnFuncionarios.Enabled = false;        // Desabilita o botão
+                btnFuncionarios.Visible = false;
+            }
+            else if (nivelUsuario == "Administrador")
+            {
+                // Deixa todos os botões visíveis e habilitados
+               
+            }
+            else if (nivelUsuario == "Gerente")
+            {
+                // Apenas alguns botões são habilitados
+                
+            }
         }
     }
 }

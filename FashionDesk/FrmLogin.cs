@@ -62,18 +62,24 @@ namespace FashionDesk
                         {
                             MessageBox.Show("Seu usuário não tem permissão de acesso. \n Contate a gerência.",
                                 "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            TxtLogin.Clear();
+                            TxtSenha.Clear();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Seu usuário está inativo. \n Contate a gerência.",
                             "Usuário Inativo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        TxtLogin.Clear();
+                        TxtSenha.Clear();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Usuário ou senha inválidos. \n Tente novamente.",
                         "Login Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtLogin.Clear();
+                    TxtSenha.Clear();
                 }
             }
             else
@@ -81,7 +87,14 @@ namespace FashionDesk
                 MessageBox.Show("Você deve preencher todos os campos.",
                     "Campos Obrigatórios", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtLogin.Focus();
+                TxtLogin.Clear();
+                TxtSenha.Clear();
             }
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            TxtLogin.Focus();
         }
     }
 }
