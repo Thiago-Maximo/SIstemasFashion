@@ -135,6 +135,8 @@ namespace FashionDesk
                 MessageBox.Show("Falha ao Atualizar Cliente");
                 CarregaGrid();
             }
+
+        
         }
 
         private void dgvFuncionariosInserir_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

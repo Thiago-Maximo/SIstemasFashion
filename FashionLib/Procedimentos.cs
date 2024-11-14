@@ -15,29 +15,29 @@ namespace FashionLib
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Valor { get; set; }
-        public TimeSpan Duracacao_Estimada { get; set; }
+    
         public string Classificacao { get; set; }
 
         // Métodos Construtores
 
         // Método com Tudo
 
-        public Procedimentos(int id, string nome, string descricao, decimal valor, TimeSpan duracao_estimada, string classificacao)
+        public Procedimentos(int id, string nome, string descricao, decimal valor,  string classificacao)
         {
             Id = id;
             Nome = nome;
             Descricao = descricao;
             Valor = valor;
-            Duracacao_Estimada = duracao_estimada;
+  
             Classificacao = classificacao;
         }
         // Método sem Id
-        public Procedimentos(string nome, string descricao, decimal valor, TimeSpan duracao_estimada, string classificacao)
+        public Procedimentos(string nome, string descricao, decimal valor, string classificacao)
         {
             Nome = nome;
             Descricao = descricao;
             Valor = valor;
-            Duracacao_Estimada = duracao_estimada;
+
             Classificacao = classificacao;
         }
 
@@ -64,7 +64,6 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("sp_nome", Nome);
             cmd.Parameters.AddWithValue("sp_descricao", Descricao);
             cmd.Parameters.AddWithValue("sp_valor", Valor);
-            cmd.Parameters.AddWithValue("sp_duracao_estimada", Duracacao_Estimada);
             cmd.Parameters.AddWithValue("sp_classificacao", Classificacao);
             var dr = cmd.ExecuteReader();
 
@@ -84,7 +83,6 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("sp_nome", Nome);
             cmd.Parameters.AddWithValue("sp_descricao", Descricao);
             cmd.Parameters.AddWithValue("sp_valor", Valor);
-            cmd.Parameters.AddWithValue("sp_duracao_estimada", Duracacao_Estimada);
             cmd.Parameters.AddWithValue("sp_classificacao", Classificacao);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
@@ -107,8 +105,7 @@ namespace FashionLib
                     dr.GetString(1),         // Nome
                     dr.GetString(2),         // Descrição
                     dr.GetDecimal(3),        // Valor
-                    (dr.GetTimeSpan(4)), // Duracao Estimada
-                    dr.GetString(5)            // Classificação
+                    dr.GetString(4)            // Classificação
                     ));
             }
             cmd.Connection.Close();
@@ -120,7 +117,7 @@ namespace FashionLib
             Procedimentos procedimento = null;
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT id, nome, descricao, valor, duracao_estimada, classificacao " +
+            cmd.CommandText = "SELECT id, nome, descricao, valor, classificacao " +
                               "FROM procedimentos WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", id);
 
@@ -132,8 +129,7 @@ namespace FashionLib
                     dr.GetString(1),         // Nome
                     dr.GetString(2),         // Descrição
                     dr.GetDecimal(3),        // Valor
-                    (dr.GetTimeSpan(4)), // Duracao Estimada
-                    dr.GetString(5)            // Classificação
+                    dr.GetString(4)            // Classificação
                 );
 
             }

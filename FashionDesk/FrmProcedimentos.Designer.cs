@@ -48,12 +48,6 @@
             tbcInserir = new Guna.UI2.WinForms.Guna2TabControl();
             tbpgInserirProcedimentos = new TabPage();
             dgvInserirProcedimentos = new Guna.UI2.WinForms.Guna2DataGridView();
-            clnId = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clndescricao = new DataGridViewTextBoxColumn();
-            clnValor = new DataGridViewTextBoxColumn();
-            clnDuracao = new DataGridViewTextBoxColumn();
-            clnClassificacao = new DataGridViewTextBoxColumn();
             lblDuracaoEstimada = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblClassificacao = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblValor = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -68,6 +62,11 @@
             txtnome = new Guna.UI2.WinForms.Guna2TextBox();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clndescricao = new DataGridViewTextBoxColumn();
+            clnValor = new DataGridViewTextBoxColumn();
+            clnClassificacao = new DataGridViewTextBoxColumn();
             tbcInserir.SuspendLayout();
             tbpgInserirProcedimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInserirProcedimentos).BeginInit();
@@ -144,7 +143,7 @@
             dgvInserirProcedimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvInserirProcedimentos.ColumnHeadersHeight = 32;
             dgvInserirProcedimentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvInserirProcedimentos.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clndescricao, clnValor, clnDuracao, clnClassificacao });
+            dgvInserirProcedimentos.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clndescricao, clnValor, clnClassificacao });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -182,42 +181,6 @@
             dgvInserirProcedimentos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvInserirProcedimentos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvInserirProcedimentos.CellContentClick += dgvInserirProcedimentos_CellContentClick_1;
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            // 
-            // clnNome
-            // 
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            // 
-            // clndescricao
-            // 
-            clndescricao.HeaderText = "Descrição";
-            clndescricao.Name = "clndescricao";
-            clndescricao.ReadOnly = true;
-            // 
-            // clnValor
-            // 
-            clnValor.HeaderText = "valor";
-            clnValor.Name = "clnValor";
-            clnValor.ReadOnly = true;
-            // 
-            // clnDuracao
-            // 
-            clnDuracao.HeaderText = "Duracção Estimada";
-            clnDuracao.Name = "clnDuracao";
-            clnDuracao.ReadOnly = true;
-            // 
-            // clnClassificacao
-            // 
-            clnClassificacao.HeaderText = "Classificação";
-            clnClassificacao.Name = "clnClassificacao";
-            clnClassificacao.ReadOnly = true;
             // 
             // lblDuracaoEstimada
             // 
@@ -408,6 +371,36 @@
             tabPage3.Text = "Consultar Procedimentos";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            // 
+            // clndescricao
+            // 
+            clndescricao.HeaderText = "Descrição";
+            clndescricao.Name = "clndescricao";
+            clndescricao.ReadOnly = true;
+            // 
+            // clnValor
+            // 
+            clnValor.HeaderText = "valor";
+            clnValor.Name = "clnValor";
+            clnValor.ReadOnly = true;
+            // 
+            // clnClassificacao
+            // 
+            clnClassificacao.HeaderText = "Classificação";
+            clnClassificacao.Name = "clnClassificacao";
+            clnClassificacao.ReadOnly = true;
+            // 
             // FrmProcedimentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -443,16 +436,15 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
         private Guna.UI2.WinForms.Guna2TextBox txtClassificacao;
         private Guna.UI2.WinForms.Guna2DataGridView dgvInserirProcedimentos;
-        private DataGridViewTextBoxColumn clnId;
-        private DataGridViewTextBoxColumn clnNome;
-        private DataGridViewTextBoxColumn clndescricao;
-        private DataGridViewTextBoxColumn clnValor;
-        private DataGridViewTextBoxColumn clnDuracao;
-        private DataGridViewTextBoxColumn clnClassificacao;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblValor;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNome;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDuracaoEstimada;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblClassificacao;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDescricao;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clndescricao;
+        private DataGridViewTextBoxColumn clnValor;
+        private DataGridViewTextBoxColumn clnClassificacao;
     }
 }

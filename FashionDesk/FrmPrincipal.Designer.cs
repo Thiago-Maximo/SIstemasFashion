@@ -193,11 +193,13 @@
             panelAdmin.Controls.Add(btnProcedimentos);
             panelAdmin.CustomizableEdges = customizableEdges13;
             panelAdmin.Dock = DockStyle.Top;
+            panelAdmin.Enabled = false;
             panelAdmin.Location = new Point(0, 718);
             panelAdmin.Name = "panelAdmin";
             panelAdmin.ShadowDecoration.CustomizableEdges = customizableEdges14;
             panelAdmin.Size = new Size(200, 158);
             panelAdmin.TabIndex = 1;
+            panelAdmin.Visible = false;
             // 
             // btnConsultarAdmin
             // 
@@ -208,6 +210,7 @@
             btnConsultarAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConsultarAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarAdmin.Dock = DockStyle.Top;
+            btnConsultarAdmin.Enabled = false;
             btnConsultarAdmin.FillColor = Color.White;
             btnConsultarAdmin.Font = new Font("Segoe UI", 9F);
             btnConsultarAdmin.ForeColor = Color.Black;
@@ -220,6 +223,7 @@
             btnConsultarAdmin.TabIndex = 6;
             btnConsultarAdmin.Text = "&Consultar";
             btnConsultarAdmin.TextAlign = HorizontalAlignment.Left;
+            btnConsultarAdmin.Visible = false;
             // 
             // btnAtualizarAdmin
             // 
@@ -230,6 +234,7 @@
             btnAtualizarAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAtualizarAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAtualizarAdmin.Dock = DockStyle.Top;
+            btnAtualizarAdmin.Enabled = false;
             btnAtualizarAdmin.FillColor = Color.White;
             btnAtualizarAdmin.Font = new Font("Segoe UI", 9F);
             btnAtualizarAdmin.ForeColor = Color.Black;
@@ -242,6 +247,7 @@
             btnAtualizarAdmin.TabIndex = 5;
             btnAtualizarAdmin.Text = "&Atualizar";
             btnAtualizarAdmin.TextAlign = HorizontalAlignment.Left;
+            btnAtualizarAdmin.Visible = false;
             // 
             // btnProcedimentos
             // 
@@ -252,6 +258,7 @@
             btnProcedimentos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnProcedimentos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnProcedimentos.Dock = DockStyle.Top;
+            btnProcedimentos.Enabled = false;
             btnProcedimentos.FillColor = Color.White;
             btnProcedimentos.Font = new Font("Segoe UI", 9F);
             btnProcedimentos.ForeColor = Color.Black;
@@ -264,6 +271,7 @@
             btnProcedimentos.TabIndex = 4;
             btnProcedimentos.Text = "&Procedimentos";
             btnProcedimentos.TextAlign = HorizontalAlignment.Left;
+            btnProcedimentos.Visible = false;
             btnProcedimentos.Click += btnProcedimentos_Click;
             // 
             // btnAdmin
@@ -275,6 +283,7 @@
             btnAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAdmin.Dock = DockStyle.Top;
+            btnAdmin.Enabled = false;
             btnAdmin.FillColor = Color.White;
             btnAdmin.Font = new Font("Segoe UI", 9F);
             btnAdmin.ForeColor = Color.Black;
@@ -288,6 +297,7 @@
             btnAdmin.TabIndex = 10;
             btnAdmin.Text = "A&dmin";
             btnAdmin.TextAlign = HorizontalAlignment.Left;
+            btnAdmin.Visible = false;
             btnAdmin.Click += btnAdmin_Click;
             // 
             // panelAgendamentos
