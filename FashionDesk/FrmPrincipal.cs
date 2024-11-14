@@ -253,5 +253,12 @@ namespace FashionDesk
             frmAtualizarAgendamento.MdiParent = this;
             frmAtualizarAgendamento.Show();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            //FrmLogin frmLogin = new();
+            ////frmLogin.MdiParent = this;
+            //frmLogin.ShowDialog();
+        }
     }
 }

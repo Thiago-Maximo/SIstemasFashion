@@ -15,13 +15,14 @@ namespace FashionLib
         public string Email { get; set; }
         public string Nivel { get; set; }
         public string Senha { get; set; }
-
-        public Usuario(int idusuarios,string email, string nivel, string senha)
+        public Boolean Ativo { get; set; }
+        public Usuario(int idusuarios,string email, string nivel, string senha,bool ativo )
         {
             IdUsuarios = idusuarios;
             Email = email;
             Nivel = nivel;
             Senha = senha;
+            Ativo = ativo;
         }
 
         public Usuario(string email, string nivel, string senha)
@@ -49,7 +50,8 @@ namespace FashionLib
                     dr.GetInt32(0),
                     dr.GetString(1),
                     dr.GetString(2),
-                    dr.GetString(3)
+                    dr.GetString(3),
+                    dr.GetBoolean(4)
                     );
             }
             return usuario;

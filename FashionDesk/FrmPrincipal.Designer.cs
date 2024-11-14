@@ -128,7 +128,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 1061);
+            panel1.Size = new Size(200, 881);
             panel1.TabIndex = 0;
             // 
             // panelUser
@@ -645,7 +645,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1076, 1061);
+            ClientSize = new Size(1076, 881);
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -653,6 +653,7 @@
             Name = "FrmPrincipal";
             SizeGripStyle = SizeGripStyle.Show;
             WindowState = FormWindowState.Maximized;
+            Load += FrmPrincipal_Load;
             panel1.ResumeLayout(false);
             panelUser.ResumeLayout(false);
             panelAdmin.ResumeLayout(false);
