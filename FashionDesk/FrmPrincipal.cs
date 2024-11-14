@@ -17,7 +17,7 @@ namespace FashionDesk
         private Boolean ShowClientes = false;
         private Boolean ShowAgendamentos = false;
         private Boolean ShowAdmin = false;
-        private bool ShowUser = false;
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace FashionDesk
             panelClientes.Height = 0;
             panelAgendamentos.Height = 0;
             panelAdmin.Height = 0;
-            panelUser.Height = 0;
+
         }
 
         //#######                             ######                       ######                       
@@ -102,22 +102,6 @@ namespace FashionDesk
             else
             {
                 panelAdmin.Height = 0;
-            }
-
-            //#     #                      
-            //#     #  ####  ###### #####  
-            //#     # #      #      #    # 
-            //#     #  ####  #####  #    # 
-            //#     #      # #      #####  
-            //#     # #    # #      #   #  
-            //#####   ####  ###### #    # 
-            if (ShowUser)
-            {
-                panelUser.Height = 69;
-            }
-            else
-            {
-                panelUser.Height = 0;
             }
         }
 
@@ -221,17 +205,7 @@ namespace FashionDesk
             ExibirDropDown();
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            ShowUser = !ShowUser;
-            ExibirDropDown();
-        }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            FrmPrincipal frmPrincipal = new();
-            frmPrincipal.Close();
-        }
 
         private void btnConsultarAgendamentos_Click(object sender, EventArgs e)
         {
@@ -267,17 +241,30 @@ namespace FashionDesk
                 panelFuncionarios.Enabled = false;
                 btnFuncionarios.Enabled = false;        // Desabilita o botão
                 btnFuncionarios.Visible = false;
+                panelAdmin.Visible = false;
+                panelAdmin.Enabled = false;
+                btnCargosADM.Visible = false;
+                btnCargosADM.Enabled = false;
+                btnAdmin.Visible = false;
+                btnAdmin.Enabled = false;
             }
             else if (nivelUsuario == "Administrador")
             {
                 // Deixa todos os botões visíveis e habilitados
-               
+
             }
             else if (nivelUsuario == "Gerente")
             {
                 // Apenas alguns botões são habilitados
-                
+
             }
+        }
+
+        private void btnCargosADM_Click(object sender, EventArgs e)
+        {
+            FrmCargos frmCargos = new();
+            frmCargos.MdiParent = this;
+            frmCargos.Show();
         }
     }
 }

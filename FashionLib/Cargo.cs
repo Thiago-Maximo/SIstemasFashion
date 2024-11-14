@@ -54,12 +54,12 @@ namespace FashionLib
         }
 
         // Função Obter Por Id
-        public static Cargo ObterPorId(int Id)
+        public static Cargo ObterPorId(int id)
         {
             Cargo cargo = new Cargo();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select * from cargos where id = {Id}";
+            cmd.CommandText = $"select * from cargos where id = {id}";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -80,6 +80,11 @@ namespace FashionLib
             {
                 cmd.CommandText = "select * from cargos order by cargo";
             }
+            else
+            {
+                cmd.CommandText = $"Select * from cargos where cargo like '%{cargos}%' order by cargo";
+            }
+
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -96,8 +101,9 @@ namespace FashionLib
         public void Atualizar()
         {
             var cmd = Banco.Abrir();
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cargos_update";
+            cmd.Parameters.AddWithValue("sp_id", Id);
             cmd.Parameters.AddWithValue("sp_cargos", Cargos);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
