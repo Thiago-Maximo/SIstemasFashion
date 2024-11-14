@@ -256,7 +256,12 @@ namespace FashionDesk
             else if (nivelUsuario == "Gerente")
             {
                 // Apenas alguns botões são habilitados
-
+                panelAdmin.Visible = false;
+                panelAdmin.Enabled = false;
+                btnCargosADM.Visible = false;
+                btnCargosADM.Enabled = false;
+                btnAdmin.Visible = false;
+                btnAdmin.Enabled = false;
             }
         }
 
