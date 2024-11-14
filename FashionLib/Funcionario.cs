@@ -18,6 +18,7 @@ namespace FashionLib
         public Cargo Id_Cargo { get; set; }
         public string Email { get; set; }
 
+
         // Métodos Construtores
         public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo, bool ativo, string email)
         {
@@ -29,6 +30,7 @@ namespace FashionLib
             Ativo = ativo;
             Id_Cargo = id_Cargo;
             Email = email;
+            
         }
 
         public Funcionario(string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo, string email)
@@ -39,6 +41,7 @@ namespace FashionLib
             Data_Nasc = data_Nasc;
             Id_Cargo = id_Cargo;
             Email = email;
+            
         }
 
         public Funcionario() { }

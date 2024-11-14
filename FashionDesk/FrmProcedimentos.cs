@@ -42,7 +42,7 @@ namespace FashionDesk
                 dgvInserirProcedimentos.Rows[cont].Cells[1].Value = procedimento.Nome;
                 dgvInserirProcedimentos.Rows[cont].Cells[2].Value = procedimento.Descricao;
                 dgvInserirProcedimentos.Rows[cont].Cells[3].Value = procedimento.Valor;
-                dgvInserirProcedimentos.Rows[cont].Cells[4].Value = procedimento.Duracacao_Estimada.ToString(@"hh\:mm\:ss"); ;
+                
 
                 dgvInserirProcedimentos.Rows[cont].Cells[5].Value = procedimento.Classificacao;
 
