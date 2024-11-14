@@ -53,6 +53,19 @@ namespace FashionLib
             dr.Close();
             cmd.Connection.Close();
         }
+
+        public void Atualizar()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_funcionarios_procedimentos_insert";
+
+            cmd.Parameters.AddWithValue("spid_funcionario", Id_funcionario.Id);
+            cmd.Parameters.AddWithValue("spid_procedimento", Id_Procedimentos.Id);
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+
         public static FuncionarioProcedimento ObterPorId(int id)
         {
             FuncionarioProcedimento funcionarioProcedimento = null;

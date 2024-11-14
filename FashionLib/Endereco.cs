@@ -6,25 +6,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using Newtonsoft.Json;
 
 namespace FashionLib
 {
     public class Endereco
     {//Declaração das Variaveis
-       
 
-        public int Id {  get; set; }
+
+        public int Id { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Bairro { get; set; }
-        public string Cidade { get; set; }
+        public string Cidade { get; set; }   
         public string Estado { get; set;}
         public string Cep {  get; set;}
+        public string Complemento { get; set; }
 
         //Métodos Construtores
 
         //Método com Tudo
-        public Endereco(int id, string logradouro, string numero, string bairro, string cidade, string estado, string cep)
+        public Endereco(int id, string logradouro, string numero, string bairro, string cidade, string estado, string cep, string complemento)
         {
             Id = id;
             Logradouro = logradouro;
@@ -33,10 +35,11 @@ namespace FashionLib
             Cidade = cidade;
             Estado = estado;
             Cep = cep;
+            Complemento = complemento;
         }
 
         //Método sem Id
-        public Endereco(string logradouro, string numero, string bairro, string cidade, string estado, string cep)
+        public Endereco(string logradouro, string numero, string bairro, string cidade, string estado, string cep, string complemento)
         {
             Logradouro = logradouro;
             Numero = numero;
@@ -44,6 +47,7 @@ namespace FashionLib
             Cidade = cidade;
             Estado = estado;
             Cep = cep;
+            Complemento = complemento;
         }
 
         //Método Vazio
@@ -66,6 +70,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spcidade",Cidade);
             cmd.Parameters.AddWithValue("spestado",Estado);
             cmd.Parameters.AddWithValue("spcep",Cep);
+            cmd.Parameters.AddWithValue("spcomplemento", Complemento);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -94,7 +99,7 @@ namespace FashionLib
             cmd.CommandType = CommandType.Text;
             if(nome == "")
             {
-                cmd.CommandText = "Select * from enderecos order by estado";
+                cmd.CommandText = "Select * from enderecos order by id";
             }
             var dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -106,7 +111,8 @@ namespace FashionLib
                     dr.GetString(3),
                     dr.GetString(4),
                     dr.GetString(5),
-                    dr.GetString(6)
+                    dr.GetString(6),
+                    dr.GetString(7)
                     ));
             }
             cmd.Connection.Close();
@@ -126,6 +132,7 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spcidade", Cidade);
             cmd.Parameters.AddWithValue("spestado", Estado);
             cmd.Parameters.AddWithValue("spcep", Cep);
+            cmd.Parameters.AddWithValue("spcomplemento", Complemento);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
