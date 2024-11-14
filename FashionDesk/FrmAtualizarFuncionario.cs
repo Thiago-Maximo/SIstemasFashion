@@ -9,6 +9,22 @@ namespace FashionDesk
 {
     public partial class FrmAtualizarFuncionario : Form
     {
+        public Guna.UI2.WinForms.Guna2TextBox TxtNomeFunc
+        {
+            get { return txtNomeFunc; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtIdFunc
+        {
+            get { return txtIdFunc; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtNomeProc
+        {
+            get { return txtProcedimento; }
+        }
+        public Guna.UI2.WinForms.Guna2TextBox TxtIdProc
+        {
+            get { return txtIdProc; }
+        }
         public FrmAtualizarFuncionario()
         {
             InitializeComponent();
@@ -31,6 +47,11 @@ namespace FashionDesk
             // Carrega os funcionários no DataGridView
             CarregaGrid();
             dgvFuncionariosAtualizar.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            
+            var FuncionarioProcedimentos = FuncionarioProcedimento.ObterPorLista();
+            CarregaGridFuncProd();
+
+            
         }
 
         private void CarregaGrid(string nome = "")
@@ -191,6 +212,71 @@ namespace FashionDesk
             else
             {
                 return false;
+            }
+        }
+
+        private void btnInserirFuncProc_Click(object sender, EventArgs e)
+        {
+            FuncionarioProcedimento funcionarioProcedimento = new FuncionarioProcedimento
+            {
+                Id_funcionario = Funcionario.ObterPorId(int.Parse(txtIdFunc.Text)),
+                Id_Procedimentos = Procedimentos.ObterPorId(int.Parse(txtIdProc.Text))
+            };
+
+            funcionarioProcedimento.Atualizar();
+            if (funcionarioProcedimento.Id > 0)
+            {
+                MessageBox.Show("Sucesso");
+
+                CarregaGridFuncProd();
+            }
+            else
+            {
+                MessageBox.Show("Falha");
+                CarregaGridFuncProd();
+            }
+        }
+        private void CarregaGridFuncProd()
+        {
+            var lista = FuncionarioProcedimento.ObterPorLista();
+            dgvFuncionariosProcedimentos.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionarioProcedimentos in lista)
+            {
+                dgvFuncionariosProcedimentos.Rows.Add();
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[0].Value = funcionarioProcedimentos.Id;
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[1].Value = funcionarioProcedimentos.Id_funcionario.Nome;
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[2].Value = funcionarioProcedimentos.Id_Procedimentos.Nome;
+
+                cont++;
+            }
+        }
+
+        private void btnEscolherFuncionario_Click(object sender, EventArgs e)
+        {
+            using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
+            {
+                frmConsultaFuncionario.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    TxtNomeFunc.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    TxtIdFunc.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
+            }
+        }
+
+        private void btnEscolherProcedimento_Click(object sender, EventArgs e)
+        {
+            using (FrmProcedimentos frmProcedimentos = new FrmProcedimentos())
+            {
+                frmProcedimentos.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmProcedimentos.ProcedimentoSelecionado) || frmProcedimentos.IdProcedimentoSelecionado != 0)
+                {
+                    TxtNomeProc.Text = frmProcedimentos.NomeProcedimentoInserir;
+                    TxtIdProc.Text = frmProcedimentos.IdProcedimentoInserir.ToString();
+                }
             }
         }
     }

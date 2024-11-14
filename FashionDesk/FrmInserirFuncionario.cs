@@ -223,7 +223,6 @@ namespace FashionDesk
                 MessageBox.Show("Falha");
                 CarregaGridFuncProd();
             }
-
         }
         private void CarregaGridFuncProd()
         {
@@ -249,7 +248,8 @@ namespace FashionDesk
                 txtBairro.Text,
                 txtCidade.Text,
                 txtEstado.Text,
-                txtCep.Text
+                txtCep.Text,
+                txtComplemento.Text
                 );
 
             endereco.Inserir();
@@ -280,6 +280,7 @@ namespace FashionDesk
                 dgvEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
                 dgvEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
                 dgvEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
+                dgvEndereco.Rows[cont].Cells[5].Value = endereco.Complemento;
 
                 cont++;
             }
@@ -306,7 +307,7 @@ namespace FashionDesk
             string cep = txtCep.Text;
             if (!string.IsNullOrEmpty(cep))
             {
-                var endereco = await  BuscaEndereco(cep);
+                var endereco = await BuscaEndereco(cep);
                 if (endereco != null)
                 {
                     txtLogradouro.Text = endereco.Logradouro;
@@ -320,5 +321,33 @@ namespace FashionDesk
                 }
             }
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Endereco endereco = new Endereco(
+                txtLogradouro.Text,
+                txtNumero.Text,
+                txtBairro.Text,
+                txtCidade.Text,
+                txtEstado.Text,
+                txtCep.Text,
+                txtComplemento.Text
+                );
+
+            endereco.Atualizar();
+            if (endereco.Id > 0)
+            {
+                MessageBox.Show($"O Endereço foi Inserido com Sucesso!!");
+
+                CarregaGridEndereco();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao InserirEndereço");
+                CarregaGridEndereco();
+            }
+        }
+
+       
     }
 }
