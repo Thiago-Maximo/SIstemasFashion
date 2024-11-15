@@ -10,7 +10,7 @@ namespace FashionLib
 {
     public class FuncionarioProcedimento
     {
-        // Declaração cas Variáveis
+        // Declaração das Variáveis
         public int Id { get; set; }
         public Funcionario Id_funcionario { get; set; }
         public Procedimentos Id_Procedimentos { get; set; }
@@ -29,6 +29,10 @@ namespace FashionLib
         {
             Id_funcionario = id_funcionario;
             Id_Procedimentos = id_procedimentos;
+        }
+        public FuncionarioProcedimento(int id)
+        {
+            Id = id;
         }
 
         // Sem Nada
@@ -58,8 +62,9 @@ namespace FashionLib
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_funcionarios_procedimentos_insert";
+            cmd.CommandText = "sp_funcionarios_procedimentos_update";
 
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spid_funcionario", Id_funcionario.Id);
             cmd.Parameters.AddWithValue("spid_procedimento", Id_Procedimentos.Id);
             cmd.ExecuteNonQuery();

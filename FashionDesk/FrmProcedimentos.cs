@@ -44,7 +44,7 @@ namespace FashionDesk
                 dgvInserirProcedimentos.Rows[cont].Cells[3].Value = procedimento.Valor;
                 
 
-                dgvInserirProcedimentos.Rows[cont].Cells[5].Value = procedimento.Classificacao;
+                dgvInserirProcedimentos.Rows[cont].Cells[4].Value = procedimento.Classificacao;
 
                 cont++;
             }

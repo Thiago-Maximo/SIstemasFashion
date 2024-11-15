@@ -19,7 +19,7 @@ namespace FashionDesk
         }
         public Guna.UI2.WinForms.Guna2TextBox TxtNomeProc
         {
-            get { return txtProcedimento; }
+            get { return txtNomeProd; }
         }
         public Guna.UI2.WinForms.Guna2TextBox TxtIdProc
         {
@@ -47,11 +47,11 @@ namespace FashionDesk
             // Carrega os funcionários no DataGridView
             CarregaGrid();
             dgvFuncionariosAtualizar.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+
             var FuncionarioProcedimentos = FuncionarioProcedimento.ObterPorLista();
             CarregaGridFuncProd();
 
-            
+
         }
 
         private void CarregaGrid(string nome = "")
@@ -136,7 +136,7 @@ namespace FashionDesk
                 CarregaGrid();
             }
 
-        
+
         }
 
         private void dgvFuncionariosInserir_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -219,15 +219,20 @@ namespace FashionDesk
 
         private void btnInserirFuncProc_Click(object sender, EventArgs e)
         {
+
             FuncionarioProcedimento funcionarioProcedimento = new FuncionarioProcedimento
             {
+                Id = Convert.ToInt32(txtIdFuncProd.Text),
                 Id_funcionario = Funcionario.ObterPorId(int.Parse(txtIdFunc.Text)),
                 Id_Procedimentos = Procedimentos.ObterPorId(int.Parse(txtIdProc.Text))
+
             };
+           
 
             funcionarioProcedimento.Atualizar();
             if (funcionarioProcedimento.Id > 0)
             {
+
                 MessageBox.Show("Sucesso");
 
                 CarregaGridFuncProd();
@@ -279,6 +284,21 @@ namespace FashionDesk
                     TxtNomeProc.Text = frmProcedimentos.NomeProcedimentoInserir;
                     TxtIdProc.Text = frmProcedimentos.IdProcedimentoInserir.ToString();
                 }
+            }
+        }
+
+        private void dgvFuncionariosProcedimentos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se o clique foi em uma célula válida e não no cabeçalho
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvFuncionariosProcedimentos.Rows[e.RowIndex];
+
+                
+                txtIdFuncProd.Text = row.Cells[0].Value?.ToString();
+                TxtNomeFunc.Text = row.Cells[1].Value?.ToString();
+                TxtNomeProc.Text = row.Cells[2].Value?.ToString();
+
             }
         }
     }
