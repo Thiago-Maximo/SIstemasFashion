@@ -70,13 +70,14 @@ namespace FashionLib
             cmd.Parameters.AddWithValue("spcidade",Cidade);
             cmd.Parameters.AddWithValue("spestado",Estado);
             cmd.Parameters.AddWithValue("spcep",Cep);
-            cmd.Parameters.AddWithValue("spcomplemento", Complemento);
+            cmd.Parameters.AddWithValue("spcomplemento",Complemento);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 Id = dr.GetInt32(0);
             }
+      
             cmd.Connection.Close();
         }
 
@@ -115,6 +116,7 @@ namespace FashionLib
                     dr.GetString(7)
                     ));
             }
+            dr.Close();
             cmd.Connection.Close();
             return lista;
 
@@ -126,6 +128,7 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = $"sp_endereco_update";
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("splogradouro", Logradouro);
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spbairro", Bairro);

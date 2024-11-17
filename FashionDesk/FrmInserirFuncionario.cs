@@ -280,7 +280,7 @@ namespace FashionDesk
                 dgvEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
                 dgvEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
                 dgvEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
-                dgvEndereco.Rows[cont].Cells[5].Value = endereco.Complemento;
+                dgvEndereco.Rows[cont].Cells[7].Value = endereco.Complemento;
 
                 cont++;
             }

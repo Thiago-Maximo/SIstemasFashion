@@ -51,7 +51,8 @@ namespace FashionDesk
             var FuncionarioProcedimentos = FuncionarioProcedimento.ObterPorLista();
             CarregaGridFuncProd();
 
-
+            var Enderecos = Endereco.ObterPorLista();
+            CarregaGridEndereco();
         }
 
         private void CarregaGrid(string nome = "")
@@ -227,7 +228,7 @@ namespace FashionDesk
                 Id_Procedimentos = Procedimentos.ObterPorId(int.Parse(txtIdProc.Text))
 
             };
-           
+
 
             funcionarioProcedimento.Atualizar();
             if (funcionarioProcedimento.Id > 0)
@@ -294,11 +295,76 @@ namespace FashionDesk
             {
                 DataGridViewRow row = dgvFuncionariosProcedimentos.Rows[e.RowIndex];
 
-                
+
                 txtIdFuncProd.Text = row.Cells[0].Value?.ToString();
                 TxtNomeFunc.Text = row.Cells[1].Value?.ToString();
                 TxtNomeProc.Text = row.Cells[2].Value?.ToString();
 
+            }
+        }
+
+        private void btnInserirEnder_Click(object sender, EventArgs e)
+        {
+            Endereco endereco = new Endereco(
+                Convert.ToInt32(txtIdEndereco.Text),
+                txtLogradouro.Text,
+                txtNumero.Text,
+                txtBairro.Text,
+                txtCidade.Text,
+                txtEstado.Text,
+                txtCep.Text,
+                txtComplemento.Text
+                );
+
+            endereco.Atualizar();
+            if (endereco.Id > 0)
+            {
+                MessageBox.Show($"O Endereço foi Inserido com Sucesso!!");
+
+                CarregaGridEndereco();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao Inserir Endereço");
+                CarregaGridEndereco();
+            }
+        }
+        private void CarregaGridEndereco()
+        {
+            var lista = Endereco.ObterPorLista();
+            dgvEndereco.Rows.Clear();
+            int cont = 0;
+            foreach (var endereco in lista)
+            {
+                dgvEndereco.Rows.Add();
+                dgvEndereco.Rows[cont].Cells[0].Value = endereco.Id;
+                dgvEndereco.Rows[cont].Cells[1].Value = endereco.Logradouro;
+                dgvEndereco.Rows[cont].Cells[2].Value = endereco.Numero;
+                dgvEndereco.Rows[cont].Cells[3].Value = endereco.Bairro;
+                dgvEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
+                dgvEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
+                dgvEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
+                dgvEndereco.Rows[cont].Cells[7].Value = endereco.Complemento;
+
+                cont++;
+            }
+        }
+
+        private void dgvEndereco_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvEndereco.Rows[e.RowIndex];
+
+                // Preenche os TextBox com os dados da linha selecionada
+                txtIdEndereco.Text = row.Cells[0].Value?.ToString();
+                txtLogradouro.Text = row.Cells[1].Value?.ToString();
+                txtNumero.Text = row.Cells[2].Value?.ToString();
+                txtBairro.Text = row.Cells[3].Value?.ToString();
+                txtCidade.Text = row.Cells[4].Value?.ToString();
+                txtEstado.Text = row.Cells[5].Value?.ToString();
+                txtCep.Text = row.Cells[6].Value?.ToString();
+                txtComplemento.Text = row.Cells[7].Value?.ToString();
             }
         }
     }
