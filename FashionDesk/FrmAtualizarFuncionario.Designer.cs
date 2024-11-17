@@ -515,6 +515,7 @@
             txtId.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtId.Size = new Size(46, 48);
             txtId.TabIndex = 26;
+            txtId.Visible = false;
             // 
             // chkAtivo
             // 
@@ -677,6 +678,7 @@
             txtIdFuncProd.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtIdFuncProd.Size = new Size(62, 48);
             txtIdFuncProd.TabIndex = 88;
+            txtIdFuncProd.Visible = false;
             // 
             // guna2HtmlLabel7
             // 
@@ -761,6 +763,7 @@
             txtIdProc.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtIdProc.Size = new Size(37, 48);
             txtIdProc.TabIndex = 83;
+            txtIdProc.Visible = false;
             // 
             // guna2ControlBox1
             // 
@@ -964,6 +967,7 @@
             txtIdFunc.ShadowDecoration.CustomizableEdges = customizableEdges38;
             txtIdFunc.Size = new Size(32, 48);
             txtIdFunc.TabIndex = 76;
+            txtIdFunc.Visible = false;
             // 
             // tabPage3
             // 
@@ -1025,6 +1029,7 @@
             txtIdEndereco.ShadowDecoration.CustomizableEdges = customizableEdges40;
             txtIdEndereco.Size = new Size(34, 48);
             txtIdEndereco.TabIndex = 68;
+            txtIdEndereco.Visible = false;
             // 
             // txtComplemento
             // 

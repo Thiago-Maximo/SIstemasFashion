@@ -159,7 +159,7 @@ namespace FashionLib
             cmd.CommandType = CommandType.Text;
             if (nome == "")
             {
-                cmd.CommandText = "Select * from clientes order by nome";
+                cmd.CommandText = "Select * from clientes order by id";
             }
             else
             {

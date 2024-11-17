@@ -155,8 +155,6 @@
             txtCep = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvEndereco = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnFecharEnder = new Guna.UI2.WinForms.Guna2Button();
-            btnInserirEnder = new Guna.UI2.WinForms.Guna2Button();
             clnIdEndereço = new DataGridViewTextBoxColumn();
             clnLogradouro = new DataGridViewTextBoxColumn();
             clnNumero = new DataGridViewTextBoxColumn();
@@ -165,6 +163,8 @@
             clnEstado = new DataGridViewTextBoxColumn();
             clnCep = new DataGridViewTextBoxColumn();
             clnComplemento = new DataGridViewTextBoxColumn();
+            btnFecharEnder = new Guna.UI2.WinForms.Guna2Button();
+            btnInserirEnder = new Guna.UI2.WinForms.Guna2Button();
             guna2TabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionariosInserir).BeginInit();
@@ -980,6 +980,7 @@
             txtIdEndereco.ShadowDecoration.CustomizableEdges = customizableEdges38;
             txtIdEndereco.Size = new Size(34, 48);
             txtIdEndereco.TabIndex = 7;
+            txtIdEndereco.Visible = false;
             // 
             // txtBuscarCep
             // 
@@ -1242,49 +1243,6 @@
             dgvEndereco.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvEndereco.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // btnFecharEnder
-            // 
-            btnFecharEnder.BackColor = Color.Transparent;
-            btnFecharEnder.BorderRadius = 10;
-            btnFecharEnder.CustomizableEdges = customizableEdges53;
-            btnFecharEnder.DisabledState.BorderColor = Color.DarkGray;
-            btnFecharEnder.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFecharEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFecharEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFecharEnder.FillColor = Color.White;
-            btnFecharEnder.Font = new Font("Segoe UI", 9F);
-            btnFecharEnder.ForeColor = Color.Black;
-            btnFecharEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnFecharEnder.Location = new Point(424, 699);
-            btnFecharEnder.Margin = new Padding(3, 4, 3, 4);
-            btnFecharEnder.Name = "btnFecharEnder";
-            btnFecharEnder.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            btnFecharEnder.Size = new Size(206, 60);
-            btnFecharEnder.TabIndex = 51;
-            btnFecharEnder.Text = "&Fechar";
-            // 
-            // btnInserirEnder
-            // 
-            btnInserirEnder.BorderColor = Color.FromArgb(255, 192, 255);
-            btnInserirEnder.BorderRadius = 10;
-            btnInserirEnder.CustomizableEdges = customizableEdges55;
-            btnInserirEnder.DisabledState.BorderColor = Color.DarkGray;
-            btnInserirEnder.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnInserirEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnInserirEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnInserirEnder.FillColor = Color.White;
-            btnInserirEnder.Font = new Font("Segoe UI", 9F);
-            btnInserirEnder.ForeColor = Color.Black;
-            btnInserirEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
-            btnInserirEnder.Location = new Point(637, 699);
-            btnInserirEnder.Margin = new Padding(3, 4, 3, 4);
-            btnInserirEnder.Name = "btnInserirEnder";
-            btnInserirEnder.ShadowDecoration.CustomizableEdges = customizableEdges56;
-            btnInserirEnder.Size = new Size(206, 60);
-            btnInserirEnder.TabIndex = 50;
-            btnInserirEnder.Text = "&Inserir";
-            btnInserirEnder.Click += btnInserirEnder_Click;
-            // 
             // clnIdEndereço
             // 
             clnIdEndereço.HeaderText = "Id";
@@ -1340,6 +1298,49 @@
             clnComplemento.MinimumWidth = 6;
             clnComplemento.Name = "clnComplemento";
             clnComplemento.ReadOnly = true;
+            // 
+            // btnFecharEnder
+            // 
+            btnFecharEnder.BackColor = Color.Transparent;
+            btnFecharEnder.BorderRadius = 10;
+            btnFecharEnder.CustomizableEdges = customizableEdges53;
+            btnFecharEnder.DisabledState.BorderColor = Color.DarkGray;
+            btnFecharEnder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFecharEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFecharEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFecharEnder.FillColor = Color.White;
+            btnFecharEnder.Font = new Font("Segoe UI", 9F);
+            btnFecharEnder.ForeColor = Color.Black;
+            btnFecharEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnFecharEnder.Location = new Point(424, 699);
+            btnFecharEnder.Margin = new Padding(3, 4, 3, 4);
+            btnFecharEnder.Name = "btnFecharEnder";
+            btnFecharEnder.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            btnFecharEnder.Size = new Size(206, 60);
+            btnFecharEnder.TabIndex = 51;
+            btnFecharEnder.Text = "&Fechar";
+            // 
+            // btnInserirEnder
+            // 
+            btnInserirEnder.BorderColor = Color.FromArgb(255, 192, 255);
+            btnInserirEnder.BorderRadius = 10;
+            btnInserirEnder.CustomizableEdges = customizableEdges55;
+            btnInserirEnder.DisabledState.BorderColor = Color.DarkGray;
+            btnInserirEnder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInserirEnder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInserirEnder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInserirEnder.FillColor = Color.White;
+            btnInserirEnder.Font = new Font("Segoe UI", 9F);
+            btnInserirEnder.ForeColor = Color.Black;
+            btnInserirEnder.HoverState.FillColor = Color.FromArgb(255, 192, 255);
+            btnInserirEnder.Location = new Point(637, 699);
+            btnInserirEnder.Margin = new Padding(3, 4, 3, 4);
+            btnInserirEnder.Name = "btnInserirEnder";
+            btnInserirEnder.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            btnInserirEnder.Size = new Size(206, 60);
+            btnInserirEnder.TabIndex = 50;
+            btnInserirEnder.Text = "&Inserir";
+            btnInserirEnder.Click += btnInserirEnder_Click;
             // 
             // FrmInserirFuncionario
             // 
