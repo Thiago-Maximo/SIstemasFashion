@@ -255,7 +255,8 @@ namespace FashionDesk
                 dgvFuncionariosProcedimentos.Rows[cont].Cells[0].Value = funcionarioProcedimentos.Id;
                 dgvFuncionariosProcedimentos.Rows[cont].Cells[1].Value = funcionarioProcedimentos.Id_funcionario.Nome;
                 dgvFuncionariosProcedimentos.Rows[cont].Cells[2].Value = funcionarioProcedimentos.Id_Procedimentos.Nome;
-
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[3].Value = funcionarioProcedimentos.Id_Procedimentos.Id;
+                dgvFuncionariosProcedimentos.Rows[cont].Cells[4].Value = funcionarioProcedimentos.Id_funcionario.Id;
                 cont++;
             }
         }
@@ -299,7 +300,8 @@ namespace FashionDesk
                 txtIdFuncProd.Text = row.Cells[0].Value?.ToString();
                 TxtNomeFunc.Text = row.Cells[1].Value?.ToString();
                 TxtNomeProc.Text = row.Cells[2].Value?.ToString();
-
+                txtIdProc.Text = row.Cells[3].Value?.ToString();
+                txtIdFunc.Text = row.Cells[4].Value?.ToString();
             }
         }
 

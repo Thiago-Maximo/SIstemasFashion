@@ -42,9 +42,29 @@ namespace FashionDesk
                 dgvInserirProcedimentos.Rows[cont].Cells[1].Value = procedimento.Nome;
                 dgvInserirProcedimentos.Rows[cont].Cells[2].Value = procedimento.Descricao;
                 dgvInserirProcedimentos.Rows[cont].Cells[3].Value = procedimento.Valor;
-                
+
 
                 dgvInserirProcedimentos.Rows[cont].Cells[4].Value = procedimento.Classificacao;
+
+                cont++;
+            }
+        }
+
+        private void CarregaGridAtualizar(string procedimentos = "")
+        {
+            var lista = Procedimentos.ObterPorLista(procedimentos);
+            dgvAtualizarProcedimento.Rows.Clear();
+            int cont = 0;
+            foreach (var procedimento in lista)
+            {
+                dgvAtualizarProcedimento.Rows.Add();
+                dgvAtualizarProcedimento.Rows[cont].Cells[0].Value = procedimento.Id;
+                dgvAtualizarProcedimento.Rows[cont].Cells[1].Value = procedimento.Nome;
+                dgvAtualizarProcedimento.Rows[cont].Cells[2].Value = procedimento.Descricao;
+                dgvAtualizarProcedimento.Rows[cont].Cells[3].Value = procedimento.Valor;
+
+
+                dgvAtualizarProcedimento.Rows[cont].Cells[4].Value = procedimento.Classificacao;
 
                 cont++;
             }
@@ -58,6 +78,7 @@ namespace FashionDesk
         private void FrmProcedimentos_Load(object sender, EventArgs e)
         {
             CarregaGrid();
+            CarregaGridAtualizar();
         }
 
         private void dgvInserirProcedimentos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -71,6 +92,23 @@ namespace FashionDesk
                 IdProcedimentoInserir = Convert.ToInt32(dgvInserirProcedimentos.Rows[e.RowIndex].Cells[0].Value.ToString());
                 // Fecha o formulário após selecionar o cliente
                 this.Close();
+            }
+        }
+
+        private void dgvAtualizarProcedimento_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Verifica se o clique foi em uma célula válida e não no cabeçalho
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvAtualizarProcedimento.Rows[e.RowIndex];
+
+
+                TxtIDProcedimento.Text = row.Cells[0].Value?.ToString();
+                TxtNomeAtualizado.Text = row.Cells[1].Value?.ToString();
+                TxtDescricaoAtualizado.Text = row.Cells[2].Value?.ToString();
+                TxtClassificacaoAtualizado.Text = row.Cells[4].Value?.ToString();
+                nmrValorAtualizado.Text = row.Cells[3].Value?.ToString();
             }
         }
     }

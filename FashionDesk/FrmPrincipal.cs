@@ -233,6 +233,8 @@ namespace FashionDesk
             // Verifica o nível do usuário logado
             string nivelUsuario = Program.UsuarioLogado.Nivel;
 
+            UserLogin.Text = Program.UsuarioLogado.Email + " " +Program.UsuarioLogado.Nivel; ;
+
             // Ajusta a visibilidade ou desabilitação dos botões com base no nível
             if (nivelUsuario == "Recepcionista")
             {
