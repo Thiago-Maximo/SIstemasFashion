@@ -111,5 +111,19 @@ namespace FashionDesk
                 nmrValorAtualizado.Text = row.Cells[3].Value?.ToString();
             }
         }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtConsultar.Text.Length > 0)
+            {
+                CarregaGrid(txtConsultar.Text);
+            }
+            else
+            {
+                CarregaGrid();
+            }
+        }
+
+        
     }
 }
