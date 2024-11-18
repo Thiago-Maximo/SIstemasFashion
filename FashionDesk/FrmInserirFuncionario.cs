@@ -321,30 +321,69 @@ namespace FashionDesk
                 }
             }
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnInserirFuncEnder_Click(object sender, EventArgs e)
         {
-            Endereco endereco = new Endereco(
-                txtLogradouro.Text,
-                txtNumero.Text,
-                txtBairro.Text,
-                txtCidade.Text,
-                txtEstado.Text,
-                txtCep.Text,
-                txtComplemento.Text
-                );
-
-            endereco.Atualizar();
-            if (endereco.Id > 0)
+            FuncionarioEndereco funcionarioEndereco = new FuncionarioEndereco
             {
-                MessageBox.Show($"O Endereço foi Inserido com Sucesso!!");
+                Id_funcionario = Funcionario.ObterPorId(int.Parse(txtIdFuncionario.Text)),
+                Id_Endereco = Endereco.ObterPorId(int.Parse(txtIdEnder.Text))
+            };
 
-                CarregaGridEndereco();
+            funcionarioEndereco.Inserir();
+            if (funcionarioEndereco.Id > 0)
+            {
+                MessageBox.Show("Sucesso");
+
+                CarregaGridFuncProd();
             }
             else
             {
-                MessageBox.Show("Falha ao InserirEndereço");
-                CarregaGridEndereco();
+                MessageBox.Show("Falha");
+                CarregaGridFuncProd();
+            }
+        }
+
+        private void btnBustarFunc_Click(object sender, EventArgs e)
+        {
+            using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
+            {
+                frmConsultaFuncionario.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmConsultaFuncionario.FuncionarioSelecionado) || frmConsultaFuncionario.IdFuncionarioSelecionado != 0)
+                {
+                    txtIdFuncEnder.Text = frmConsultaFuncionario.NomeFuncionarioInserir;
+                    txtIdFuncionario.Text = frmConsultaFuncionario.IdFuncionairoInserir.ToString();
+                }
+            }
+        }
+
+        private void btnBuscarEnder_Click(object sender, EventArgs e)
+        {
+            using (FrmConsultaEndereco frmConsultaEndereco = new FrmConsultaEndereco())
+            {
+                frmConsultaEndereco.ShowDialog();
+
+                if (!string.IsNullOrEmpty(frmConsultaEndereco.EnderecoSelecionado) || frmConsultaEndereco.IdEnderecoSelecionado != 0)
+                {
+                    txtIdEnderFunc.Text = frmConsultaEndereco.NomeEnderecoInserir;
+                    txtIdEnder.Text = frmConsultaEndereco.IdEnderecoInserir.ToString();
+                }
+            }
+        }
+
+        private void dgvFuncionarioEndereco_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var lista = FuncionarioEndereco.ObterPorLista();
+            dgvFuncionarioEndereco.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionarioProcedimentos in lista)
+            {
+                dgvFuncionarioEndereco.Rows.Add();
+                dgvFuncionarioEndereco.Rows[cont].Cells[0].Value = funcionarioProcedimentos.Id;
+                dgvFuncionarioEndereco.Rows[cont].Cells[1].Value = funcionarioProcedimentos.Id_funcionario.Nome;
+                dgvFuncionarioEndereco.Rows[cont].Cells[2].Value = funcionarioProcedimentos.Id_Endereco.Logradouro;
+
+                cont++;
             }
         }
 

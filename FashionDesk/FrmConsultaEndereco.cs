@@ -13,6 +13,10 @@ namespace FashionDesk
 {
     public partial class FrmConsultaEndereco : Form
     {
+        public string EnderecoSelecionado { get; private set; }
+        public int IdEnderecoSelecionado { get; set; }
+        public string NomeEnderecoInserir { get; private set; }
+        public int IdEnderecoInserir { get; set; }
         public FrmConsultaEndereco()
         {
             InitializeComponent();
@@ -21,23 +25,24 @@ namespace FashionDesk
         private void FrmConsultaEndereco_Load(object sender, EventArgs e)
         {
             CarregaGridEndereco();
+            
         }
         private void CarregaGridEndereco()
         {
             var lista = Endereco.ObterPorLista();
-            dgvEndereco.Rows.Clear();
+            dgvConsultarEndereco.Rows.Clear();
             int cont = 0;
             foreach (var endereco in lista)
             {
-                dgvEndereco.Rows.Add();
-                dgvEndereco.Rows[cont].Cells[0].Value = endereco.Id;
-                dgvEndereco.Rows[cont].Cells[1].Value = endereco.Logradouro;
-                dgvEndereco.Rows[cont].Cells[2].Value = endereco.Numero;
-                dgvEndereco.Rows[cont].Cells[3].Value = endereco.Bairro;
-                dgvEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
-                dgvEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
-                dgvEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
-                dgvEndereco.Rows[cont].Cells[7].Value = endereco.Complemento;
+                dgvConsultarEndereco.Rows.Add();
+                dgvConsultarEndereco.Rows[cont].Cells[0].Value = endereco.Id;
+                dgvConsultarEndereco.Rows[cont].Cells[1].Value = endereco.Logradouro;
+                dgvConsultarEndereco.Rows[cont].Cells[2].Value = endereco.Numero;
+                dgvConsultarEndereco.Rows[cont].Cells[3].Value = endereco.Bairro;
+                dgvConsultarEndereco.Rows[cont].Cells[4].Value = endereco.Cidade;
+                dgvConsultarEndereco.Rows[cont].Cells[5].Value = endereco.Estado;
+                dgvConsultarEndereco.Rows[cont].Cells[6].Value = endereco.Cep;
+                dgvConsultarEndereco.Rows[cont].Cells[7].Value = endereco.Complemento;
 
                 cont++;
             }
@@ -48,14 +53,11 @@ namespace FashionDesk
             // Verifica se o clique foi em uma célula válida e não no cabeçalho
             if (e.RowIndex >= 0)
             {
-                //DataGridViewRow row = dgvFuncionariosProcedimentos.Rows[e.RowIndex];
-
-
-                //txtIdFuncProd.Text = row.Cells[0].Value?.ToString();
-                //TxtNomeFunc.Text = row.Cells[1].Value?.ToString();
-                //TxtNomeProc.Text = row.Cells[2].Value?.ToString();
-                //txtIdProc.Text = row.Cells[3].Value?.ToString();
-                //txtIdFunc.Text = row.Cells[4].Value?.ToString();
+                EnderecoSelecionado = dgvConsultarEndereco.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdEnderecoSelecionado = Convert.ToInt32(dgvConsultarEndereco.Rows[e.RowIndex].Cells[0].Value.ToString());
+                NomeEnderecoInserir = dgvConsultarEndereco.Rows[e.RowIndex].Cells[1].Value.ToString();
+                IdEnderecoInserir = Convert.ToInt32(dgvConsultarEndereco.Rows[e.RowIndex].Cells[0].Value.ToString());
+                this.Close();
             }
         }
     }

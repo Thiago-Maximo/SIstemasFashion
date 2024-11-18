@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            dgvEndereco = new Guna.UI2.WinForms.Guna2DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            dgvConsultarEndereco = new Guna.UI2.WinForms.Guna2DataGridView();
             clnIdEndereço = new DataGridViewTextBoxColumn();
             clnLogradouro = new DataGridViewTextBoxColumn();
             clnNumero = new DataGridViewTextBoxColumn();
@@ -40,64 +40,64 @@
             clnEstado = new DataGridViewTextBoxColumn();
             clnCep = new DataGridViewTextBoxColumn();
             clnComplemento = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dgvEndereco).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultarEndereco).BeginInit();
             SuspendLayout();
             // 
-            // dgvEndereco
+            // dgvConsultarEndereco
             // 
-            dgvEndereco.AllowUserToAddRows = false;
-            dgvEndereco.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvEndereco.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvEndereco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvEndereco.ColumnHeadersHeight = 17;
-            dgvEndereco.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvEndereco.Columns.AddRange(new DataGridViewColumn[] { clnIdEndereço, clnLogradouro, clnNumero, clnBairro, clnCidade, clnEstado, clnCep, clnComplemento });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvEndereco.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvEndereco.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEndereco.Location = new Point(30, 168);
-            dgvEndereco.Name = "dgvEndereco";
-            dgvEndereco.ReadOnly = true;
-            dgvEndereco.RowHeadersVisible = false;
-            dgvEndereco.RowHeadersWidth = 51;
-            dgvEndereco.Size = new Size(746, 270);
-            dgvEndereco.TabIndex = 7;
-            dgvEndereco.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvEndereco.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvEndereco.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvEndereco.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvEndereco.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvEndereco.ThemeStyle.BackColor = Color.White;
-            dgvEndereco.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEndereco.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvEndereco.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvEndereco.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dgvEndereco.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvEndereco.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvEndereco.ThemeStyle.HeaderStyle.Height = 17;
-            dgvEndereco.ThemeStyle.ReadOnly = true;
-            dgvEndereco.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvEndereco.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvEndereco.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvEndereco.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvEndereco.ThemeStyle.RowsStyle.Height = 25;
-            dgvEndereco.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvEndereco.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dgvEndereco.CellContentDoubleClick += dgvEndereco_CellContentDoubleClick;
+            dgvConsultarEndereco.AllowUserToAddRows = false;
+            dgvConsultarEndereco.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dgvConsultarEndereco.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvConsultarEndereco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvConsultarEndereco.ColumnHeadersHeight = 17;
+            dgvConsultarEndereco.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultarEndereco.Columns.AddRange(new DataGridViewColumn[] { clnIdEndereço, clnLogradouro, clnNumero, clnBairro, clnCidade, clnEstado, clnCep, clnComplemento });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvConsultarEndereco.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvConsultarEndereco.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultarEndereco.Location = new Point(30, 168);
+            dgvConsultarEndereco.Name = "dgvConsultarEndereco";
+            dgvConsultarEndereco.ReadOnly = true;
+            dgvConsultarEndereco.RowHeadersVisible = false;
+            dgvConsultarEndereco.RowHeadersWidth = 51;
+            dgvConsultarEndereco.Size = new Size(746, 270);
+            dgvConsultarEndereco.TabIndex = 7;
+            dgvConsultarEndereco.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvConsultarEndereco.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvConsultarEndereco.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvConsultarEndereco.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvConsultarEndereco.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvConsultarEndereco.ThemeStyle.BackColor = Color.White;
+            dgvConsultarEndereco.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultarEndereco.ThemeStyle.HeaderStyle.Height = 17;
+            dgvConsultarEndereco.ThemeStyle.ReadOnly = true;
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.Height = 25;
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvConsultarEndereco.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultarEndereco.CellContentDoubleClick += dgvEndereco_CellContentDoubleClick;
             // 
             // clnIdEndereço
             // 
@@ -160,18 +160,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dgvEndereco);
+            Controls.Add(dgvConsultarEndereco);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmConsultaEndereco";
             StartPosition = FormStartPosition.CenterScreen;
             Load += FrmConsultaEndereco_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvEndereco).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultarEndereco).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2DataGridView dgvEndereco;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvConsultarEndereco;
         private DataGridViewTextBoxColumn clnIdEndereço;
         private DataGridViewTextBoxColumn clnLogradouro;
         private DataGridViewTextBoxColumn clnNumero;
