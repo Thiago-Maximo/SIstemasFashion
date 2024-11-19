@@ -36,6 +36,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblFirstTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             TxtSenha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -205,6 +206,7 @@
             Controls.Add(lblTitulo);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLogin";
