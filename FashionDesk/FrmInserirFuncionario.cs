@@ -66,6 +66,9 @@ namespace FashionDesk
 
             var Enderecos = Endereco.ObterPorLista();
             CarregaGridEndereco();
+
+            var funcionarioEndereco = FuncionarioEndereco.ObterPorLista();
+            CarregaGridFuncEnder();
         }
 
         private void CarregaGrid(string nome = "")
@@ -334,34 +337,15 @@ namespace FashionDesk
             {
                 MessageBox.Show("Sucesso");
 
-                CarregaGridFuncProd();
+                CarregaGridFuncEnder();
             }
             else
             {
                 MessageBox.Show("Falha");
-                CarregaGridFuncProd();
+                CarregaGridFuncEnder();
             }
-
-
-            //Funcionario funcionarioEndereco = new Funcionario
-            //{
-            //    Id = Funcionario.ObterPorId(Convert.ToInt32((txtIdFuncionario.Text))),
-            //    Id_Enderecos = Endereco.ObterPorId(int.Parse(txtIdEnder.Text))
-            //};
-
-            //funcionarioEndereco.Inserir();
-            //if (funcionarioEndereco.Id > 0)
-            //{
-            //    MessageBox.Show("Sucesso");
-
-            //    CarregaGridFuncProd();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Falha");
-            //    CarregaGridFuncProd();
-            //}
         }
+
         private void btnBustarFunc_Click(object sender, EventArgs e)
         {
             using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())
@@ -406,6 +390,20 @@ namespace FashionDesk
             }
         }
 
-       
+        private void CarregaGridFuncEnder()
+        {
+            var lista = FuncionarioEndereco.ObterPorLista();
+            dgvFuncionarioEndereco.Rows.Clear();
+            int cont = 0;
+            foreach (var funcionarioProcedimentos in lista)
+            {
+                dgvFuncionarioEndereco.Rows.Add();
+                dgvFuncionarioEndereco.Rows[cont].Cells[0].Value = funcionarioProcedimentos.Id;
+                dgvFuncionarioEndereco.Rows[cont].Cells[1].Value = funcionarioProcedimentos.Id_funcionario.Nome;
+                dgvFuncionarioEndereco.Rows[cont].Cells[2].Value = funcionarioProcedimentos.Id_Endereco.Logradouro;
+
+                cont++;
+            }
+        }
     }
 }

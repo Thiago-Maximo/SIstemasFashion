@@ -94,9 +94,9 @@ namespace FashionDesk
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            TxtLogin.Focus();
-            TxtLogin.Text = "thiagoMaximo@gmail.com";
-            TxtSenha.Text = "23456789000";
+            //TxtLogin.Focus();
+            //TxtLogin.Text = "thiagoMaximo@gmail.com";
+            //TxtSenha.Text = "23456789000";
         }
     }
 }

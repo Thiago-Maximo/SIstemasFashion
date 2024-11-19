@@ -18,9 +18,9 @@ namespace FashionLib
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Bairro { get; set; }
-        public string Cidade { get; set; }   
-        public string Estado { get; set;}
-        public string Cep {  get; set;}
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
+        public string Cep { get; set; }
         public string Complemento { get; set; }
 
         //Métodos Construtores
@@ -64,30 +64,48 @@ namespace FashionLib
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = $"sp_endereco_insert";
-            cmd.Parameters.AddWithValue("splogradouro",Logradouro);
-            cmd.Parameters.AddWithValue("spnumero",Numero);
-            cmd.Parameters.AddWithValue("spbairro",Bairro);
-            cmd.Parameters.AddWithValue("spcidade",Cidade);
-            cmd.Parameters.AddWithValue("spestado",Estado);
-            cmd.Parameters.AddWithValue("spcep",Cep);
-            cmd.Parameters.AddWithValue("spcomplemento",Complemento);
+            cmd.Parameters.AddWithValue("splogradouro", Logradouro);
+            cmd.Parameters.AddWithValue("spnumero", Numero);
+            cmd.Parameters.AddWithValue("spbairro", Bairro);
+            cmd.Parameters.AddWithValue("spcidade", Cidade);
+            cmd.Parameters.AddWithValue("spestado", Estado);
+            cmd.Parameters.AddWithValue("spcep", Cep);
+            cmd.Parameters.AddWithValue("spcomplemento", Complemento);
 
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 Id = dr.GetInt32(0);
             }
-      
+
             cmd.Connection.Close();
         }
 
         //Função Onter Por Id
-        public static Endereco ObterPorId(int id)
+        public static Endereco ObterPorId(int Id)
         {
-            Endereco endereco = new Endereco();
+            Endereco endereco = null;
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"Select * from enderecos where id = {id}";
+            cmd.CommandText = "Select * from enderecos where id = @id";
+            cmd.Parameters.AddWithValue("@id", Id);
+
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                endereco = new Endereco(
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetString(4),
+                    dr.GetString(5),
+                    dr.GetString(6),
+                    dr.GetString(7)
+
+                );
+            }
+            dr.Close();
             cmd.Connection.Close();
             return endereco;
         }
@@ -98,7 +116,7 @@ namespace FashionLib
             List<Endereco> lista = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            if(nome == "")
+            if (nome == "")
             {
                 cmd.CommandText = "Select * from enderecos order by id";
             }
@@ -144,7 +162,7 @@ namespace FashionLib
         public void Deletar()
         {
             var cmd = Banco.Abrir();
-            cmd.CommandType= CommandType.Text;
+            cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"Delete from enderecos where id = {Id}";
             cmd.Connection.Close();
         }
