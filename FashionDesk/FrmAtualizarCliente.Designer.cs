@@ -133,6 +133,7 @@
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
+            btnFechar.Cursor = Cursors.Hand;
             btnFechar.CustomizableEdges = customizableEdges5;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -249,6 +250,7 @@
             // 
             btnAtualizar.BorderColor = Color.FromArgb(255, 192, 255);
             btnAtualizar.BorderRadius = 10;
+            btnAtualizar.Cursor = Cursors.Hand;
             btnAtualizar.CustomizableEdges = customizableEdges7;
             btnAtualizar.DisabledState.BorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -269,6 +271,7 @@
             // dateData_Nasc
             // 
             dateData_Nasc.Checked = true;
+            dateData_Nasc.Cursor = Cursors.Hand;
             dateData_Nasc.CustomizableEdges = customizableEdges9;
             dateData_Nasc.FillColor = Color.FromArgb(255, 192, 255);
             dateData_Nasc.Font = new Font("Segoe UI", 9F);
@@ -381,6 +384,7 @@
             chkAtivo.CheckedState.BorderRadius = 0;
             chkAtivo.CheckedState.BorderThickness = 0;
             chkAtivo.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            chkAtivo.Cursor = Cursors.Hand;
             chkAtivo.Location = new Point(413, 179);
             chkAtivo.Name = "chkAtivo";
             chkAtivo.Size = new Size(54, 19);

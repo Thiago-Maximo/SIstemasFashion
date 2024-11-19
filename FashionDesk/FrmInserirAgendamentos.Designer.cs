@@ -74,6 +74,7 @@
             // btnfecharForm
             // 
             btnfecharForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnfecharForm.Cursor = Cursors.Hand;
             btnfecharForm.CustomizableEdges = customizableEdges1;
             btnfecharForm.FillColor = Color.FromArgb(139, 152, 166);
             btnfecharForm.IconColor = Color.White;
@@ -211,6 +212,7 @@
             // btnEscolherCliente
             // 
             btnEscolherCliente.BorderRadius = 20;
+            btnEscolherCliente.Cursor = Cursors.Hand;
             btnEscolherCliente.CustomizableEdges = customizableEdges11;
             btnEscolherCliente.DisabledState.BorderColor = Color.DarkGray;
             btnEscolherCliente.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -230,6 +232,7 @@
             // btnEscolherFuncionario
             // 
             btnEscolherFuncionario.BorderRadius = 20;
+            btnEscolherFuncionario.Cursor = Cursors.Hand;
             btnEscolherFuncionario.CustomizableEdges = customizableEdges13;
             btnEscolherFuncionario.DisabledState.BorderColor = Color.DarkGray;
             btnEscolherFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;

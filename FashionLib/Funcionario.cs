@@ -17,7 +17,7 @@ namespace FashionLib
         public bool Ativo { get; set; }
         public Cargo Id_Cargo { get; set; }
         public string Email { get; set; }
-
+        public List<Endereco> Id_Enderecos { get; set; }
 
         // Métodos Construtores
         public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, Cargo id_Cargo, bool ativo, string email)
@@ -45,6 +45,19 @@ namespace FashionLib
         }
 
         public Funcionario() { }
+
+        public Funcionario(int id, string nome, string rg, string cpf, DateTime data_Nasc, bool ativo, Cargo id_Cargo, string email, List<Endereco> id_Enderecos)
+        {
+            Id = id;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            Data_Nasc = data_Nasc;
+            Ativo = ativo;
+            Id_Cargo = id_Cargo;
+            Email = email;
+            Id_Enderecos = id_Enderecos;
+        }
 
         // Função Inserir
         public void Inserir()
@@ -202,5 +215,22 @@ namespace FashionLib
             return lista;
         }
 
+        public void InserirEndereco()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_funcionarios_enderecos_insert";
+
+            cmd.Parameters.AddWithValue("sp_id_funcionario",Id);
+            cmd.Parameters.AddWithValue("sp_id_endereco", Id_Enderecos);
+
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                Id = dr.GetInt32(0);
+            }
+            dr.Close();
+            cmd.Connection.Close();
+        }
     }
 }

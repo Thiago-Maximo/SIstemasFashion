@@ -151,6 +151,7 @@
             // 
             lblAvancar.BackgroundImageLayout = ImageLayout.Zoom;
             lblAvancar.BorderRadius = 10;
+            lblAvancar.Cursor = Cursors.Hand;
             lblAvancar.CustomizableEdges = customizableEdges3;
             lblAvancar.DisabledState.BorderColor = Color.DarkGray;
             lblAvancar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -174,6 +175,7 @@
             // lblVoltar
             // 
             lblVoltar.BorderRadius = 10;
+            lblVoltar.Cursor = Cursors.Hand;
             lblVoltar.CustomizableEdges = customizableEdges5;
             lblVoltar.DisabledState.BorderColor = Color.DarkGray;
             lblVoltar.DisabledState.CustomBorderColor = Color.DarkGray;

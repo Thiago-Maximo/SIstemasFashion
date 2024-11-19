@@ -341,8 +341,27 @@ namespace FashionDesk
                 MessageBox.Show("Falha");
                 CarregaGridFuncProd();
             }
-        }
 
+
+            //Funcionario funcionarioEndereco = new Funcionario
+            //{
+            //    Id = Funcionario.ObterPorId(Convert.ToInt32((txtIdFuncionario.Text))),
+            //    Id_Enderecos = Endereco.ObterPorId(int.Parse(txtIdEnder.Text))
+            //};
+
+            //funcionarioEndereco.Inserir();
+            //if (funcionarioEndereco.Id > 0)
+            //{
+            //    MessageBox.Show("Sucesso");
+
+            //    CarregaGridFuncProd();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Falha");
+            //    CarregaGridFuncProd();
+            //}
+        }
         private void btnBustarFunc_Click(object sender, EventArgs e)
         {
             using (FrmConsultarFuncionario frmConsultaFuncionario = new FrmConsultarFuncionario())

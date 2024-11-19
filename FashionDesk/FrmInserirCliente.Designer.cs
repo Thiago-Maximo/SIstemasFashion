@@ -128,6 +128,7 @@
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
+            btnFechar.Cursor = Cursors.Hand;
             btnFechar.CustomizableEdges = customizableEdges5;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -199,7 +200,6 @@
             dgvClientesInserir.ThemeStyle.RowsStyle.Height = 25;
             dgvClientesInserir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvClientesInserir.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            
             // 
             // clnID
             // 
@@ -245,6 +245,7 @@
             // 
             btnInserir.BorderColor = Color.FromArgb(255, 192, 255);
             btnInserir.BorderRadius = 10;
+            btnInserir.Cursor = Cursors.Hand;
             btnInserir.CustomizableEdges = customizableEdges7;
             btnInserir.DisabledState.BorderColor = Color.DarkGray;
             btnInserir.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -265,6 +266,7 @@
             // dateData_Nasc
             // 
             dateData_Nasc.Checked = true;
+            dateData_Nasc.Cursor = Cursors.Hand;
             dateData_Nasc.CustomizableEdges = customizableEdges9;
             dateData_Nasc.FillColor = Color.FromArgb(255, 192, 255);
             dateData_Nasc.Font = new Font("Segoe UI", 9F);

@@ -189,6 +189,7 @@
             // btnEscolherFuncionario
             // 
             btnEscolherFuncionario.BorderRadius = 20;
+            btnEscolherFuncionario.Cursor = Cursors.Hand;
             btnEscolherFuncionario.CustomizableEdges = customizableEdges9;
             btnEscolherFuncionario.DisabledState.BorderColor = Color.DarkGray;
             btnEscolherFuncionario.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -208,6 +209,7 @@
             // btnEscolherCliente
             // 
             btnEscolherCliente.BorderRadius = 20;
+            btnEscolherCliente.Cursor = Cursors.Hand;
             btnEscolherCliente.CustomizableEdges = customizableEdges11;
             btnEscolherCliente.DisabledState.BorderColor = Color.DarkGray;
             btnEscolherCliente.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -617,6 +619,7 @@
             // btnTrocarDia
             // 
             btnTrocarDia.BorderRadius = 20;
+            btnTrocarDia.Cursor = Cursors.Hand;
             btnTrocarDia.CustomizableEdges = customizableEdges33;
             btnTrocarDia.DisabledState.BorderColor = Color.DarkGray;
             btnTrocarDia.DisabledState.CustomBorderColor = Color.DarkGray;

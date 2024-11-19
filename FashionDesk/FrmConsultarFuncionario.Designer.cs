@@ -178,6 +178,7 @@
             // 
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 10;
+            btnFechar.Cursor = Cursors.Hand;
             btnFechar.CustomizableEdges = customizableEdges3;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;

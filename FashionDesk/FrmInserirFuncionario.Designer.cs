@@ -240,6 +240,7 @@
             guna2TabControl1.Controls.Add(tabPage1);
             guna2TabControl1.Controls.Add(tabPage2);
             guna2TabControl1.Controls.Add(tabPage3);
+            guna2TabControl1.Cursor = Cursors.Hand;
             guna2TabControl1.ItemSize = new Size(180, 40);
             guna2TabControl1.Location = new Point(0, -1);
             guna2TabControl1.Name = "guna2TabControl1";

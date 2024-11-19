@@ -82,12 +82,12 @@ namespace FashionLib
         }
 
         //Função Onter Por Id
-        public static Endereco ObterPorId(int Id)
+        public static Endereco ObterPorId(int id)
         {
             Endereco endereco = new Endereco();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"Select * from enderecos where id = {Id}";
+            cmd.CommandText = $"Select * from enderecos where id = {id}";
             cmd.Connection.Close();
             return endereco;
         }
