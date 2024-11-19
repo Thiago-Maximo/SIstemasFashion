@@ -46,10 +46,7 @@ namespace FashionDesk
             get { return cmbProcedimentos; }
         }
 
-        public Guna.UI2.WinForms.Guna2TextBox TxtStatus
-        {
-            get { return txtStatus; }
-        }
+       
 
         public Guna.UI2.WinForms.Guna2TextBox TxtIdProcedimento
         {
@@ -194,7 +191,7 @@ namespace FashionDesk
                 TxtClientes.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[4].Value.ToString();
                 TxtIdClientes.Text = Convert.ToString(Convert.ToInt32(dgvConsultaAgendamento.Rows[e.RowIndex].Cells[3].Value.ToString()));
                 TxtData.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[1].Value.ToString();
-                TxtStatus.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[8].Value.ToString();
+                cmbStatus.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[8].Value.ToString();
                 TxtIdProcedimento.Text = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string procedimentoNome = dgvConsultaAgendamento.Rows[e.RowIndex].Cells[7].Value.ToString();
                 cmbProcedimentos.Text = procedimentoNome;
@@ -294,7 +291,7 @@ namespace FashionDesk
                 Convert.ToDateTime(txtDate.Text),
                 Convert.ToDateTime(cmbHora.Text),
                 Procedimentos.ObterPorId(int.Parse(cmbProcedimentos.SelectedValue.ToString())),
-                txtStatus.Text
+                cmbStatus.Text
              );
 
           

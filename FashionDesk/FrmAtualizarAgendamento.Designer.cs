@@ -54,12 +54,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -83,7 +83,6 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnfecharForm = new Guna.UI2.WinForms.Guna2ControlBox();
-            txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             txtIDProcedimentos = new Guna.UI2.WinForms.Guna2TextBox();
             lblStatus = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvConsultaAgendamento = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -100,6 +99,7 @@
             lblPesquisa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnConsultar = new Guna.UI2.WinForms.Guna2Button();
             btnTrocarDia = new Guna.UI2.WinForms.Guna2Button();
+            cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvConsultaAgendamento).BeginInit();
             SuspendLayout();
             // 
@@ -386,29 +386,9 @@
             btnfecharForm.Size = new Size(44, 24);
             btnfecharForm.TabIndex = 45;
             // 
-            // txtStatus
-            // 
-            txtStatus.CustomizableEdges = customizableEdges25;
-            txtStatus.DefaultText = "";
-            txtStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStatus.Font = new Font("Segoe UI", 9F);
-            txtStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStatus.Location = new Point(466, 213);
-            txtStatus.Name = "txtStatus";
-            txtStatus.PasswordChar = '\0';
-            txtStatus.PlaceholderText = "";
-            txtStatus.SelectedText = "";
-            txtStatus.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            txtStatus.Size = new Size(221, 36);
-            txtStatus.TabIndex = 53;
-            // 
             // txtIDProcedimentos
             // 
-            txtIDProcedimentos.CustomizableEdges = customizableEdges27;
+            txtIDProcedimentos.CustomizableEdges = customizableEdges25;
             txtIDProcedimentos.DefaultText = "";
             txtIDProcedimentos.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtIDProcedimentos.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -422,7 +402,7 @@
             txtIDProcedimentos.PasswordChar = '\0';
             txtIDProcedimentos.PlaceholderText = "";
             txtIDProcedimentos.SelectedText = "";
-            txtIDProcedimentos.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtIDProcedimentos.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtIDProcedimentos.Size = new Size(29, 36);
             txtIDProcedimentos.TabIndex = 61;
             txtIDProcedimentos.Visible = false;
@@ -565,7 +545,7 @@
             // txtConsultar
             // 
             txtConsultar.BackgroundImageLayout = ImageLayout.Zoom;
-            txtConsultar.CustomizableEdges = customizableEdges29;
+            txtConsultar.CustomizableEdges = customizableEdges27;
             txtConsultar.DefaultText = "";
             txtConsultar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConsultar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -582,7 +562,7 @@
             txtConsultar.PasswordChar = '\0';
             txtConsultar.PlaceholderText = "";
             txtConsultar.SelectedText = "";
-            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txtConsultar.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtConsultar.Size = new Size(755, 30);
             txtConsultar.TabIndex = 63;
             // 
@@ -599,7 +579,7 @@
             // 
             btnConsultar.BorderRadius = 10;
             btnConsultar.Cursor = Cursors.Hand;
-            btnConsultar.CustomizableEdges = customizableEdges31;
+            btnConsultar.CustomizableEdges = customizableEdges29;
             btnConsultar.DisabledState.BorderColor = Color.DarkGray;
             btnConsultar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConsultar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -610,7 +590,7 @@
             btnConsultar.HoverState.FillColor = Color.FromArgb(255, 192, 255);
             btnConsultar.Location = new Point(567, 274);
             btnConsultar.Name = "btnConsultar";
-            btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnConsultar.Size = new Size(120, 45);
             btnConsultar.TabIndex = 58;
             btnConsultar.Text = "&Consultar";
@@ -620,7 +600,7 @@
             // 
             btnTrocarDia.BorderRadius = 20;
             btnTrocarDia.Cursor = Cursors.Hand;
-            btnTrocarDia.CustomizableEdges = customizableEdges33;
+            btnTrocarDia.CustomizableEdges = customizableEdges31;
             btnTrocarDia.DisabledState.BorderColor = Color.DarkGray;
             btnTrocarDia.DisabledState.CustomBorderColor = Color.DarkGray;
             btnTrocarDia.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -631,16 +611,37 @@
             btnTrocarDia.Image = Properties.Resources.pesquisa;
             btnTrocarDia.Location = new Point(418, 51);
             btnTrocarDia.Name = "btnTrocarDia";
-            btnTrocarDia.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnTrocarDia.ShadowDecoration.CustomizableEdges = customizableEdges32;
             btnTrocarDia.Size = new Size(37, 36);
             btnTrocarDia.TabIndex = 56;
             btnTrocarDia.Click += btnTrocarDia_Click;
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.BackColor = Color.Transparent;
+            cmbStatus.Cursor = Cursors.Hand;
+            cmbStatus.CustomizableEdges = customizableEdges33;
+            cmbStatus.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.FillColor = SystemColors.Window;
+            cmbStatus.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbStatus.Font = new Font("Segoe UI", 10F);
+            cmbStatus.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbStatus.ItemHeight = 30;
+            cmbStatus.Items.AddRange(new object[] { "Aberto", "Cancelado", "Finalizado" });
+            cmbStatus.Location = new Point(470, 213);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            cmbStatus.Size = new Size(221, 36);
+            cmbStatus.TabIndex = 65;
             // 
             // FrmAtualizarAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(988, 683);
+            Controls.Add(cmbStatus);
             Controls.Add(dgvConsultaAgendamento);
             Controls.Add(txtConsultar);
             Controls.Add(lblPesquisa);
@@ -655,7 +656,6 @@
             Controls.Add(btnEscolherCliente);
             Controls.Add(cmbProcedimentos);
             Controls.Add(cmbHora);
-            Controls.Add(txtStatus);
             Controls.Add(TextFuncionarios);
             Controls.Add(textClientes);
             Controls.Add(txtDate);
@@ -696,7 +696,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblData;
         private Guna.UI2.WinForms.Guna2ControlBox btnfecharForm;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtIDProcedimentos;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblStatus;
         private Guna.UI2.WinForms.Guna2DataGridView dgvConsultaAgendamento;
@@ -713,5 +712,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPesquisa;
         private Guna.UI2.WinForms.Guna2Button btnConsultar;
         private Guna.UI2.WinForms.Guna2Button btnTrocarDia;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
     }
 }

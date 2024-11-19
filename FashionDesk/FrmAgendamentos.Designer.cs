@@ -36,6 +36,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgendamentos));
             lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblDomingo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblSegunda = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -227,6 +228,7 @@
             Controls.Add(lblDomingo);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmAgendamentos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAgendamentos";
